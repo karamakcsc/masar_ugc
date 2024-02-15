@@ -1,0 +1,279 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "format:{full_name_ar}-{#####}",
+ "creation": "2024-02-15 12:54:46.212909",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_uvul",
+  "register_date",
+  "column_break_pm5j",
+  "status",
+  "section_break_pnt9",
+  "first_name_en",
+  "first_name_ar",
+  "column_break_b0ja",
+  "middle_name_en",
+  "middle_name_ar",
+  "column_break_xbsb",
+  "last_name_en",
+  "last_name_ar",
+  "column_break_4sww",
+  "full_name_en",
+  "full_name_ar",
+  "section_break_atuk",
+  "mobile_no",
+  "email",
+  "column_break_dxpp",
+  "nationality",
+  "column_break_xy9b",
+  "personal_no",
+  "nationality_no",
+  "section_break_ry23",
+  "you_are",
+  "amended_from",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_uvul",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "User Register",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "register_date",
+   "fieldtype": "Date",
+   "label": "Register Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_pnt9",
+   "fieldtype": "Section Break",
+   "label": "Register Name"
+  },
+  {
+   "fieldname": "first_name_en",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name_en",
+   "fieldtype": "Data",
+   "label": "Middle Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name_en",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name_en",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_b0ja",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xbsb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4sww",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "first_name_ar",
+   "fieldtype": "Data",
+   "label": "First Name AR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name_ar",
+   "fieldtype": "Data",
+   "label": "Middle Name AR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name_ar",
+   "fieldtype": "Data",
+   "label": "Last Name AR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name_ar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name AR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_atuk",
+   "fieldtype": "Section Break",
+   "label": "Register Info"
+  },
+  {
+   "fieldname": "column_break_pm5j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "+962-",
+   "fieldname": "mobile_no",
+   "fieldtype": "Phone",
+   "in_standard_filter": 1,
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "column_break_dxpp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Jordan",
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Country"
+  },
+  {
+   "fieldname": "column_break_xy9b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.nationality!='Jordan'",
+   "fieldname": "personal_no",
+   "fieldtype": "Data",
+   "label": "Personal No",
+   "mandatory_depends_on": "eval:doc.nationality!='Jordan'"
+  },
+  {
+   "depends_on": "eval:doc.nationality=='Jordan'",
+   "fieldname": "nationality_no",
+   "fieldtype": "Data",
+   "label": "Nationality No",
+   "mandatory_depends_on": "eval:doc.nationality=='Jordan'"
+  },
+  {
+   "fieldname": "section_break_ry23",
+   "fieldtype": "Section Break",
+   "label": "Register Details"
+  },
+  {
+   "fieldname": "you_are",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "You Are",
+   "options": "\n\u0645\u0648\u0638\u0641\n\u0628\u0627\u0626\u0639\n\u062f\u0647\u064a\u0646\n\u0639\u0645\u064a\u0644"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nFor Approval\nApproved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "User Register",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-15 12:54:46.212909",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "User Register",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Master Painter Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Master Painter Officer",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
