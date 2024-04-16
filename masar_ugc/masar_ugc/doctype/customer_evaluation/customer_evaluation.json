@@ -14,7 +14,7 @@
  ],
  "fields": [
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "is_enable",
    "fieldtype": "Check",
    "label": "Enable"
@@ -36,14 +36,16 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "posting_date",
    "fieldtype": "Date",
-   "label": "Posting Date"
+   "label": "Posting Date",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-14 13:26:34.739864",
+ "modified": "2024-04-16 09:45:59.894156",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Customer Evaluation",
