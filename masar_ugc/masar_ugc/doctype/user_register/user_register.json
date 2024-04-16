@@ -2,12 +2,13 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "format:{full_name_ar}-{#####}",
+ "autoname": "naming_series:",
  "creation": "2024-02-15 12:54:46.212909",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_uvul",
+  "naming_series",
   "register_date",
   "column_break_pm5j",
   "status",
@@ -29,12 +30,20 @@
   "column_break_dxpp",
   "nationality",
   "column_break_xy9b",
-  "personal_no",
   "nationality_no",
+  "section_break_uiva",
+  "id_image",
+  "column_break_toqh",
+  "image",
   "section_break_ry23",
   "you_are",
   "amended_from",
-  "amended_from"
+  "customer_details_section",
+  "number_of_doors",
+  "signboard_type",
+  "column_break_mzfx",
+  "customer_evaluation",
+  "customer_sector"
  ],
  "fields": [
   {
@@ -86,8 +95,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Full Name",
-   "reqd": 1
+   "label": "Full Name"
   },
   {
    "fieldname": "column_break_b0ja",
@@ -124,8 +132,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Full Name AR",
-   "reqd": 1
+   "label": "Full Name AR"
   },
   {
    "fieldname": "section_break_atuk",
@@ -159,18 +166,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:doc.nationality!='Jordan'",
-   "fieldname": "personal_no",
-   "fieldtype": "Data",
-   "label": "Personal No",
-   "mandatory_depends_on": "eval:doc.nationality!='Jordan'"
-  },
-  {
-   "depends_on": "eval:doc.nationality=='Jordan'",
    "fieldname": "nationality_no",
    "fieldtype": "Data",
-   "label": "Nationality No",
-   "mandatory_depends_on": "eval:doc.nationality=='Jordan'"
+   "label": "Nationality No"
   },
   {
    "fieldname": "section_break_ry23",
@@ -209,15 +207,78 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "section_break_uiva",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "id_image",
+   "fieldtype": "Attach Image",
+   "label": "ID Image"
+  },
+  {
+   "fieldname": "column_break_toqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Image",
+   "label": "Image",
+   "options": "id_image"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "REG-.YYYY.-"
+  },
+  {
+   "depends_on": "eval:doc.you_are =='\u0639\u0645\u064a\u0644'",
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "depends_on": "eval:doc.you_are =='\u0639\u0645\u064a\u0644'",
+   "fieldname": "number_of_doors",
+   "fieldtype": "Int",
+   "label": "Number of Doors",
+   "mandatory_depends_on": "eval:doc.you_are =='\u0639\u0645\u064a\u0644'"
+  },
+  {
+   "depends_on": "eval:doc.you_are =='\u0639\u0645\u064a\u0644'",
+   "fieldname": "signboard_type",
+   "fieldtype": "Link",
+   "label": "Signboard Type",
+   "options": "Signboard Type"
+  },
+  {
+   "depends_on": "eval:doc.you_are =='\u0639\u0645\u064a\u0644'",
+   "fieldname": "customer_evaluation",
+   "fieldtype": "Link",
+   "label": "Customer Evaluation",
+   "options": "Customer Evaluation"
+  },
+  {
+   "fieldname": "column_break_mzfx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_sector",
+   "fieldtype": "Link",
+   "label": "Customer Sector",
+   "options": "Customer Sector"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-15 12:54:46.212909",
+ "modified": "2024-04-14 13:55:13.003836",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "User Register",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
