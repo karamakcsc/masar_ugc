@@ -49,10 +49,10 @@ class UserRegister(Document):
         elif self.you_are == "عميل":
             doc_customer = frappe.new_doc('Customer')
             doc_customer.customer_name = f"{self.first_name_en} {self.middle_name_en} {self.last_name_en}"
-            doc_customer.custom_number_of_doors = self.number_of_doors
-            doc_customer.custom_signboard_type = self.signboard_type
-            doc_customer.custom_customer_evaluation = self.customer_evaluation
-            doc_customer.custom_customer_sector = self.customer_sector
+            # doc_customer.custom_number_of_doors = self.number_of_doors
+            # doc_customer.custom_signboard_type = self.signboard_type
+            # doc_customer.custom_customer_evaluation = self.customer_evaluation
+            # doc_customer.custom_customer_sector = self.customer_sector
             doc_customer.insert(ignore_permissions=True)
             frappe.db.commit()
 

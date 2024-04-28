@@ -238,6 +238,7 @@
    "depends_on": "eval:doc.you_are =='\u0639\u0645\u064a\u0644'",
    "fieldname": "customer_details_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Customer Details"
   },
   {
@@ -274,7 +275,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-14 13:55:13.003836",
+ "modified": "2024-04-24 11:57:41.516094",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "User Register",

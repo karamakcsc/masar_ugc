@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-24 12:54:04.447541",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_fizf",
+  "naming_series",
+  "section_break_ztpj",
+  "customer_managment",
+  "customer_name",
+  "customer_mobile",
+  "column_break_xrhw",
+  "district",
+  "sales_man",
+  "supervisor",
+  "section_break_jkdw",
+  "signboard_type",
+  "customer_evaluation",
+  "column_break_illx",
+  "customer_sector",
+  "status",
+  "section_break_ufjt",
+  "description",
+  "process_time_tab",
+  "is_insert",
+  "is_closed_row",
+  "section_break_t0jq",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_t0jq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customers Visits",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer_managment",
+   "fieldtype": "Link",
+   "label": "Customer Managment",
+   "options": "Customer Managment"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Name",
+   "options": "CUST-VIS-."
+  },
+  {
+   "fieldname": "section_break_fizf",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "section_break_ztpj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "customer_managment.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_managment.customer_mobile",
+   "fieldname": "customer_mobile",
+   "fieldtype": "Phone",
+   "label": "Customer Mobile",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_managment.district",
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_managment.sales_man",
+   "fieldname": "sales_man",
+   "fieldtype": "Link",
+   "label": "Sales Man",
+   "options": "Sales Person",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_managment.supervisor",
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xrhw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jkdw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "customer_managment.signboard_type",
+   "fieldname": "signboard_type",
+   "fieldtype": "Link",
+   "label": "Signboard Type",
+   "options": "Signboard Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_managment.customer_evaluation",
+   "fieldname": "customer_evaluation",
+   "fieldtype": "Link",
+   "label": "Customer Evaluation",
+   "options": "Customer Evaluation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_illx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_managment.customer_sector",
+   "fieldname": "customer_sector",
+   "fieldtype": "Link",
+   "label": "Customer Sector",
+   "options": "Customer Sector",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ufjt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "process_time_tab",
+   "fieldtype": "Table",
+   "label": "process Time",
+   "options": "Customers Visits Details"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nOpen\nHold\nComplete",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_insert",
+   "fieldtype": "Check",
+   "label": "Inset Row"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_closed_row",
+   "fieldtype": "Check",
+   "label": "Close Row"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-04-25 14:54:06.600819",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Customers Visits",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

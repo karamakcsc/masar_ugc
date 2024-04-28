@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-24 11:59:38.589974",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sdbw",
+  "naming_series",
+  "column_break_cqcu",
+  "section_break_w3l1",
+  "customer_name",
+  "customer_mobile",
+  "district",
+  "amended_from",
+  "column_break_lota",
+  "posting_date",
+  "sales_man",
+  "supervisor",
+  "section_break_fpwv",
+  "signboard_type",
+  "customer_evaluation",
+  "column_break_gpps",
+  "customer_sector"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_w3l1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Managment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Name",
+   "options": "CUST-MANAG-."
+  },
+  {
+   "fieldname": "column_break_cqcu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": "customer_name.mobile_no",
+   "fieldname": "customer_mobile",
+   "fieldtype": "Phone",
+   "label": "Customer Mobile"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "sales_man",
+   "fieldtype": "Link",
+   "label": "Sales Man",
+   "options": "Sales Person"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Supervisor"
+  },
+  {
+   "fieldname": "column_break_lota",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fpwv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signboard_type",
+   "fieldtype": "Link",
+   "label": "Signboard Type",
+   "options": "Signboard Type"
+  },
+  {
+   "fieldname": "customer_evaluation",
+   "fieldtype": "Link",
+   "label": "Customer Evaluation",
+   "options": "Customer Evaluation"
+  },
+  {
+   "fieldname": "column_break_gpps",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_sector",
+   "fieldtype": "Link",
+   "label": "Customer Sector",
+   "options": "Customer Sector"
+  },
+  {
+   "fieldname": "section_break_sdbw",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-04-24 16:12:28.076629",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Customer Managment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

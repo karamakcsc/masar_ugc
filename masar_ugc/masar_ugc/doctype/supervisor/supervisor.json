@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-24 15:12:29.415015",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ex6k",
+  "naming_series",
+  "section_break_janm",
+  "is_enable",
+  "section_break_bhdu",
+  "supervisors"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ex6k",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Name",
+   "options": "SUPER-."
+  },
+  {
+   "fieldname": "section_break_janm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  },
+  {
+   "fieldname": "section_break_bhdu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "supervisors",
+   "fieldtype": "Table",
+   "label": "Supervisors",
+   "options": "Supervisor Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-24 15:21:51.250284",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Supervisor",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
