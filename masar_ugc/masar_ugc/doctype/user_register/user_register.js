@@ -4,7 +4,7 @@
 frappe.ui.form.on("User Register", {
     refresh: function(frm) {
         if (frm.doc.docstatus === 1) { 
-            frm.add_custom_button(__('Get Portal User'), function(){
+            frm.add_custom_button(__('Create User Portal'), function(){
                 frappe.call({
                     doc: frm.doc,
                     method: 'create_user', 
