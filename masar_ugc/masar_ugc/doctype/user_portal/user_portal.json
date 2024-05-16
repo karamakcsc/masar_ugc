@@ -1,0 +1,279 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-15 14:40:41.877948",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_5im5",
+  "naming_series",
+  "register_date",
+  "column_break_bnkh",
+  "status",
+  "section_break_jcvh",
+  "first_name_en",
+  "first_name_ar",
+  "column_break_ucpr",
+  "middle_name_en",
+  "middle_name_ar",
+  "column_break_phmm",
+  "last_name_en",
+  "last_name_ar",
+  "column_break_lsqb",
+  "full_name_en",
+  "full_name_ar",
+  "section_break_rvro",
+  "mobile_no",
+  "email",
+  "column_break_jnyk",
+  "nationality",
+  "column_break_yvgc",
+  "nationality_no",
+  "section_break_fmlu",
+  "id_image",
+  "column_break_ihfl",
+  "image",
+  "registered_details_section",
+  "you_are",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_5im5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "User Portal",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "REG-.YYYY.-"
+  },
+  {
+   "fieldname": "register_date",
+   "fieldtype": "Date",
+   "label": "Register Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bnkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nFor Approval\nApproved",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_jcvh",
+   "fieldtype": "Section Break",
+   "label": "Registered Name"
+  },
+  {
+   "fieldname": "first_name_en",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_name_ar",
+   "fieldtype": "Data",
+   "label": "First Name AR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ucpr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "middle_name_en",
+   "fieldtype": "Data",
+   "label": "Middle Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name_ar",
+   "fieldtype": "Data",
+   "label": "Middle Name AR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name_en",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_phmm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_name_ar",
+   "fieldtype": "Data",
+   "label": "Last Name AR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name_en",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lsqb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_name_ar",
+   "fieldtype": "Data",
+   "label": "Full Name AR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_rvro",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "+962-",
+   "fieldname": "mobile_no",
+   "fieldtype": "Phone",
+   "in_standard_filter": 1,
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "unique": 1
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Country"
+  },
+  {
+   "fieldname": "column_break_jnyk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nationality_no",
+   "fieldtype": "Data",
+   "label": "Nationality No"
+  },
+  {
+   "fieldname": "column_break_yvgc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fmlu",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "id_image",
+   "fieldtype": "Attach Image",
+   "label": "ID Image"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Image",
+   "label": "Image",
+   "options": "id_image"
+  },
+  {
+   "fieldname": "column_break_ihfl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registered_details_section",
+   "fieldtype": "Section Break",
+   "label": "Registered Details"
+  },
+  {
+   "fieldname": "you_are",
+   "fieldtype": "Select",
+   "label": "You Are",
+   "options": "\n\u0645\u0648\u0638\u0641\n\u0628\u0627\u0626\u0639\n\u062f\u0647\u064a\u0646\n\u0639\u0645\u064a\u0644"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-16 12:26:31.761171",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "User Portal",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Master Painter Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Master Painter Officer",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

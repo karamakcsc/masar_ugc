@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"XtV9sx6zpH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sales Track</span>\",\"col\":12}},{\"id\":\"nLEWSyQZf0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"rRSPimCPbS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Managment\",\"col\":4}},{\"id\":\"CmK66FV0Ha\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customers Visits\",\"col\":3}},{\"id\":\"Kr5I4GJJ_u\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pqlrOQv5Nz\",\"type\":\"card\",\"data\":{\"card_name\":\"Master Data\",\"col\":4}},{\"id\":\"4TcYGlvNgn\",\"type\":\"card\",\"data\":{\"card_name\":\"Setting\",\"col\":4}}]",
+ "content": "[{\"id\":\"XtV9sx6zpH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Sales Track</span>\",\"col\":12}},{\"id\":\"nLEWSyQZf0\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"rRSPimCPbS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shop Management\",\"col\":4}},{\"id\":\"CmK66FV0Ha\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shop Visit\",\"col\":3}},{\"id\":\"Kr5I4GJJ_u\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pqlrOQv5Nz\",\"type\":\"card\",\"data\":{\"card_name\":\"Master Data\",\"col\":4}},{\"id\":\"4TcYGlvNgn\",\"type\":\"card\",\"data\":{\"card_name\":\"Setting\",\"col\":4}}]",
  "creation": "2024-04-28 15:19:06.333862",
  "custom_blocks": [],
  "docstatus": 0,
@@ -25,9 +25,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Customer Managment",
+   "label": "Shop Management",
    "link_count": 0,
-   "link_to": "Customer Managment",
+   "link_to": "Shop Management",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -35,9 +35,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Customers Visits",
+   "label": "Shop Visit",
    "link_count": 0,
-   "link_to": "Customers Visits",
+   "link_to": "Shop Visit",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -64,9 +64,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Customer Evaluation",
+   "label": "Shop Evaluation",
    "link_count": 0,
-   "link_to": "Customer Evaluation",
+   "link_to": "Shop Evaluation",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -74,15 +74,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Customer Sector",
+   "label": "Shop Sector",
    "link_count": 0,
-   "link_to": "Customer Sector",
+   "link_to": "Shop Sector",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2024-04-28 15:22:55.828405",
+ "modified": "2024-05-16 13:02:10.807291",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Sales Track",
@@ -97,16 +97,16 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Customer Managment",
-   "link_to": "Customer Managment",
+   "label": "Shop Management",
+   "link_to": "Shop Management",
    "stats_filter": "[]",
    "type": "DocType"
   },
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Customers Visits",
-   "link_to": "Customers Visits",
+   "label": "Shop Visit",
+   "link_to": "Shop Visit",
    "stats_filter": "[]",
    "type": "DocType"
   }

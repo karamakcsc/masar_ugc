@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-15 16:32:49.559879",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sdbw",
+  "naming_series",
+  "column_break_cqcu",
+  "section_break_w3l1",
+  "shop_name",
+  "shop_mobile",
+  "district",
+  "column_break_lota",
+  "posting_date",
+  "sales_man",
+  "supervisor",
+  "section_break_fpwv",
+  "signboard_type",
+  "shop_evaluation",
+  "column_break_gpps",
+  "shop_sector",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_sdbw",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Name",
+   "options": "SHOP-MANAG-."
+  },
+  {
+   "fieldname": "column_break_cqcu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_w3l1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop Name"
+  },
+  {
+   "fetch_from": "customer_name.mobile_no",
+   "fieldname": "shop_mobile",
+   "fieldtype": "Phone",
+   "label": "Shop Mobile"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fieldname": "column_break_lota",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "sales_man",
+   "fieldtype": "Link",
+   "label": "Sales Man",
+   "options": "Sales Person"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Supervisor"
+  },
+  {
+   "fieldname": "section_break_fpwv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signboard_type",
+   "fieldtype": "Link",
+   "label": "Signboard Type",
+   "options": "Signboard Type"
+  },
+  {
+   "fieldname": "shop_evaluation",
+   "fieldtype": "Link",
+   "label": "Shop Evaluation",
+   "options": "Shop Evaluation"
+  },
+  {
+   "fieldname": "column_break_gpps",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_sector",
+   "fieldtype": "Link",
+   "label": "Shop Sector",
+   "options": "Shop Sector"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Shop Management",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-15 17:21:23.060849",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Shop Management",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
