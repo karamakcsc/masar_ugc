@@ -11,7 +11,7 @@ class ShopVisit(Document):
 			self.child_row = self.insert_start_time()
 		elif not self.is_closed_row:
 			self.insert_end_time()
-		elif:
+		elif self.is_closed_row ==1 and self.is_insert==1:
 			self.insert_event_row()
 		
 	def insert_start_time(self):
@@ -45,7 +45,10 @@ class ShopVisit(Document):
 	def insert_event_row(self):
 		start_time = frappe.db.sql("""SELECT MAX(end_time) AS start_time FROM `tabShop Visits Details` tsvd """ , as_dict= True)[0]['start_time']
 		end_time = datetime.now()
-		duration = (end_time - start_time).total_seconds()
+		if start_time and end_time:
+			duration = (end_time - start_time).total_seconds()
+		else: 
+			duration = 0 
 		user_id = frappe.session.user
 		status = self.status 
 		row = self.append('process_time_tab', {})
