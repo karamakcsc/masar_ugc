@@ -12,3 +12,16 @@ frappe.ui.form.on("Shop Visit", {
         });
     }
 });
+
+// frappe.ready(function() {
+//     frappe.realtime.on("run_js_function", function(data) {
+//         // Call your JavaScript function here
+//         your_js_function();
+//     });
+// });
+
+// function your_js_function() {
+//     // frappe.msgprint('python');
+//     console.log('python');
+// }
+

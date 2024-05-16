@@ -17,7 +17,11 @@
   "neighbourhood",
   "road",
   "building_number",
-  "full_address"
+  "full_address",
+  "section_break_gvxm",
+  "latitude",
+  "column_break_vgis",
+  "longitude"
  ],
  "fields": [
   {
@@ -92,12 +96,32 @@
    "fieldtype": "Data",
    "label": "Full Address",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_gvxm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "latitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "longitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vgis",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-05-16 13:38:55.760268",
+ "modified": "2024-05-16 14:45:59.679278",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Shop Visits Details",
