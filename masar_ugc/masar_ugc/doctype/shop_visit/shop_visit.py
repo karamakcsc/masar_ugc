@@ -11,7 +11,7 @@ class ShopVisit(Document):
 			self.child_row = self.insert_start_time()
 		elif not self.is_closed_row:
 			self.insert_end_time()
-		else:
+		elif:
 			self.insert_event_row()
 		
 	def insert_start_time(self):
