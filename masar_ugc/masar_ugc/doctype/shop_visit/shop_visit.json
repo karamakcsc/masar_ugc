@@ -24,12 +24,12 @@
   "status",
   "section_break_ufjt",
   "description",
-  "amended_from",
   "section_break_t0jq",
   "process_time_tab",
   "section_break_fite",
   "is_insert",
-  "is_closed_row"
+  "is_closed_row",
+  "amended_from"
  ],
  "fields": [
   {
@@ -72,7 +72,7 @@
    "fieldname": "supervisor",
    "fieldtype": "Link",
    "label": "Supervisor",
-   "options": "Employee",
+   "options": "Supervisor",
    "read_only": 1
   },
   {
@@ -195,7 +195,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-16 11:07:31.778749",
+ "modified": "2024-05-21 22:21:58.745160",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Shop Visit",

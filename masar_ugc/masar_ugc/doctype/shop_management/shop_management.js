@@ -6,7 +6,7 @@ frappe.ui.form.on("Shop Management", {
 		frm.set_query("sales_man", function (doc) {
 			return {
 				filters: [
-					['Sales Person', 'is_group', '=', 1],
+					['Sales Person', 'is_group', '=', 0],
 					['Sales Person', 'enabled', '=', 1]
 				]
 			};
@@ -14,7 +14,7 @@ frappe.ui.form.on("Shop Management", {
 		frm.set_query("supervisor", function (doc) {
 			return {
 				filters: [
-					['Sales Person', 'enabled', '=', 1]
+					['Supervisor', 'is_enable', '=', 1]
 				]
 			};
 		});

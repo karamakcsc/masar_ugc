@@ -1,30 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "field:supervisor",
  "creation": "2024-04-24 15:12:29.415015",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_ex6k",
-  "naming_series",
   "section_break_janm",
   "is_enable",
-  "section_break_bhdu",
-  "supervisors"
+  "section_break_naxa",
+  "supervisor",
+  "column_break_lskt",
+  "supervisor_name"
  ],
  "fields": [
-  {
-   "fieldname": "section_break_ex6k",
-   "fieldtype": "Section Break",
-   "hidden": 1
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Name",
-   "options": "SUPER-."
-  },
   {
    "fieldname": "section_break_janm",
    "fieldtype": "Section Break"
@@ -36,23 +25,35 @@
    "label": "Enable"
   },
   {
-   "fieldname": "section_break_bhdu",
+   "fieldname": "section_break_naxa",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "supervisors",
-   "fieldtype": "Table",
-   "label": "Supervisors",
-   "options": "Supervisor Details"
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Sales Person",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_lskt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "supervisor.sales_person_name",
+   "fieldname": "supervisor_name",
+   "fieldtype": "Data",
+   "label": "Supervisor Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-16 13:48:32.237337",
+ "modified": "2024-05-21 22:19:54.451959",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Supervisor",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

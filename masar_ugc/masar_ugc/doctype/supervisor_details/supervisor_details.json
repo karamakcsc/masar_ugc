@@ -7,9 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "supervisor_id",
-  "empolyee_name",
   "column_break_nflu",
-  "supervisor_name"
+  "empolyee_name"
  ],
  "fields": [
   {
@@ -20,15 +19,7 @@
    "options": "Sales Person"
   },
   {
-   "fetch_from": "supervisor_id.employee",
-   "fieldname": "supervisor_name",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "label": "Supervisor Name",
-   "options": "Employee"
-  },
-  {
-   "fetch_from": "supervisor_name.employee_name",
+   "fetch_from": "supervisor_id.sales_person_name",
    "fieldname": "empolyee_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -42,7 +33,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-04-24 15:19:28.512677",
+ "modified": "2024-05-21 21:59:36.564376",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Supervisor Details",
