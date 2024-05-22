@@ -22,19 +22,8 @@
   "shop_evaluation",
   "column_break_gpps",
   "shop_sector",
-  "amended_from",
-  "more_details_section",
-  "visit_purpose",
-  "collection",
-  "order",
-  "column_break_uvip",
-  "visit_amount",
-  "collection_amount",
-  "order_amount",
-  "more_info_section",
-  "contact_person",
-  "column_break_zyug",
-  "contact_number"
+  "section_break_zphr",
+  "amended_from"
  ],
  "fields": [
   {
@@ -138,79 +127,14 @@
    "search_index": 1
   },
   {
-   "fieldname": "more_details_section",
-   "fieldtype": "Section Break",
-   "label": "More Details"
-  },
-  {
-   "fieldname": "contact_person",
-   "fieldtype": "Data",
-   "label": "Contact Person",
-   "reqd": 1
-  },
-  {
-   "fieldname": "visit_purpose",
-   "fieldtype": "Select",
-   "label": "Visit Purpose",
-   "options": "\nYes\nNo"
-  },
-  {
-   "depends_on": "eval:doc.visit_purpose == 'Yes'",
-   "fieldname": "visit_amount",
-   "fieldtype": "Data",
-   "label": "Amount",
-   "mandatory_depends_on": "eval:doc.visit_purpose == 'Yes'"
-  },
-  {
-   "depends_on": "eval:doc.collection == 'Yes'",
-   "fieldname": "collection_amount",
-   "fieldtype": "Data",
-   "label": "Amount",
-   "mandatory_depends_on": "eval:doc.collection == 'Yes'"
-  },
-  {
-   "depends_on": "eval:doc.order == 'Yes'",
-   "fieldname": "order_amount",
-   "fieldtype": "Data",
-   "label": "Amount",
-   "mandatory_depends_on": "eval:doc.order == 'Yes'"
-  },
-  {
-   "fieldname": "contact_number",
-   "fieldtype": "Data",
-   "label": "Contact Number",
-   "reqd": 1
-  },
-  {
-   "fieldname": "more_info_section",
-   "fieldtype": "Section Break",
-   "label": "More Info"
-  },
-  {
-   "fieldname": "column_break_zyug",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_uvip",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "collection",
-   "fieldtype": "Select",
-   "label": "Collection Purpose",
-   "options": "\nYes\nNo"
-  },
-  {
-   "fieldname": "order",
-   "fieldtype": "Select",
-   "label": "Order Purpose",
-   "options": "\nYes\nNo"
+   "fieldname": "section_break_zphr",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-22 15:51:13.677602",
+ "modified": "2024-05-23 02:02:32.866108",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Shop Management",
