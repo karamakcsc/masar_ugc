@@ -130,6 +130,8 @@
   {
    "fieldname": "full_name_en",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Full Name",
    "reqd": 1
   },
@@ -214,7 +216,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-16 12:26:31.761171",
+ "modified": "2024-05-22 15:33:02.536883",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "User Portal",

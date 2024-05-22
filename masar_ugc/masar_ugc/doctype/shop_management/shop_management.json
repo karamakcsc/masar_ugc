@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series:",
+ "autoname": "field:shop_name",
  "creation": "2024-05-15 16:32:49.559879",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -22,7 +22,19 @@
   "shop_evaluation",
   "column_break_gpps",
   "shop_sector",
-  "amended_from"
+  "amended_from",
+  "more_details_section",
+  "visit_purpose",
+  "collection",
+  "order",
+  "column_break_uvip",
+  "visit_amount",
+  "collection_amount",
+  "order_amount",
+  "more_info_section",
+  "contact_person",
+  "column_break_zyug",
+  "contact_number"
  ],
  "fields": [
   {
@@ -47,7 +59,10 @@
   {
    "fieldname": "shop_name",
    "fieldtype": "Data",
-   "label": "Shop Name"
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Shop Name",
+   "unique": 1
   },
   {
    "default": "+962-",
@@ -121,16 +136,85 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "more_details_section",
+   "fieldtype": "Section Break",
+   "label": "More Details"
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_purpose",
+   "fieldtype": "Select",
+   "label": "Visit Purpose",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.visit_purpose == 'Yes'",
+   "fieldname": "visit_amount",
+   "fieldtype": "Data",
+   "label": "Amount",
+   "mandatory_depends_on": "eval:doc.visit_purpose == 'Yes'"
+  },
+  {
+   "depends_on": "eval:doc.collection == 'Yes'",
+   "fieldname": "collection_amount",
+   "fieldtype": "Data",
+   "label": "Amount",
+   "mandatory_depends_on": "eval:doc.collection == 'Yes'"
+  },
+  {
+   "depends_on": "eval:doc.order == 'Yes'",
+   "fieldname": "order_amount",
+   "fieldtype": "Data",
+   "label": "Amount",
+   "mandatory_depends_on": "eval:doc.order == 'Yes'"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "more_info_section",
+   "fieldtype": "Section Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "column_break_zyug",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uvip",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "collection",
+   "fieldtype": "Select",
+   "label": "Collection Purpose",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "order",
+   "fieldtype": "Select",
+   "label": "Order Purpose",
+   "options": "\nYes\nNo"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-21 21:52:40.358064",
+ "modified": "2024-05-22 15:51:13.677602",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Shop Management",
- "naming_rule": "By \"Naming Series\" field",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
