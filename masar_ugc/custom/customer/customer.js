@@ -19,7 +19,7 @@ frappe.ui.form.on('Customer', {
             frm.fields_dict['custom_shop_sector'].get_query = function(doc) {
                 return {
                     filters: {
-                        // "report_type": "Profit and Loss",
+                        //// "report_type": "Profit and Loss",
                         "is_enable": 1,
                     }
                 };

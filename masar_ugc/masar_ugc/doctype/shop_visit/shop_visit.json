@@ -32,11 +32,6 @@
   "amount",
   "collection_amount",
   "order_amount",
-  "section_break_mfsj",
-  "more_info_column",
-  "contact_person",
-  "column_break_efun",
-  "contact_number",
   "section_break_t0jq",
   "process_time_tab",
   "section_break_fite",
@@ -107,10 +102,10 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nOpen\nHold\nComplete",
-   "reqd": 1
+   "options": "\nOpen\nHold\nComplete"
   },
   {
    "fieldname": "section_break_ufjt",
@@ -125,6 +120,7 @@
    "depends_on": "eval: frappe.user.has_role('Sales Manager')",
    "fieldname": "process_time_tab",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "process Time",
    "options": "Shop Visits Details"
   },
@@ -255,35 +251,12 @@
    "fieldtype": "Data",
    "label": "Order Amount",
    "mandatory_depends_on": "eval:doc.order_purpose == 'Yes'"
-  },
-  {
-   "fieldname": "section_break_mfsj",
-   "fieldtype": "Section Break",
-   "label": "More Info"
-  },
-  {
-   "fieldname": "more_info_column",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "contact_person",
-   "fieldtype": "Data",
-   "label": "Contact Person"
-  },
-  {
-   "fieldname": "column_break_efun",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "contact_number",
-   "fieldtype": "Data",
-   "label": "Contact Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-23 02:00:35.236032",
+ "modified": "2024-05-23 11:06:16.856153",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Shop Visit",
