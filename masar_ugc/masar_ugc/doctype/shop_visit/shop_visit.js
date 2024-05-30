@@ -64,5 +64,5 @@ frappe.ui.form.on("Shop Visit", {
 // // function your_js_function() {
 // //     // frappe.msgprint('python');
 // //     console.log('python');
-// // }
+// }
 
