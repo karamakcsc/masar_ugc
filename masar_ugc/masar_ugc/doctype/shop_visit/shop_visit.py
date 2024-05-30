@@ -59,17 +59,17 @@ class ShopVisit(Document):
 		row.status = status
 		frappe.db.commit()
 
-	@frappe.whitelist()
-	def get_current_location_details( self ,  country ,city   ,  neighbourhood , road  , house_number ,  full_address , lat , lon ):
-		if self.is_insert == 1 and self.is_closed_row == 0:
-			row = frappe.get_doc('Shop Visits Details', {'parent': self.name})
-			row.country = country 
-			row.city = city 
-			row.neighbourhood = neighbourhood
-			row.road = road 
-			row.house_number = house_number
-			row.full_address = full_address
-			row.latitude = lat 
-			row.longitude = lon
-			row.save()
-			frappe.db.commit()
+	# @frappe.whitelist()
+	# def get_current_location_details( self ,  country ,city   ,  neighbourhood , road  , house_number ,  full_address , lat , lon ):
+	# 	if self.is_insert == 1 and self.is_closed_row == 0:
+	# 		row = frappe.get_doc('Shop Visits Details', {'parent': self.name})
+	# 		row.country = country 
+	# 		row.city = city 
+	# 		row.neighbourhood = neighbourhood
+	# 		row.road = road 
+	# 		row.house_number = house_number
+	# 		row.full_address = full_address
+	# 		row.latitude = lat 
+	# 		row.longitude = lon
+	# 		row.save()
+	# 		frappe.db.commit()
