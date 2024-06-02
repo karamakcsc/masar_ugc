@@ -8,6 +8,7 @@
  "field_order": [
   "section_break_fizf",
   "naming_series",
+  "column_break_gwko",
   "section_break_ztpj",
   "shop_management",
   "shop_name",
@@ -37,7 +38,19 @@
   "section_break_fite",
   "is_insert",
   "is_closed_row",
-  "amended_from"
+  "location_tab",
+  "country",
+  "neighbourhood",
+  "house_number",
+  "column_break_nntn",
+  "city",
+  "road",
+  "full_address",
+  "section_break_ovry",
+  "latitude",
+  "amended_from",
+  "column_break_orml",
+  "longitude"
  ],
  "fields": [
   {
@@ -120,7 +133,6 @@
    "depends_on": "eval: frappe.user.has_role('Sales Manager')",
    "fieldname": "process_time_tab",
    "fieldtype": "Table",
-   "hidden": 1,
    "label": "process Time",
    "options": "Shop Visits Details"
   },
@@ -138,27 +150,8 @@
   },
   {
    "fieldname": "section_break_t0jq",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Shop Visit",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Shop Visit",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
+   "fieldtype": "Section Break",
+   "hidden": 1
   },
   {
    "fetch_from": "shop_management.shop_name",
@@ -251,12 +244,91 @@
    "fieldtype": "Data",
    "label": "Order Amount",
    "mandatory_depends_on": "eval:doc.order_purpose == 'Yes'"
+  },
+  {
+   "fieldname": "location_tab",
+   "fieldtype": "Tab Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Shop Visit",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "read_only": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "read_only": 1
+  },
+  {
+   "fieldname": "neighbourhood",
+   "fieldtype": "Data",
+   "label": "Neighbourhood",
+   "read_only": 1
+  },
+  {
+   "fieldname": "road",
+   "fieldtype": "Data",
+   "label": "Road",
+   "read_only": 1
+  },
+  {
+   "fieldname": "house_number",
+   "fieldtype": "Data",
+   "label": "House Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_nntn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_address",
+   "fieldtype": "Data",
+   "label": "Full Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gwko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ovry",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_orml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-30 10:50:58.180969",
+ "modified": "2024-06-02 12:29:40.976588",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Shop Visit",

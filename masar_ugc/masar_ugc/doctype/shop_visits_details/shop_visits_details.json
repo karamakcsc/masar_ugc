@@ -9,15 +9,9 @@
   "user_id",
   "start_time",
   "end_time",
+  "column_break_yuyd",
   "duration",
   "status",
-  "column_break_qnen",
-  "country",
-  "city",
-  "neighbourhood",
-  "road",
-  "building_number",
-  "full_address",
   "section_break_gvxm",
   "latitude",
   "column_break_vgis",
@@ -50,51 +44,11 @@
    "label": "Duration"
   },
   {
-   "fieldname": "column_break_qnen",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
    "options": "Open\nHold\nComplete",
-   "read_only": 1
-  },
-  {
-   "fieldname": "country",
-   "fieldtype": "Data",
-   "label": "Country",
-   "read_only": 1
-  },
-  {
-   "fieldname": "city",
-   "fieldtype": "Data",
-   "label": "City",
-   "read_only": 1
-  },
-  {
-   "fieldname": "neighbourhood",
-   "fieldtype": "Data",
-   "label": "Neighbourhood",
-   "read_only": 1
-  },
-  {
-   "fieldname": "road",
-   "fieldtype": "Data",
-   "label": "Road",
-   "read_only": 1
-  },
-  {
-   "fieldname": "building_number",
-   "fieldtype": "Data",
-   "label": "Building Number",
-   "read_only": 1
-  },
-  {
-   "fieldname": "full_address",
-   "fieldtype": "Data",
-   "label": "Full Address",
    "read_only": 1
   },
   {
@@ -116,12 +70,16 @@
   {
    "fieldname": "column_break_vgis",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_yuyd",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-05-16 14:45:59.679278",
+ "modified": "2024-06-02 12:23:22.880212",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Shop Visits Details",

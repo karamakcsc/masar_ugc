@@ -12,39 +12,36 @@ frappe.ui.form.on("Shop Visit", {
         });
     }
 });
-// frappe.ui.form.on('Shop Visit', {
-//     before_save: function(frm) {
-//         function onPositionReceived(position) {
-//             var longitude = position.coords.longitude;
-//             var latitude = position.coords.latitude;
-//             console.log("Longitude:", longitude);
-//             console.log("Latitude:", latitude);
-//             frappe.call({
-//                 type: "GET",
-//                 url: `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`,
-//                 callback: function(r) {
-//                     if (r) {
-//                         console.log(r.address.country);
-//                         frappe.call({
-//                             doc:frm.doc,
-//                             method : 'get_current_location_details' , 
-//                             args :{
-//                                 country :r.address.country , 
-//                                 city  : r.address.city , 
-//                                 neighbourhood :  r.address.neighbourhood, 
-//                                 road :  r.address.road,
-//                                 house_number :  r.address.house_number ,  
-//                                 full_address :  r.address.display_name,
-//                                 lat :  r.address.lat,
-//                                 lon :  r.address.lon
-//                             }
-//                         })
-//                     } else {
-//                         console.log("Error: Failed to get address from coordinates");
-//                     }
-//                 }
-//             });
-//         }
+// Get the position before calling validate function
+navigator.geolocation.getCurrentPosition(function(position) {
+    frappe.ui.form.on('Shop Visit', {
+        validate: function(frm) {
+            if (frm.is_new()) {
+                var longitude = position.coords.longitude;
+                var latitude = position.coords.latitude;
+
+                frappe.call({
+                    type: "GET",
+                    url: `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`,
+                    callback: function(r) {
+                        frm.set_value('country', r.address.country || '');
+                        frm.set_value('city', r.address.city || '');
+                        frm.set_value('neighbourhood', r.address.neighbourhood || '');
+                        frm.set_value('road', r.address.road || '');
+                        frm.set_value('house_number', r.address.house_number || '');
+                        frm.set_value('full_address', r.display_name || '');
+                        frm.set_value('latitude', r.lat);
+                        frm.set_value('longitude', r.lon);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error fetching address from coordinates:", status, error);
+                    }
+                });
+            }
+        }
+    });
+});
+
 
 //         // Get current position
 //         navigator.geolocation.getCurrentPosition(onPositionReceived, function(error) {
