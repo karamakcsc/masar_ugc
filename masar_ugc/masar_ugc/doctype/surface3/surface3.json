@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:surface3_en",
+ "creation": "2024-11-05 12:25:50.782995",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "surface3_en",
+  "surface3_ar",
+  "surface3_fr",
+  "column_break_bfyb",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "surface3_en",
+   "fieldtype": "Data",
+   "label": "Surface3 EN",
+   "unique": 1
+  },
+  {
+   "fieldname": "surface3_ar",
+   "fieldtype": "Data",
+   "label": "Surface3 AR"
+  },
+  {
+   "fieldname": "surface3_fr",
+   "fieldtype": "Data",
+   "label": "Surface3 FR"
+  },
+  {
+   "fieldname": "column_break_bfyb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-05 12:32:51.786036",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Surface3",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

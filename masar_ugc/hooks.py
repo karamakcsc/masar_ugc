@@ -122,16 +122,14 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
-doctype_js = {
-   "Customer" : "custom/customer/customer.js"
- }
+doc_events = {
+	"Item": {
+		"validate": "masar_ugc.custom.item.item.validate"
+	}
+}
+# doctype_js = {
+#    "Customer" : "custom/customer/customer.js"
+#  }
 # Scheduled Tasks
 # ---------------
 
@@ -232,12 +230,99 @@ fixtures = [
     {"dt": "Custom Field", "filters": [
         [
             "name", "in", [
-                "Customer-custom_signboard_type",
-                "CCustomer-custom_shop_evaluation",
-                "Customer-custom_column_break_2ga1k",
-                "Customer-custom_shop_sector",
-                "Customer-custom_number_of_doors",
-                "Customer-custom_section_break_9ahfy"
+                "Item-custom_more_details",
+                "Item-custom_visible",
+                "Item-custom_column_break_2hsra",
+                "Item-custom_sold",
+                "Item-custom_section_break_k9luu",
+                "Item-custom_category_en",
+                "Item-custom_column_break_fus0k",
+                "Item-custom_category_ar",
+                "Item-custom_column_break_k78p3",
+                "Item-custom_category_fr",
+                "Item-custom_brand_en",
+                "Item-custom_brand_ar",
+                "Item-custom_brand_fr",
+                "Item-custom_subbrand1_en",
+                "Item-custom_subbrand1_ar",
+                "Item-custom_subbrand1_fr",
+                "Item-custom_product_name_en",
+                "Item-custom_product_name_ar",
+                "Item-custom_product_name_fr",
+                "Item-custom_short_disc_en",
+                "Item-custom_short_disc_ar",
+                "Item-custom_short_disc_fr",
+                "Item-custom_product_use_en",
+                "Item-custom_product_use_ar",
+                "Item-custom_product_use_fr",
+                "Item-custom_surface1_en",
+                "Item-custom_surface2_en",
+                "Item-custom_surface3_en",
+                "Item-custom_surface1_ar",
+                "Item-custom_surface2_ar",
+                "Item-custom_surface3_ar",
+                "Item-custom_surface1_fr",
+                "Item-custom_surface2_fr",
+                "Item-custom_surface3_fr",
+                "Item-custom_finishes_en",
+                "Item-custom_finishes_ar",
+                "Item-custom_finishes_fr",
+                "Item-custom_colors_en",
+                "Item-custom_colors_ar",
+                "Item-custom_colors_fr",
+                "Item-custom_sheen_en",
+                "Item-custom_sheen_ar",
+                "Item-custom_sheen_fr",
+                "Item-custom_packsize_en",
+                "Item-custom_packsize_ar",
+                "Item-custom_packsize_fr",
+                "Item-custom_coverageperpack_en",
+                "Item-custom_applicationtool_en",
+                "Item-custom_coverageperpack_ar",
+                "Item-custom_applicationtool_ar",
+                "Item-custom_coverageperpack_fr",
+                "Item-custom_applicationtool_fr",
+                "Item-custom_links",
+                "Item-custom_subbrand_pic_en",
+                "Item-custom_column_break_k37i5",
+                "Item-custom_subbrand_pic_ar",
+                "Item-custom_column_break_aj825",
+                "Item-custom_subbrand_pic_fr",
+                "Item-custom_subbrand_ved_en",
+                "Item-custom_tds_en",
+                "Item-custom_msds_en",
+                "Item-custom_subbrand_ved_ar",
+                "Item-custom_tds_ar",
+                "Item-custom_msds_ar",
+                "Item-custom_subbrand_ved_fr",
+                "Item-custom_tds_fr",
+                "Item-custom_msds_fr",
+                "Item-custom_meta",
+                "Item-custom_metadisc_en",
+                "Item-custom_column_break_fjuwk",
+                "Item-custom_metadisc_ar",
+                "Item-custom_column_break_qnpzb",
+                "Item-custom_metadisc_fr",
+                "Item-custom_section_break_slnq0",
+                "Item-custom_long_disc_en",
+                "Item-custom_column_break_6xuw8",
+                "Item-custom_long_disc_ar",
+                "Item-custom_column_break_xmeo3",
+                "Item-custom_long_disc_fr",
+                "Item-custom_long_desc_ar",
+                "Item-custom_long_desc_fr",
+                "Item-custom_short_desc",
+                "Item-custom_column_break_nemtx",
+                "Item-custom_column_break_h4rgs",
+                "Item-custom_product_details",
+                "Item-custom_column_break_ayb4e",
+                "Item-custom_column_break_hlizb",
+                "Item-custom_color_details",
+                "Item-custom_column_break_bchap",
+                "Item-custom_column_break_nngsj",
+                "Brand-custom_is_enabled",
+                "Brand-custom_brand_fr",
+                "Brand-custom_brand_ar"
             ]
         ]
     ]}

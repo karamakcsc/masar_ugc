@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:subbrand_name_en",
+ "creation": "2024-11-05 12:19:28.782839",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "subbrand_name_en",
+  "subbrand_name_ar",
+  "subbrand_name_fr",
+  "column_break_nmne",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "subbrand_name_en",
+   "fieldtype": "Data",
+   "label": "SubBrand Name EN",
+   "unique": 1
+  },
+  {
+   "fieldname": "subbrand_name_ar",
+   "fieldtype": "Data",
+   "label": "SubBrand Name AR"
+  },
+  {
+   "fieldname": "subbrand_name_fr",
+   "fieldtype": "Data",
+   "label": "SubBrand Name FR"
+  },
+  {
+   "fieldname": "column_break_nmne",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-05 12:32:10.750908",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "SubBrand 1",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

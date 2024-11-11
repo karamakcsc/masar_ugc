@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:applicationtool_en",
+ "creation": "2024-11-05 12:30:03.833350",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "applicationtool_en",
+  "applicationtool_ar",
+  "applicationtool_fr",
+  "column_break_lknx",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "applicationtool_en",
+   "fieldtype": "Data",
+   "label": "ApplicationTool EN",
+   "unique": 1
+  },
+  {
+   "fieldname": "applicationtool_ar",
+   "fieldtype": "Data",
+   "label": "ApplicationTool AR"
+  },
+  {
+   "fieldname": "applicationtool_fr",
+   "fieldtype": "Data",
+   "label": "ApplicationTool FR"
+  },
+  {
+   "fieldname": "column_break_lknx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-05 12:33:19.726042",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "ApplicationTool",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

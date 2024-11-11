@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:sheen_en",
+ "creation": "2024-11-05 12:28:51.509635",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sheen_en",
+  "sheen_ar",
+  "sheen_fr",
+  "column_break_wwun",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "sheen_en",
+   "fieldtype": "Data",
+   "label": "Sheen EN",
+   "unique": 1
+  },
+  {
+   "fieldname": "sheen_ar",
+   "fieldtype": "Data",
+   "label": "Sheen AR"
+  },
+  {
+   "fieldname": "sheen_fr",
+   "fieldtype": "Data",
+   "label": "Sheen FR"
+  },
+  {
+   "fieldname": "column_break_wwun",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-05 12:33:10.377346",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Sheen",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

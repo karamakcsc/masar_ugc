@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:surface1_en",
+ "creation": "2024-11-05 12:23:22.162000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "surface1_en",
+  "surface1_ar",
+  "surface1_fr",
+  "column_break_osti",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "surface1_en",
+   "fieldtype": "Data",
+   "label": "Surface1 EN",
+   "unique": 1
+  },
+  {
+   "fieldname": "surface1_ar",
+   "fieldtype": "Data",
+   "label": "Surface1 AR"
+  },
+  {
+   "fieldname": "surface1_fr",
+   "fieldtype": "Data",
+   "label": "Surface1 FR"
+  },
+  {
+   "fieldname": "column_break_osti",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-05 12:32:32.343239",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Surface1",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
