@@ -336,7 +336,14 @@ fixtures = [
                 "Quotation-custom_right_header_link",
                 "Quotation-custom_right_header",
                 "Tax Category-custom_column_break_fy4ai", 
-                "Tax Category-custom_sales_taxes_and_charges_template"
+                "Tax Category-custom_sales_taxes_and_charges_template",
+                "Brand-custom_column_break_jkogk",
+                "Brand-custom_section_break_u71wi",
+                "Brand-custom_brand_name_fr",
+                "Brand-custom_brand_name_ar", 
+                "Item-custom_subbrand2_en", 
+                "Item-custom_subbrand2_ar", 
+                "Item-custom_subbrand2_fr"
                 
             ]
         ]
@@ -373,7 +380,11 @@ fixtures = [
                     "Quotation-rounded_total-hidden",
                     "Quotation-base_rounded_total-print_hide",
                     "Quotation-base_rounded_total-hidden",
-                    "Quotation-taxes_and_charges-fetch_from"
+                    "Quotation-taxes_and_charges-fetch_from",
+                    "Quotation-sec_break23-hidden", 
+                    "Quotation-base_total_taxes_and_charges-hidden" , 
+                    "Quotation-total_taxes_and_charges-hidden",
+                    "Quotation-company-hidden"
                 ]
             ]
         ]

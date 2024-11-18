@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"U0Ya0TOWW-\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UGC Admin</span>\",\"col\":12}},{\"id\":\"yaqk9oygv1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"j6qSAkqQY8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Category\",\"col\":4}},{\"id\":\"b9g_6VogN5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Subbrand 1\",\"col\":4}},{\"id\":\"j33iEpqs1m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Use\",\"col\":4}},{\"id\":\"W4Jb1juI2O\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface1\",\"col\":4}},{\"id\":\"6_c99CIiVy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface2\",\"col\":4}},{\"id\":\"sHsqqEFlTU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface3\",\"col\":4}},{\"id\":\"DWqerMBPsQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Finishes\",\"col\":4}},{\"id\":\"Qybqzjabcr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sheen\",\"col\":4}},{\"id\":\"YA8T4Uk-gw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"ApplicationTool\",\"col\":4}},{\"id\":\"42eM8QoNaK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Brand\",\"col\":4}},{\"id\":\"TIdpGn13vA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incoterm\",\"col\":4}},{\"id\":\"gXcYJtyBlj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Header\",\"col\":4}}]",
+ "content": "[{\"id\":\"U0Ya0TOWW-\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UGC Admin</span>\",\"col\":12}},{\"id\":\"yaqk9oygv1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"j6qSAkqQY8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Category\",\"col\":4}},{\"id\":\"b9g_6VogN5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Subbrand 1\",\"col\":4}},{\"id\":\"-8ig9XRJcd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SubBrand 2\",\"col\":4}},{\"id\":\"j33iEpqs1m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Use\",\"col\":4}},{\"id\":\"W4Jb1juI2O\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface1\",\"col\":4}},{\"id\":\"6_c99CIiVy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface2\",\"col\":4}},{\"id\":\"sHsqqEFlTU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface3\",\"col\":4}},{\"id\":\"DWqerMBPsQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Finishes\",\"col\":4}},{\"id\":\"Qybqzjabcr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sheen\",\"col\":4}},{\"id\":\"YA8T4Uk-gw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"ApplicationTool\",\"col\":4}},{\"id\":\"42eM8QoNaK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Brand\",\"col\":4}},{\"id\":\"TIdpGn13vA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incoterm\",\"col\":4}},{\"id\":\"gXcYJtyBlj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Header\",\"col\":4}}]",
  "creation": "2024-11-13 19:22:32.978409",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "UGC Admin",
  "links": [],
- "modified": "2024-11-18 02:24:25.561053",
+ "modified": "2024-11-18 19:12:21.060574",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "UGC Admin",
@@ -29,6 +29,14 @@
  ],
  "sequence_id": 39.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "SubBrand 2",
+   "link_to": "SubBrand 2",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
   {
    "color": "Grey",
    "doc_view": "List",

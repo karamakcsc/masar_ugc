@@ -2,14 +2,14 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:subbrand_name_en",
- "creation": "2024-11-05 12:19:28.782839",
+ "creation": "2024-11-18 19:10:04.608860",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "subbrand_name_en",
   "subbrand_name_ar",
   "subbrand_name_fr",
-  "column_break_nmne",
+  "column_break_emlv",
   "is_enabled"
  ],
  "fields": [
@@ -36,22 +36,22 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_nmne",
-   "fieldtype": "Column Break"
-  },
-  {
    "default": "1",
    "fieldname": "is_enabled",
    "fieldtype": "Check",
    "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_emlv",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-18 19:13:06.837334",
+ "modified": "2024-11-18 19:14:47.520470",
  "modified_by": "Administrator",
  "module": "Masar UGC",
- "name": "SubBrand 1",
+ "name": "SubBrand 2",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
