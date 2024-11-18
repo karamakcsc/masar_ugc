@@ -127,9 +127,10 @@ doc_events = {
 		"validate": "masar_ugc.custom.item.item.validate"
 	}
 }
-# doctype_js = {
+doctype_js = {
 #    "Customer" : "custom/customer/customer.js"
-#  }
+    "Quotation" : "custom/quotation/quotation.js"
+ }
 # Scheduled Tasks
 # ---------------
 
@@ -322,8 +323,59 @@ fixtures = [
                 "Item-custom_column_break_nngsj",
                 "Brand-custom_is_enabled",
                 "Brand-custom_brand_fr",
-                "Brand-custom_brand_ar"
+                "Brand-custom_brand_ar",
+                "Quotation-custom_left_header",
+                "Quotation-custom_project",
+                "Incoterm-custom_section_break_4t80x",
+                "Incoterm-custom_is_enable",
+                "Incoterm-custom_column_break_dgsft",
+                "Quotation-custom_incoterms",
+                "Quotation-custom_quotation_type",
+                "Quotation-custom_left_header_link",
+                "Quotation-custom_column_break_tqgal",
+                "Quotation-custom_right_header_link",
+                "Quotation-custom_right_header",
+                "Tax Category-custom_column_break_fy4ai", 
+                "Tax Category-custom_sales_taxes_and_charges_template"
+                
             ]
         ]
-    ]}
+    ]},
+     {
+        "doctype": "Property Setter",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Quotation-main-field_order",
+                    "Quotation-payment_schedule_section-hidden",
+                    "Quotation-pricing_rule_details-hidden",
+                    "Quotation-bundle_items_section-hidden",
+                    "Quotation-sec_tax_breakup-hidden",
+                    "Quotation-section_break_44-hidden",
+                    "Quotation-totals-hidden",
+                    "Quotation-items-allow_bulk_edit",
+                    "Quotation-named_place-hidden",
+                    "Quotation-incoterm-hidden",
+                    "Quotation-shipping_rule-hidden",
+                    "Quotation-net_total-hidden",
+                    "Quotation-total-hidden",
+                    "Quotation-total_net_weight-hidden",
+                    "Quotation-total_qty-hidden",
+                    "Quotation-scan_barcode-hidden",
+                    "Quotation-more_info_tab-hidden",
+                    "Quotation-order_type-hidden",
+                    "Quotation-in_words-print_hide",
+                    "Quotation-in_words-hidden",
+                    "Quotation-disable_rounded_total-default",
+                    "Quotation-rounded_total-print_hide",
+                    "Quotation-rounded_total-hidden",
+                    "Quotation-base_rounded_total-print_hide",
+                    "Quotation-base_rounded_total-hidden",
+                    "Quotation-taxes_and_charges-fetch_from"
+                ]
+            ]
+        ]
+    }
 ]

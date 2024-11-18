@@ -1,0 +1,130 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"U0Ya0TOWW-\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UGC Admin</span>\",\"col\":12}},{\"id\":\"yaqk9oygv1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"j6qSAkqQY8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Category\",\"col\":4}},{\"id\":\"b9g_6VogN5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Subbrand 1\",\"col\":4}},{\"id\":\"j33iEpqs1m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Use\",\"col\":4}},{\"id\":\"W4Jb1juI2O\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface1\",\"col\":4}},{\"id\":\"6_c99CIiVy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface2\",\"col\":4}},{\"id\":\"sHsqqEFlTU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface3\",\"col\":4}},{\"id\":\"DWqerMBPsQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Finishes\",\"col\":4}},{\"id\":\"Qybqzjabcr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sheen\",\"col\":4}},{\"id\":\"YA8T4Uk-gw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"ApplicationTool\",\"col\":4}},{\"id\":\"42eM8QoNaK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Brand\",\"col\":4}},{\"id\":\"TIdpGn13vA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incoterm\",\"col\":4}},{\"id\":\"gXcYJtyBlj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Header\",\"col\":4}}]",
+ "creation": "2024-11-13 19:22:32.978409",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-review-points",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "UGC Admin",
+ "links": [],
+ "modified": "2024-11-18 02:24:25.561053",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "UGC Admin",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 39.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Header",
+   "link_to": "Header",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Category",
+   "link_to": "Category",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Incoterm",
+   "link_to": "Incoterm",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Subbrand 1",
+   "link_to": "SubBrand 1",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Product Use",
+   "link_to": "Product Use",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Surface1",
+   "link_to": "Surface1",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Surface2",
+   "link_to": "Surface2",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Surface3",
+   "link_to": "Surface3",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Finishes",
+   "link_to": "Finishes",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Sheen",
+   "link_to": "Sheen",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "ApplicationTool",
+   "link_to": "ApplicationTool",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Brand",
+   "link_to": "Brand",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "UGC Admin"
+}
