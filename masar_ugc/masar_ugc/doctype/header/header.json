@@ -13,6 +13,7 @@
   "right_header",
   "section_break_qyge",
   "title",
+  "abbr",
   "column_break_dlmk",
   "attach"
  ],
@@ -46,7 +47,9 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Title",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -56,18 +59,26 @@
   {
    "fieldname": "attach",
    "fieldtype": "Attach Image",
-   "label": "Attach"
+   "label": "Attach",
+   "reqd": 1
   },
   {
    "default": "0",
    "fieldname": "defualt",
    "fieldtype": "Check",
    "label": "Defualt"
+  },
+  {
+   "depends_on": "left_header",
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "label": "Abbr",
+   "mandatory_depends_on": "left_header"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-18 01:47:12.366378",
+ "modified": "2024-11-19 13:53:51.507870",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Header",

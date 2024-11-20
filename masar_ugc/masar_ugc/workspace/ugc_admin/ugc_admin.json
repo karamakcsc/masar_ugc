@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"U0Ya0TOWW-\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UGC Admin</span>\",\"col\":12}},{\"id\":\"yaqk9oygv1\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"j6qSAkqQY8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Category\",\"col\":4}},{\"id\":\"b9g_6VogN5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Subbrand 1\",\"col\":4}},{\"id\":\"-8ig9XRJcd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SubBrand 2\",\"col\":4}},{\"id\":\"j33iEpqs1m\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Use\",\"col\":4}},{\"id\":\"W4Jb1juI2O\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface1\",\"col\":4}},{\"id\":\"6_c99CIiVy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface2\",\"col\":4}},{\"id\":\"sHsqqEFlTU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface3\",\"col\":4}},{\"id\":\"DWqerMBPsQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Finishes\",\"col\":4}},{\"id\":\"Qybqzjabcr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sheen\",\"col\":4}},{\"id\":\"YA8T4Uk-gw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"ApplicationTool\",\"col\":4}},{\"id\":\"42eM8QoNaK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Brand\",\"col\":4}},{\"id\":\"TIdpGn13vA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incoterm\",\"col\":4}},{\"id\":\"gXcYJtyBlj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Header\",\"col\":4}}]",
+ "content": "[{\"id\":\"U0Ya0TOWW-\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UGC Admin</span>\",\"col\":12}},{\"id\":\"qTt5_BIG5Z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Category\",\"col\":4}},{\"id\":\"apC4knXUmz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Header\",\"col\":4}},{\"id\":\"abc0s_wl2R\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Application Tool\",\"col\":4}},{\"id\":\"SenMgs2xDr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Use\",\"col\":4}},{\"id\":\"2pQnQPG6rm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface1\",\"col\":4}},{\"id\":\"35d1tfYrHV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface2\",\"col\":4}},{\"id\":\"fdxtRLbXBa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface3\",\"col\":4}},{\"id\":\"Olr7M-Al3C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Finishes\",\"col\":4}},{\"id\":\"KbF6u9Q24j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incoterm\",\"col\":4}},{\"id\":\"SjAMTlRs1j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sheen\",\"col\":4}},{\"id\":\"20OOtscXAA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Brand\",\"col\":4}},{\"id\":\"tAD82Z_CQA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SubBrand 1\",\"col\":4}},{\"id\":\"IUmTBUznem\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SubBrand 2\",\"col\":3}}]",
  "creation": "2024-11-13 19:22:32.978409",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "UGC Admin",
  "links": [],
- "modified": "2024-11-18 19:12:21.060574",
+ "modified": "2024-11-20 14:35:54.376664",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "UGC Admin",
@@ -32,72 +32,8 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "SubBrand 2",
-   "link_to": "SubBrand 2",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Header",
-   "link_to": "Header",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
    "label": "Category",
    "link_to": "Category",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Incoterm",
-   "link_to": "Incoterm",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Subbrand 1",
-   "link_to": "SubBrand 1",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Product Use",
-   "link_to": "Product Use",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Surface1",
-   "link_to": "Surface1",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Surface2",
-   "link_to": "Surface2",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Surface3",
-   "link_to": "Surface3",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -112,6 +48,30 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Header",
+   "link_to": "Header",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Incoterm",
+   "link_to": "Incoterm",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Application Tool",
+   "link_to": "ApplicationTool",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Sheen",
    "link_to": "Sheen",
    "stats_filter": "[]",
@@ -120,8 +80,8 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "ApplicationTool",
-   "link_to": "ApplicationTool",
+   "label": "Product Use",
+   "link_to": "Product Use",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -130,6 +90,46 @@
    "doc_view": "List",
    "label": "Brand",
    "link_to": "Brand",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Surface2",
+   "link_to": "Surface2",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "SubBrand 1",
+   "link_to": "SubBrand 1",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Surface3",
+   "link_to": "Surface3",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "SubBrand 2",
+   "link_to": "SubBrand 2",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Surface1",
+   "link_to": "Surface1",
    "stats_filter": "[]",
    "type": "DocType"
   }

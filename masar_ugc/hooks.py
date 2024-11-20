@@ -125,7 +125,11 @@ app_license = "mit"
 doc_events = {
 	"Item": {
 		"validate": "masar_ugc.custom.item.item.validate"
-	}
+	}, 
+    "Quotation": {
+        "on_submit" : "masar_ugc.custom.quotation.quotation.on_submit", 
+        "autoname" : "masar_ugc.custom.quotation.quotation.autoname"
+    }
 }
 doctype_js = {
 #    "Customer" : "custom/customer/customer.js"
@@ -343,8 +347,19 @@ fixtures = [
                 "Brand-custom_brand_name_ar", 
                 "Item-custom_subbrand2_en", 
                 "Item-custom_subbrand2_ar", 
-                "Item-custom_subbrand2_fr"
-                
+                "Item-custom_subbrand2_fr", 
+                "Item-custom_applicationtool_2_en" , 
+                "Item-custom_applicationtool_2_ar" , 
+                "Item-custom_applicationtool_2_fr" , 
+                "Item-custom_applicationtool_3_en" , 
+                "Item-custom_applicationtool_3_ar" , 
+                "Item-custom_applicationtool_3_fr" , 
+                "Quotation Item-custom_section_break_lf7wl" , 
+                "Quotation Item-custom_color" , 
+                "Quotation Item-custom_pack_size" , 
+                "Quotation Item-custom_column_break_im5er" , 
+                "Quotation Item-custom_no_of_coats" , 
+                "Quotation Item-custom_spr_rate"
             ]
         ]
     ]},

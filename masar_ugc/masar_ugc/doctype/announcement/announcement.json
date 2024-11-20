@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-20 09:46:20.323412",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "is_enable",
+  "section_break_euxj",
+  "from_date",
+  "column_break_wspm",
+  "to_date",
+  "section_break_nvsw",
+  "title",
+  "announcement"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "is_enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  },
+  {
+   "fieldname": "section_break_euxj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wspm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_nvsw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "announcement",
+   "fieldtype": "Text Editor",
+   "label": "Announcement"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-20 09:54:04.185585",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Announcement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

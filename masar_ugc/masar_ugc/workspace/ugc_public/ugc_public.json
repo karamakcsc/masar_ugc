@@ -1,0 +1,108 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"qeO2lnnysO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UGC Public</span>\",\"col\":12}},{\"id\":\"2BQgr21gXz\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Employee Details\",\"col\":6}},{\"id\":\"I3q9dR4XQv\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Announcement\",\"col\":6}},{\"id\":\"Stwfwa3JW8\",\"type\":\"card\",\"data\":{\"card_name\":\"Shortcuts\",\"col\":3}},{\"id\":\"3DZ5vapre5\",\"type\":\"card\",\"data\":{\"card_name\":\"Shortcuts\",\"col\":3}},{\"id\":\"pWaXiEz0Vt\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h2\\\">KPI</span>\",\"col\":6}}]",
+ "creation": "2024-11-20 15:47:29.077124",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Employee Details",
+   "label": "Employee Details"
+  },
+  {
+   "custom_block_name": "Announcement",
+   "label": "Announcement"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "solid-info",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "UGC Public",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Shortcuts",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Finishes",
+   "link_count": 0,
+   "link_to": "Finishes",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Brand",
+   "link_count": 0,
+   "link_to": "Brand",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sheen",
+   "link_count": 0,
+   "link_to": "Sheen",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Incoterm",
+   "link_count": 0,
+   "link_to": "Incoterm",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SubBrand 1",
+   "link_count": 0,
+   "link_to": "SubBrand 1",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SubBrand 2",
+   "link_count": 0,
+   "link_to": "SubBrand 2",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-11-20 16:15:50.827276",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "UGC Public",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 40.0,
+ "shortcuts": [],
+ "title": "UGC Public"
+}
