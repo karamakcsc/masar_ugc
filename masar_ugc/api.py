@@ -3,19 +3,51 @@ from datetime import date
 
 @frappe.whitelist()
 def get_employee_details():
-    user = 'masterpainter@ugc.jo'#frappe.session.user#
+    '''
+    HTML: 
+                <h4>Employee Details</h4><br><br><br>
+            <div id="employee-info" style="display: flex; align-items: center; width: 100%; height: 30px;">
+                
+                <img id="employee-image" class="qr-code" src="" style="height: 4cm; width: 6cm; flex: 1;" alt="Employee Image">
+                <div class="print-heading" style="flex: 2;width: 10%; text-align: left;"></div>
+                <div class="print-heading" style="flex: 3; text-align: left;">
+                    <div id="employee_name"></div>
+                    <div id="cell_number"></div>
+                    <div id="department"></div>
+                </div>
+            </div><br><br><br><br><br><br>
+            
+    JS: 
+    
+        frappe.call({
+                method: "masar_ugc.api.get_employee_details",
+                callback(r) {
+                    if (r.message) {
+                        root_element.querySelector("#employee_name").innerHTML = '<b>First Name:</b><br>' + (r.message.employee_name || '');
+                        root_element.querySelector("#cell_number").innerHTML = '<b>Mobile:</b><br>' + (r.message.cell_number || '');
+                        root_element.querySelector("#department").innerHTML = '<b>Department:</b><br>' + (r.message.department || '');
+                        root_element.querySelector('#employee-image').src = r.message.image || '';
+                    } else {
+                        console.error("Employee not found for the specified ID.");
+                    }
+                },
+                error(err) {
+                    console.error("Error fetching employee data:", err);
+                }
+            });
+    '''
+    user = frappe.session.user#'masterpainter@ugc.jo'#
     e = frappe.qb.DocType('Employee')
     sql = (frappe.qb.from_(e).select(
-        (e.first_name) , (e.middle_name) , (e.last_name) , (e.department) , (e.image)
+        (e.employee_name) , (e.cell_number) , (e.department) , (e.image)
         )
         .where(e.user_id == user
         )
     ).run(as_dict = True)
     if len(sql) != 0 : 
         return {
-            'first_name' : sql[0]['first_name'],
-            'middle_name' : sql[0]['middle_name'],
-            'last_name' : sql[0]['last_name'],
+            'employee_name' : sql[0]['employee_name'],
+            'cell_number' : sql[0]['cell_number'],
             'department' : sql[0]['department'],
             'image' : sql[0]['image']
         }
@@ -24,6 +56,48 @@ def get_employee_details():
         
 @frappe.whitelist()
 def get_announcement():
+    """
+    HTML: 
+            <h4>Announcements</h4>
+            <div id="title"></div>
+            <div id="announcement"></div>
+            
+    JS: 
+    
+        frappe.call({
+        method: "masar_ugc.api.get_announcement",
+        callback(r) {
+            if (r.message && Array.isArray(r.message)) {
+                let announcements = r.message; 
+                let index = 0;
+                const allAnnouncements = announcements.map(announcement => {
+                    return `<b>Title:</b> ${announcement.title || ''}<br><b>Details:</b> ${announcement.announcement || ''}<br><br>`;
+                }).join('');
+
+                function displayAnnouncement() {
+                    const announcement = announcements[index];
+                    root_element.querySelector("#title").innerHTML = '<b>Title:</b> ' + (announcement.title || '');
+                    root_element.querySelector("#announcement").innerHTML = '<br><b>Details</b><br>' + (announcement.announcement || '');
+                    index++;
+                    if (index >= announcements.length) {
+                        index = 0;
+                    }
+                }
+                displayAnnouncement();
+                const intervalId = setInterval(displayAnnouncement, 25000);
+
+                // Add click event listener to the root element
+                root_element.addEventListener('click', () => {
+                    frappe.msgprint(allAnnouncements , title= frappe._("Announcements"));
+                });
+            } else {
+                console.error("No announcements found.");
+            }
+        },
+        error(err) {
+            console.error("Error fetching announcements:", err);
+        }
+    });"""
     today = date.today()
     a = frappe.qb.DocType('Announcement')
     sql = (
@@ -34,6 +108,7 @@ def get_announcement():
         
     ).run(as_dict = True)
     return sql 
+    
 
 @frappe.whitelist()
 def get_item_details():

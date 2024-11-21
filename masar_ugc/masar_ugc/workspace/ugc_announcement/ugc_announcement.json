@@ -1,0 +1,43 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"awuFQFUi84\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UGC Announcement</span>\",\"col\":12}},{\"id\":\"YoLeyDbiaL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Announcement\",\"col\":3}},{\"id\":\"9nZw3CdrGW\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Announcement\",\"col\":12}}]",
+ "creation": "2024-11-21 13:06:43.977104",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Announcement",
+   "label": "Announcement"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "add-round",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "UGC Announcement",
+ "links": [],
+ "modified": "2024-11-21 13:08:02.056843",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "UGC Announcement",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 41.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Announcement",
+   "link_to": "Announcement",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "UGC Announcement"
+}

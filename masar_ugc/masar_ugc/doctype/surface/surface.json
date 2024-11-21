@@ -16,18 +16,18 @@
   {
    "fieldname": "surface1_en",
    "fieldtype": "Data",
-   "label": "Surface1 EN",
+   "label": "Surface EN",
    "unique": 1
   },
   {
    "fieldname": "surface1_ar",
    "fieldtype": "Data",
-   "label": "Surface1 AR"
+   "label": "Surface AR"
   },
   {
    "fieldname": "surface1_fr",
    "fieldtype": "Data",
-   "label": "Surface1 FR"
+   "label": "Surface FR"
   },
   {
    "fieldname": "column_break_osti",
@@ -42,10 +42,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-05 12:32:32.343239",
+ "modified": "2024-11-21 12:44:18.764725",
  "modified_by": "Administrator",
  "module": "Masar UGC",
- "name": "Surface1",
+ "name": "Surface",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

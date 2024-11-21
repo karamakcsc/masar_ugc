@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Surface1(Document):
+class PackSize(Document):
 	pass

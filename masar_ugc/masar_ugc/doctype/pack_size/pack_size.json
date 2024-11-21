@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:pack_size_en",
+ "creation": "2024-11-21 12:48:15.653299",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "is_enable",
+  "section_break_evom",
+  "pack_size_en",
+  "pack_size_ar",
+  "column_break_jqju",
+  "pack_size_fr"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "is_enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  },
+  {
+   "fieldname": "section_break_evom",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pack_size_en",
+   "fieldtype": "Data",
+   "label": "Pack Size EN",
+   "unique": 1
+  },
+  {
+   "fieldname": "pack_size_ar",
+   "fieldtype": "Data",
+   "label": "Pack Size AR"
+  },
+  {
+   "fieldname": "column_break_jqju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pack_size_fr",
+   "fieldtype": "Data",
+   "label": "Pack Size FR"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-21 12:50:46.802919",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Pack Size",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
