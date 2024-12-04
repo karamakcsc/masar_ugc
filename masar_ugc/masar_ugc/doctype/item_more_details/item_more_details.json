@@ -1,0 +1,1191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-04 10:45:10.821857",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "section_break_zbri",
+  "visible",
+  "column_break_hpnl",
+  "sold",
+  "section_break_qdxe",
+  "category_en",
+  "brand_en",
+  "subbrand1_en",
+  "subbrand2_en",
+  "product_name_en",
+  "product_use_en",
+  "surface1_en",
+  "surface2_en",
+  "surface3_en",
+  "column_break_ifjg",
+  "category_ar",
+  "brand_ar",
+  "subbrand1_ar",
+  "subbrand2_ar",
+  "product_name_ar",
+  "product_use_ar",
+  "surface1_ar",
+  "surface2_ar",
+  "surface3_ar",
+  "column_break_qaob",
+  "category_fr",
+  "brand_fr",
+  "subbrand1_fr",
+  "subbrand2_fr",
+  "product_name_fr",
+  "product_use_fr",
+  "surface1_fr",
+  "surface2_fr",
+  "surface3_fr",
+  "section_break_nodg",
+  "finishes_en",
+  "colors_en",
+  "sheen_en",
+  "column_break_gxar",
+  "finishes_ar",
+  "colors_ar",
+  "sheen_ar",
+  "column_break_bvrx",
+  "finishes_fr",
+  "colors_fr",
+  "sheen_fr",
+  "section_break_vstz",
+  "packsize_en",
+  "coverageperpack_en",
+  "applicationtool_en",
+  "applicationtool_2_en",
+  "applicationtool_3_en",
+  "column_break_mcrm",
+  "packsize_ar",
+  "coverageperpack_ar",
+  "applicationtool_ar",
+  "applicationtool_2_ar",
+  "applicationtool_3_ar",
+  "column_break_rxvi",
+  "packsize_fr",
+  "coverageperpack_fr",
+  "applicationtool_fr",
+  "applicationtool_2_fr",
+  "applicationtool_3_fr",
+  "section_break_imws",
+  "subbrand_pic_en",
+  "subbrand_ved_en",
+  "tds_en",
+  "msds_en",
+  "column_break_ixwo",
+  "subbrand_pic_ar",
+  "subbrand_ved_ar",
+  "tds_ar",
+  "msds_ar",
+  "column_break_zqwe",
+  "subbrand_pic_fr",
+  "subbrand_ved_fr",
+  "tds_fr",
+  "msds_fr",
+  "section_break_vicc",
+  "metadisc_en",
+  "column_break_idbh",
+  "metadisc_ar",
+  "column_break_sggg",
+  "metadisc_fr",
+  "section_break_zzey",
+  "short_disc_en",
+  "column_break_ybnh",
+  "short_disc_ar",
+  "column_break_omlc",
+  "short_disc_fr",
+  "section_break_rncz",
+  "long_disc_en",
+  "section_break_hixr",
+  "long_disc_ar",
+  "section_break_knca",
+  "long_disc_fr",
+  "section_break_wtgq",
+  "upd_visible",
+  "column_break_wqxq",
+  "upd_sold",
+  "section_break_ntyh",
+  "upd_category_en",
+  "upd_brand_en",
+  "upd_subbrand1_en",
+  "upd_subbrand2_en",
+  "upd_product_name_en",
+  "upd_product_use_en",
+  "upd_surface1_en",
+  "upd_surface2_en",
+  "upd_surface3_en",
+  "column_break_otzd",
+  "upd_category_ar",
+  "upd_brand_ar",
+  "upd_subbrand1_ar",
+  "upd_subbrand2_ar",
+  "upd_product_name_ar",
+  "upd_product_use_ar",
+  "upd_surface1_ar",
+  "upd_surface2_ar",
+  "upd_surface3_ar",
+  "column_break_iehn",
+  "upd_category_fr",
+  "upd_brand_fr",
+  "upd_subbrand1_fr",
+  "upd_subbrand2_fr",
+  "upd_product_name_fr",
+  "upd_product_use_fr",
+  "upd_surface1_fr",
+  "upd_surface2_fr",
+  "upd_surface3_fr",
+  "section_break_egmc",
+  "upd_finishes_en",
+  "upd_colors_en",
+  "upd_sheen_en",
+  "column_break_lccy",
+  "upd_finishes_ar",
+  "upd_colors_ar",
+  "upd_sheen_ar",
+  "column_break_woct",
+  "upd_finishes_fr",
+  "upd_colors_fr",
+  "upd_sheen_fr",
+  "section_break_qpri",
+  "upd_packsize_en",
+  "upd_coverageperpack_en",
+  "upd_applicationtool_en",
+  "upd_applicationtool_2_en",
+  "column_break_tfln",
+  "upd_packsize_ar",
+  "upd_coverageperpack_ar",
+  "upd_applicationtool_ar",
+  "upd_applicationtool_2_ar",
+  "column_break_wbkk",
+  "upd_packsize_fr",
+  "upd_coverageperpack_fr",
+  "upd_applicationtool_fr",
+  "upd_applicationtool_2_fr",
+  "section_break_c5lc",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_c5lc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Item More Details",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_zbri",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "visible",
+   "fieldtype": "Check",
+   "label": "Visible",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hpnl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sold",
+   "fieldtype": "Check",
+   "label": "Sold",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_qdxe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item.custom_category_en",
+   "fieldname": "category_en",
+   "fieldtype": "Data",
+   "label": "Category EN",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ifjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_category_ar",
+   "fieldname": "category_ar",
+   "fieldtype": "Data",
+   "label": "Category AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qaob",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_category_fr",
+   "fieldname": "category_fr",
+   "fieldtype": "Data",
+   "label": "Category FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_brand_en",
+   "fieldname": "brand_en",
+   "fieldtype": "Data",
+   "label": "Brand EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_brand_ar",
+   "fieldname": "brand_ar",
+   "fieldtype": "Data",
+   "label": "Brand AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_brand_fr",
+   "fieldname": "brand_fr",
+   "fieldtype": "Data",
+   "label": "Brand FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_subbrand1_en",
+   "fieldname": "subbrand1_en",
+   "fieldtype": "Data",
+   "label": "SubBrand1 EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_subbrand1_ar",
+   "fieldname": "subbrand1_ar",
+   "fieldtype": "Data",
+   "label": "SubBrand1 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_subbrand1_fr",
+   "fieldname": "subbrand1_fr",
+   "fieldtype": "Data",
+   "label": "SubBrand1 FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_subbrand2_en",
+   "fieldname": "subbrand2_en",
+   "fieldtype": "Data",
+   "label": "SubBrand2 EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_subbrand2_ar",
+   "fieldname": "subbrand2_ar",
+   "fieldtype": "Data",
+   "label": "SubBrand2 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_surface2_fr",
+   "fieldname": "subbrand2_fr",
+   "fieldtype": "Data",
+   "label": "SubBrand2 FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_product_name_en",
+   "fieldname": "product_name_en",
+   "fieldtype": "Data",
+   "label": "Product Name EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_product_name_ar",
+   "fieldname": "product_name_ar",
+   "fieldtype": "Data",
+   "label": "Product Name AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_product_name_fr",
+   "fieldname": "product_name_fr",
+   "fieldtype": "Data",
+   "label": "Product Name FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_product_use_en",
+   "fieldname": "product_use_en",
+   "fieldtype": "Data",
+   "label": "Product Use EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_product_use_ar",
+   "fieldname": "product_use_ar",
+   "fieldtype": "Data",
+   "label": "Product Use AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_product_use_fr",
+   "fieldname": "product_use_fr",
+   "fieldtype": "Data",
+   "label": "Product Use FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_surface1_en",
+   "fieldname": "surface1_en",
+   "fieldtype": "Data",
+   "label": "Surface1 EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_surface1_ar",
+   "fieldname": "surface1_ar",
+   "fieldtype": "Data",
+   "label": "Surface1 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_surface1_fr",
+   "fieldname": "surface1_fr",
+   "fieldtype": "Data",
+   "label": "Surface1 FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_surface2_en",
+   "fieldname": "surface2_en",
+   "fieldtype": "Data",
+   "label": "Surface2 EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_surface2_ar",
+   "fieldname": "surface2_ar",
+   "fieldtype": "Data",
+   "label": "Surface2 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_surface2_fr",
+   "fieldname": "surface2_fr",
+   "fieldtype": "Data",
+   "label": "Surface2 FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_surface3_en",
+   "fieldname": "surface3_en",
+   "fieldtype": "Data",
+   "label": "Surface3 EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_surface3_ar",
+   "fieldname": "surface3_ar",
+   "fieldtype": "Data",
+   "label": "Surface3 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_surface3_fr",
+   "fieldname": "surface3_fr",
+   "fieldtype": "Data",
+   "label": "Surface3 FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_nodg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item.custom_finishes_en",
+   "fieldname": "finishes_en",
+   "fieldtype": "Data",
+   "label": "Finishes EN",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gxar",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_finishes_ar",
+   "fieldname": "finishes_ar",
+   "fieldtype": "Data",
+   "label": "Finishes AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bvrx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_finishes_fr",
+   "fieldname": "finishes_fr",
+   "fieldtype": "Data",
+   "label": "Finishes FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_colors_en",
+   "fieldname": "colors_en",
+   "fieldtype": "Data",
+   "label": "Colors EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_colors_ar",
+   "fieldname": "colors_ar",
+   "fieldtype": "Data",
+   "label": "Colors AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_colors_fr",
+   "fieldname": "colors_fr",
+   "fieldtype": "Data",
+   "label": "Colors FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_sheen_en",
+   "fieldname": "sheen_en",
+   "fieldtype": "Data",
+   "label": "Sheen EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_sheen_ar",
+   "fieldname": "sheen_ar",
+   "fieldtype": "Data",
+   "label": "Sheen AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_sheen_fr",
+   "fieldname": "sheen_fr",
+   "fieldtype": "Data",
+   "label": "Sheen FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_vstz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item.custom_packsize_en",
+   "fieldname": "packsize_en",
+   "fieldtype": "Data",
+   "label": "PackSize EN",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mcrm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_packsize_ar",
+   "fieldname": "packsize_ar",
+   "fieldtype": "Data",
+   "label": "PackSize AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rxvi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_packsize_fr",
+   "fieldname": "packsize_fr",
+   "fieldtype": "Data",
+   "label": "PackSize FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_coverageperpack_en",
+   "fieldname": "coverageperpack_en",
+   "fieldtype": "Data",
+   "label": "CoveragePerPack EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_coverageperpack_ar",
+   "fieldname": "coverageperpack_ar",
+   "fieldtype": "Data",
+   "label": "CoveragePerPack AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_coverageperpack_fr",
+   "fieldname": "coverageperpack_fr",
+   "fieldtype": "Data",
+   "label": "CoveragePerPack FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_applicationtool_en",
+   "fieldname": "applicationtool_en",
+   "fieldtype": "Data",
+   "label": "ApplicationTool EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_applicationtool_ar",
+   "fieldname": "applicationtool_ar",
+   "fieldtype": "Data",
+   "label": "ApplicationTool AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_applicationtool_fr",
+   "fieldname": "applicationtool_fr",
+   "fieldtype": "Data",
+   "label": "ApplicationTool FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_applicationtool_2_en",
+   "fieldname": "applicationtool_2_en",
+   "fieldtype": "Data",
+   "label": "ApplicationTool 2 EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_applicationtool_2_ar",
+   "fieldname": "applicationtool_2_ar",
+   "fieldtype": "Data",
+   "label": "ApplicationTool 2 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_applicationtool_2_fr",
+   "fieldname": "applicationtool_2_fr",
+   "fieldtype": "Data",
+   "label": "ApplicationTool 2 FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_applicationtool_3_en",
+   "fieldname": "applicationtool_3_en",
+   "fieldtype": "Data",
+   "label": "ApplicationTool 3 EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_applicationtool_3_ar",
+   "fieldname": "applicationtool_3_ar",
+   "fieldtype": "Data",
+   "label": "ApplicationTool 3 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_applicationtool_3_fr",
+   "fieldname": "applicationtool_3_fr",
+   "fieldtype": "Data",
+   "label": "ApplicationTool 3 FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_imws",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item.custom_subbrand_pic_en",
+   "fieldname": "subbrand_pic_en",
+   "fieldtype": "Data",
+   "label": "SubBrand Pic EN",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ixwo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_subbrand_pic_ar",
+   "fieldname": "subbrand_pic_ar",
+   "fieldtype": "Data",
+   "label": "SubBrand Pic AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zqwe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_subbrand_pic_fr",
+   "fieldname": "subbrand_pic_fr",
+   "fieldtype": "Data",
+   "label": "SubBrand Pic FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_subbrand_ved_en",
+   "fieldname": "subbrand_ved_en",
+   "fieldtype": "Data",
+   "label": "SubBrand Ved EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_subbrand_ved_ar",
+   "fieldname": "subbrand_ved_ar",
+   "fieldtype": "Data",
+   "label": "SubBrand Ved AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_subbrand_ved_fr",
+   "fieldname": "subbrand_ved_fr",
+   "fieldtype": "Data",
+   "label": "SubBrand Ved FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_tds_en",
+   "fieldname": "tds_en",
+   "fieldtype": "Data",
+   "label": "TDS EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_tds_ar",
+   "fieldname": "tds_ar",
+   "fieldtype": "Data",
+   "label": "TDS AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_tds_fr",
+   "fieldname": "tds_fr",
+   "fieldtype": "Data",
+   "label": "TDS FR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_msds_en",
+   "fieldname": "msds_en",
+   "fieldtype": "Data",
+   "label": "MSDS EN",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_msds_ar",
+   "fieldname": "msds_ar",
+   "fieldtype": "Data",
+   "label": "MSDS AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.custom_msds_fr",
+   "fieldname": "msds_fr",
+   "fieldtype": "Data",
+   "label": "MSDS FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_vicc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item.custom_metadisc_en",
+   "fieldname": "metadisc_en",
+   "fieldtype": "Small Text",
+   "label": "MetaDisc EN",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_idbh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_metadisc_ar",
+   "fieldname": "metadisc_ar",
+   "fieldtype": "Small Text",
+   "label": "MetaDisc AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sggg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_metadisc_fr",
+   "fieldname": "metadisc_fr",
+   "fieldtype": "Small Text",
+   "label": "MetaDisc FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_zzey",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item.custom_short_disc_en",
+   "fieldname": "short_disc_en",
+   "fieldtype": "Small Text",
+   "label": "Short Disc EN",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ybnh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_short_disc_ar",
+   "fieldname": "short_disc_ar",
+   "fieldtype": "Small Text",
+   "label": "Short Disc AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_omlc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.custom_short_disc_fr",
+   "fieldname": "short_disc_fr",
+   "fieldtype": "Small Text",
+   "label": "Short Disc FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rncz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item.custom_long_disc_en",
+   "fieldname": "long_disc_en",
+   "fieldtype": "Text Editor",
+   "label": "Long Disc EN",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_hixr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item.custom_long_disc_ar",
+   "fieldname": "long_disc_ar",
+   "fieldtype": "Text Editor",
+   "label": "Long Disc AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_knca",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item.custom_long_disc_fr",
+   "fieldname": "long_disc_fr",
+   "fieldtype": "Text Editor",
+   "label": "Long Disc FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wtgq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "upd_visible",
+   "fieldtype": "Check",
+   "label": "Visible"
+  },
+  {
+   "fieldname": "column_break_wqxq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "upd_sold",
+   "fieldtype": "Check",
+   "label": "Sold"
+  },
+  {
+   "fieldname": "section_break_ntyh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "upd_category_en",
+   "fieldtype": "Link",
+   "label": "Category EN",
+   "options": "Category"
+  },
+  {
+   "fieldname": "column_break_otzd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "upd_category_en.category_name_ar",
+   "fieldname": "upd_category_ar",
+   "fieldtype": "Data",
+   "label": "Category AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_iehn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "upd_category_en.category_name_fr",
+   "fieldname": "upd_category_fr",
+   "fieldtype": "Data",
+   "label": "Category FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upd_brand_en",
+   "fieldtype": "Link",
+   "label": "Brand EN",
+   "options": "Brand"
+  },
+  {
+   "fetch_from": "upd_brand_en.custom_brand_name_ar",
+   "fieldname": "upd_brand_ar",
+   "fieldtype": "Data",
+   "label": "Brand AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upd_brand_en.custom_brand_name_fr",
+   "fieldname": "upd_brand_fr",
+   "fieldtype": "Data",
+   "label": "Brand FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upd_subbrand1_en",
+   "fieldtype": "Link",
+   "label": "SubBrand1 EN",
+   "options": "SubBrand 1"
+  },
+  {
+   "fetch_from": "upd_subbrand1_en.subbrand_name_ar",
+   "fieldname": "upd_subbrand1_ar",
+   "fieldtype": "Data",
+   "label": "SubBrand1 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upd_subbrand1_en.subbrand_name_fr",
+   "fieldname": "upd_subbrand1_fr",
+   "fieldtype": "Data",
+   "label": "SubBrand1 FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upd_subbrand2_en",
+   "fieldtype": "Link",
+   "label": "SubBrand2 EN",
+   "options": "SubBrand 2"
+  },
+  {
+   "fetch_from": "upd_subbrand2_en.subbrand_name_ar",
+   "fieldname": "upd_subbrand2_ar",
+   "fieldtype": "Data",
+   "label": "SubBrand2 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upd_subbrand2_en.subbrand_name_fr",
+   "fieldname": "upd_subbrand2_fr",
+   "fieldtype": "Data",
+   "label": "SubBrand2 FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upd_product_name_en",
+   "fieldtype": "Data",
+   "label": "Product Name EN"
+  },
+  {
+   "fieldname": "upd_product_name_ar",
+   "fieldtype": "Data",
+   "label": "Product Name AR"
+  },
+  {
+   "fieldname": "upd_product_name_fr",
+   "fieldtype": "Data",
+   "label": "Product Name FR"
+  },
+  {
+   "fieldname": "upd_product_use_en",
+   "fieldtype": "Link",
+   "label": "Product Use EN",
+   "options": "Product Use"
+  },
+  {
+   "fetch_from": "upd_product_use_en.product_use_ar",
+   "fieldname": "upd_product_use_ar",
+   "fieldtype": "Data",
+   "label": "Product Use AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upd_product_use_en.product_use_fr",
+   "fieldname": "upd_product_use_fr",
+   "fieldtype": "Data",
+   "label": "Product Use FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upd_surface1_en",
+   "fieldtype": "Link",
+   "label": "Surface1 EN",
+   "options": "Surface"
+  },
+  {
+   "fetch_from": "upd_surface1_en.surface1_ar",
+   "fieldname": "upd_surface1_ar",
+   "fieldtype": "Data",
+   "label": "Surface1 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upd_surface1_en.surface1_fr",
+   "fieldname": "upd_surface1_fr",
+   "fieldtype": "Data",
+   "label": "Surface1 FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upd_surface2_en",
+   "fieldtype": "Link",
+   "label": "Surface2 EN",
+   "options": "Surface2"
+  },
+  {
+   "fetch_from": "upd_surface2_en.surface2_ar",
+   "fieldname": "upd_surface2_ar",
+   "fieldtype": "Data",
+   "label": "Surface2 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upd_surface2_en.surface2_fr",
+   "fieldname": "upd_surface2_fr",
+   "fieldtype": "Data",
+   "label": "Surface2 FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upd_surface3_en",
+   "fieldtype": "Link",
+   "label": "Surface3 EN",
+   "options": "Surface3"
+  },
+  {
+   "fetch_from": "upd_surface3_en.surface3_ar",
+   "fieldname": "upd_surface3_ar",
+   "fieldtype": "Data",
+   "label": "Surface3 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upd_surface3_en.surface3_fr",
+   "fieldname": "upd_surface3_fr",
+   "fieldtype": "Data",
+   "label": "Surface3 FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_egmc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "upd_finishes_en",
+   "fieldtype": "Link",
+   "label": "Finishes EN",
+   "options": "Finishes"
+  },
+  {
+   "fieldname": "column_break_lccy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "upd_finishes_en.finishes_ar",
+   "fieldname": "upd_finishes_ar",
+   "fieldtype": "Data",
+   "label": "Finishes AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_woct",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "upd_finishes_en.finishes_fr",
+   "fieldname": "upd_finishes_fr",
+   "fieldtype": "Data",
+   "label": "Finishes FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upd_colors_en",
+   "fieldtype": "Data",
+   "label": "Colors EN"
+  },
+  {
+   "fieldname": "upd_colors_ar",
+   "fieldtype": "Data",
+   "label": "Colors AR"
+  },
+  {
+   "fieldname": "upd_colors_fr",
+   "fieldtype": "Data",
+   "label": "Colors FR"
+  },
+  {
+   "fieldname": "upd_sheen_en",
+   "fieldtype": "Link",
+   "label": "Sheen EN",
+   "options": "Sheen"
+  },
+  {
+   "fetch_from": "upd_sheen_en.sheen_ar",
+   "fieldname": "upd_sheen_ar",
+   "fieldtype": "Data",
+   "label": "Sheen AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upd_sheen_en.sheen_fr",
+   "fieldname": "upd_sheen_fr",
+   "fieldtype": "Data",
+   "label": "Sheen FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_qpri",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "upd_packsize_en",
+   "fieldtype": "Link",
+   "label": "PackSize EN",
+   "options": "Pack Size"
+  },
+  {
+   "fieldname": "column_break_tfln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "upd_packsize_en.pack_size_ar",
+   "fieldname": "upd_packsize_ar",
+   "fieldtype": "Data",
+   "label": "PackSize AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wbkk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "upd_packsize_en.pack_size_fr",
+   "fieldname": "upd_packsize_fr",
+   "fieldtype": "Data",
+   "label": "PackSize FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upd_coverageperpack_en",
+   "fieldtype": "Data",
+   "label": "CoveragePerPack EN"
+  },
+  {
+   "fieldname": "upd_coverageperpack_ar",
+   "fieldtype": "Data",
+   "label": "CoveragePerPack AR"
+  },
+  {
+   "fieldname": "upd_coverageperpack_fr",
+   "fieldtype": "Data",
+   "label": "CoveragePerPack FR"
+  },
+  {
+   "fieldname": "upd_applicationtool_en",
+   "fieldtype": "Link",
+   "label": "ApplicationTool EN",
+   "options": "ApplicationTool"
+  },
+  {
+   "fetch_from": "upd_applicationtool_en.applicationtool_ar",
+   "fieldname": "upd_applicationtool_ar",
+   "fieldtype": "Data",
+   "label": "ApplicationTool AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upd_applicationtool_en.applicationtool_fr",
+   "fieldname": "upd_applicationtool_fr",
+   "fieldtype": "Data",
+   "label": "ApplicationTool FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upd_applicationtool_2_en",
+   "fieldtype": "Link",
+   "label": "ApplicationTool 2 EN",
+   "options": "ApplicationTool"
+  },
+  {
+   "fetch_from": "upd_applicationtool_en.applicationtool_ar",
+   "fieldname": "upd_applicationtool_2_ar",
+   "fieldtype": "Data",
+   "label": "ApplicationTool 2 AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "upd_applicationtool_en.applicationtool_fr",
+   "fieldname": "upd_applicationtool_2_fr",
+   "fieldtype": "Data",
+   "label": "ApplicationTool 2 FR",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-04 13:23:45.860224",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Item More Details",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -134,6 +134,7 @@ doc_events = {
 doctype_js = {
 #    "Customer" : "custom/customer/customer.js"
     "Quotation" : "custom/quotation/quotation.js"
+    # "Item": "custom/item/item.js"
  }
 # Scheduled Tasks
 # ---------------
@@ -359,7 +360,8 @@ fixtures = [
                 "Quotation Item-custom_pack_size" , 
                 "Quotation Item-custom_column_break_im5er" , 
                 "Quotation Item-custom_no_of_coats" , 
-                "Quotation Item-custom_spr_rate"
+                "Quotation Item-custom_spr_rate",
+                "Item-custom_is_publish"
             ]
         ]
     ]},
@@ -399,7 +401,8 @@ fixtures = [
                     "Quotation-sec_break23-hidden", 
                     "Quotation-base_total_taxes_and_charges-hidden" , 
                     "Quotation-total_taxes_and_charges-hidden",
-                    "Quotation-company-hidden"
+                    "Quotation-company-hidden",
+                    "Quotation-quotation_to-hidden"
                 ]
             ]
         ]

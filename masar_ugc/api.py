@@ -98,18 +98,36 @@ def get_announcement():
             console.error("Error fetching announcements:", err);
         }
     });"""
+    if frappe.session.user == 'Administrator':
+        today = date.today()
+        a = frappe.qb.DocType('Announcement')
+        sql = (
+            frappe.qb.from_(a)
+            .select((a.title) , (a.announcement) )
+            .where(a.from_date <= today)
+            .where(a.to_date >= today)
+            
+        ).run(as_dict = True)
+        return sql 
+    user = frappe.session.user
     today = date.today()
     a = frappe.qb.DocType('Announcement')
+    ugm = frappe.qb.DocType('User Group Member')
     sql = (
         frappe.qb.from_(a)
-        .select((a.title) , (a.announcement) )
+        .join(ugm).on(ugm.parent == a.name)
+        .select((a.title) , (a.announcement) , (ugm.user))
         .where(a.from_date <= today)
         .where(a.to_date >= today)
-        
     ).run(as_dict = True)
-    return sql 
+    data = list()
+    for s in sql: 
+        if user == s.user:
+            data.append(s)
+      
+    return data 
     
-
+    
 @frappe.whitelist()
 def get_item_details():
     return frappe.db.sql("""

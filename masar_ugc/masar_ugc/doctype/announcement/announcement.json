@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:title",
  "creation": "2024-11-20 09:46:20.323412",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,7 +13,8 @@
   "to_date",
   "section_break_nvsw",
   "title",
-  "announcement"
+  "announcement",
+  "allow_to"
  ],
  "fields": [
   {
@@ -56,15 +58,23 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title"
+   "label": "Title",
+   "unique": 1
+  },
+  {
+   "fieldname": "allow_to",
+   "fieldtype": "Table MultiSelect",
+   "label": "Allow To",
+   "options": "User Group Member"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-20 09:54:04.185585",
+ "modified": "2024-12-04 15:34:45.700701",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Announcement",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

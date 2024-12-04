@@ -9,14 +9,14 @@
  "hide_custom": 0,
  "icon": "color-review-points",
  "idx": 0,
- "indicator_color": "green",
+ "indicator_color": "",
  "is_hidden": 0,
- "label": "UGC Admin",
+ "label": "UGC Product Admin",
  "links": [],
- "modified": "2024-11-21 13:05:45.308542",
+ "modified": "2024-12-04 15:35:37.361927",
  "modified_by": "Administrator",
  "module": "Masar UGC",
- "name": "UGC Admin",
+ "name": "UGC Product Admin",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
@@ -126,5 +126,5 @@
    "type": "DocType"
   }
  ],
- "title": "UGC Admin"
+ "title": "UGC Product Admin"
 }
