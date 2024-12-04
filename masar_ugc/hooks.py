@@ -361,6 +361,7 @@ fixtures = [
                 "Quotation Item-custom_column_break_im5er" , 
                 "Quotation Item-custom_no_of_coats" , 
                 "Quotation Item-custom_spr_rate",
+                "Quotation-custom_attention"
                 "Item-custom_is_publish"
             ]
         ]
