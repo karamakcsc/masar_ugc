@@ -1,11 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:title",
+ "autoname": "naming_series:",
  "creation": "2024-11-20 09:46:20.323412",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
+  "column_break_fhfd",
   "is_enable",
   "section_break_euxj",
   "from_date",
@@ -21,6 +23,7 @@
    "default": "1",
    "fieldname": "is_enable",
    "fieldtype": "Check",
+   "in_standard_filter": 1,
    "label": "Enable"
   },
   {
@@ -58,23 +61,32 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title",
-   "unique": 1
+   "label": "Title"
   },
   {
    "fieldname": "allow_to",
    "fieldtype": "Table MultiSelect",
    "label": "Allow To",
    "options": "User Group Member"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ANN-.YYYY.-"
+  },
+  {
+   "fieldname": "column_break_fhfd",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-04 15:34:45.700701",
+ "modified": "2024-12-05 11:47:15.430687",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Announcement",
- "naming_rule": "By fieldname",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -90,7 +102,10 @@
    "write": 1
   }
  ],
+ "search_fields": "title",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "title"
 }

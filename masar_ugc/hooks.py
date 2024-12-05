@@ -133,6 +133,7 @@ doc_events = {
 }
 doctype_js = {
 #    "Customer" : "custom/customer/customer.js"
+    "Employee": "custom/employee/employee.js",
     "Quotation" : "custom/quotation/quotation.js"
     # "Item": "custom/item/item.js"
  }

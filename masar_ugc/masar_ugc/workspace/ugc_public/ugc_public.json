@@ -22,7 +22,7 @@
  "is_hidden": 0,
  "label": "UGC Public",
  "links": [],
- "modified": "2024-11-21 15:00:40.942841",
+ "modified": "2024-12-05 12:41:54.204288",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "UGC Public",
@@ -31,7 +31,11 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
  "sequence_id": 40.0,
  "shortcuts": [],
  "title": "UGC Public"
