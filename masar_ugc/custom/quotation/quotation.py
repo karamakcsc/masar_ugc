@@ -42,15 +42,15 @@ def autoname(self , method):
             f_name = full_name['first_name'].split()
             first_initial = f_name[0][0]
         else: 
-            first_initial = 'N/A'
+            first_initial = 'N-A'
         if full_name['last_name']:
             l_name = full_name['last_name'].split()
             last_initial = l_name[0][0]
         else: 
-            last_initial = 'N/A'
+            last_initial = 'N-A'
     else: 
-            first_initial = 'FN/A'
-            last_initial = 'LN/A'
+            first_initial = 'FN-A'
+            last_initial = 'LN-A'
     part_one = str(first_initial + last_initial)
     part_two = "SO"
     headers_validate(self)
