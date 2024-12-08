@@ -405,7 +405,8 @@ fixtures = [
                     "Quotation-total_taxes_and_charges-hidden",
                     "Quotation-company-hidden",
                     "Quotation-quotation_to-hidden",
-                    "Quotation Item-item_name-in_list_view"
+                    "Quotation Item-item_name-in_list_view",
+                    "Quotation-company-default"
                 ]
             ]
         ]
