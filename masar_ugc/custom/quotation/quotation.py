@@ -33,10 +33,24 @@ def headers_validate(self):
 
 def autoname(self , method): 
     h = frappe.qb.DocType('Header')
-    full_name = self.customer_name
-    names = full_name.split()
-    first_initial = names[0][0]
-    last_initial = names[-1][0]
+    user = frappe.session.user
+    e = frappe.qb.DocType('Employee')
+    sql = frappe.frappe.qb.from_(e).select(e.first_name , e.last_name).where(e.user_id == user).run(as_dict = True)
+    if sql and sql[0]:
+        full_name = sql[0]
+        if full_name['first_name']:
+            f_name = full_name['first_name'].split()
+            first_initial = f_name[0][0]
+        else: 
+            first_initial = 'N/A'
+        if full_name['last_name']:
+            l_name = full_name['last_name'].split()
+            last_initial = l_name[0][0]
+        else: 
+            last_initial = 'N/A'
+    else: 
+            first_initial = 'FN/A'
+            last_initial = 'LN/A'
     part_one = str(first_initial + last_initial)
     part_two = "SO"
     headers_validate(self)
