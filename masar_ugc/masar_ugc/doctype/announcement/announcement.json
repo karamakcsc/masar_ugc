@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "column_break_asez",
   "naming_series",
   "column_break_fhfd",
   "is_enable",
@@ -70,19 +71,25 @@
    "options": "User Group Member"
   },
   {
+   "default": "ANN-.YYYY.-",
    "fieldname": "naming_series",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Series",
    "options": "ANN-.YYYY.-"
   },
   {
    "fieldname": "column_break_fhfd",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_asez",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-05 11:47:15.430687",
+ "modified": "2024-12-05 12:49:35.031240",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Announcement",
