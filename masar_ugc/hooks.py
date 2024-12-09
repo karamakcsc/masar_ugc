@@ -363,7 +363,17 @@ fixtures = [
                 "Quotation Item-custom_no_of_coats" , 
                 "Quotation Item-custom_spr_rate",
                 "Quotation-custom_attention",
-                "Item-custom_is_publish"
+                "Item-custom_is_publish",
+                "Quotation-custom_payment_term",
+                "Quotation-custom_address", 
+                "Quotation-custom_title1", 
+                "Quotation-custom_section_break_nvp9m", 
+                "Quotation-custom_title2", 
+                "Quotation-custom_items2", 
+                "Quotation-custom_section_break_qvuqs", 
+                "Quotation-custom_title3",
+                "Quotation-custom_items3",
+                "Quotation-custom_coats_or_dft"
             ]
         ]
     ]},
@@ -406,7 +416,8 @@ fixtures = [
                     "Quotation-company-hidden",
                     "Quotation-quotation_to-hidden",
                     "Quotation Item-item_name-in_list_view",
-                    "Quotation-company-default"
+                    "Quotation-company-default",
+                    "Quotation-address_and_contact_tab-hidden"
                 ]
             ]
         ]
