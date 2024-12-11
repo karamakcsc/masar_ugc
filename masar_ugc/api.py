@@ -146,5 +146,6 @@ def get_item_details():
                             custom_metadisc_ar ,custom_metadisc_fr , custom_long_disc_en ,custom_long_disc_ar ,custom_long_disc_fr ,
                             custom_applicationtool_2_en , custom_applicationtool_2_ar , custom_applicationtool_2_fr, custom_applicationtool_3_en , 
                             custom_applicationtool_3_ar , custom_applicationtool_3_fr
-                        FROM tabItem ti """)
+                        FROM tabItem ti
+                        WHERE disabled = 0 AND custom_visible = 1""", as_dict= True)
     
