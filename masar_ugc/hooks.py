@@ -373,7 +373,8 @@ fixtures = [
                 "Quotation-custom_section_break_qvuqs", 
                 "Quotation-custom_title3",
                 "Quotation-custom_items3",
-                "Quotation-custom_coats_or_dft"
+                "Quotation-custom_coats_or_dft", 
+                "Item-custom_friendly_url"
             ]
         ]
     ]},
