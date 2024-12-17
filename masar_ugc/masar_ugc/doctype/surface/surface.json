@@ -10,7 +10,13 @@
   "surface1_ar",
   "surface1_fr",
   "column_break_osti",
-  "is_enabled"
+  "is_enabled",
+  "section_break_obfo",
+  "surfacemetadiscen",
+  "column_break_necr",
+  "surfacemetadiscar",
+  "column_break_arfv",
+  "surfacemetadiscfr"
  ],
  "fields": [
   {
@@ -38,11 +44,38 @@
    "fieldname": "is_enabled",
    "fieldtype": "Check",
    "label": "Enabled"
+  },
+  {
+   "fieldname": "section_break_obfo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "surfacemetadiscen",
+   "fieldtype": "Small Text",
+   "label": "SurfaceMetaDiscEN"
+  },
+  {
+   "fieldname": "column_break_necr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "surfacemetadiscar",
+   "fieldtype": "Small Text",
+   "label": "SurfaceMetaDiscAR"
+  },
+  {
+   "fieldname": "column_break_arfv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "surfacemetadiscfr",
+   "fieldtype": "Small Text",
+   "label": "SurfaceMetaDiscFR"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-21 12:44:18.764725",
+ "modified": "2024-12-17 13:52:42.943986",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Surface",

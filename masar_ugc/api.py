@@ -159,4 +159,13 @@ def get_category_details():
                             category_meta_disc_ar, category_meta_disc_fr
                         FROM tabCategory tc
                         WHERE is_enabled = 1 """, as_dict= True)
+
+@frappe.whitelist()
+def get_surface_details():
+    return frappe.db.sql("""
+                         SELECT 
+                            surface1_en, surface1_ar, surface1_fr,
+                            surfacemetadiscen, surfacemetadiscar, surfacemetadiscfr 
+                        FROM tabCategory tc
+                        WHERE is_enabled = 1 """, as_dict= True)
     
