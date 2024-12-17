@@ -147,7 +147,7 @@ def get_item_details():
                             custom_applicationtool_2_en , custom_applicationtool_2_ar , custom_applicationtool_2_fr, custom_applicationtool_3_en , 
                             custom_applicationtool_3_ar , custom_applicationtool_3_fr , custom_friendly_url
                         FROM tabItem ti
-                        WHERE disabled = 0 AND custom_visible = 1""", as_dict= True)
+                        WHERE disabled = 0 AND custom_visible = 1 AND workflow_state = 'Publish' """, as_dict= True)
 
 
 
