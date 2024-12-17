@@ -374,13 +374,7 @@ fixtures = [
                 "Quotation-custom_title3",
                 "Quotation-custom_items3",
                 "Quotation-custom_coats_or_dft", 
-                "Item-custom_friendly_url",
-                "Category-custom_section_break_bkjt7", 
-                "Category-custom_category_meta_disc_en",
-                "Category-custom_column_break_0doyw",
-                "Category-custom_category_meta_disc_ar",
-                "Category-custom_column_break_a5q2a", 
-                "Category-custom_category_meta_disc_fr"
+                "Item-custom_friendly_url"
             ]
         ]
     ]},

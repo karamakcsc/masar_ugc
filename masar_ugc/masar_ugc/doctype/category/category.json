@@ -10,7 +10,13 @@
   "category_name_ar",
   "category_name_fr",
   "column_break_prhv",
-  "is_enabled"
+  "is_enabled",
+  "section_break_sasd",
+  "category_meta_disc_en",
+  "column_break_jios",
+  "category_meta_disc_ar",
+  "column_break_wpfs",
+  "category_meta_disc_fr"
  ],
  "fields": [
   {
@@ -38,11 +44,38 @@
    "fieldname": "is_enabled",
    "fieldtype": "Check",
    "label": "Enabled"
+  },
+  {
+   "fieldname": "section_break_sasd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "category_meta_disc_en",
+   "fieldtype": "Small Text",
+   "label": "Category Meta Disc EN"
+  },
+  {
+   "fieldname": "column_break_jios",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category_meta_disc_ar",
+   "fieldtype": "Small Text",
+   "label": "Category Meta Disc AR"
+  },
+  {
+   "fieldname": "column_break_wpfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category_meta_disc_fr",
+   "fieldtype": "Small Text",
+   "label": "Category Meta Disc FR"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-05 12:32:01.035340",
+ "modified": "2024-12-17 10:02:11.797993",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Category",

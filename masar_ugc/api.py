@@ -148,4 +148,15 @@ def get_item_details():
                             custom_applicationtool_3_ar , custom_applicationtool_3_fr , custom_friendly_url
                         FROM tabItem ti
                         WHERE disabled = 0 AND custom_visible = 1""", as_dict= True)
+
+
+
+@frappe.whitelist()
+def get_category_details():
+    return frappe.db.sql("""
+                         SELECT 
+                            category_name, category_name_ar, category_name_fr, category_meta_disc_en,
+                            category_meta_disc_ar, category_meta_disc_fr
+                        FROM tabCategory tc
+                        WHERE is_enabled = 1 """, as_dict= True)
     
