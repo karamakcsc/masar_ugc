@@ -166,6 +166,6 @@ def get_surface_details():
                          SELECT 
                             surface1_en, surface1_ar, surface1_fr,
                             surfacemetadiscen, surfacemetadiscar, surfacemetadiscfr 
-                        FROM tabCategory tc
+                        FROM tabSurface ts
                         WHERE is_enabled = 1 """, as_dict= True)
     
