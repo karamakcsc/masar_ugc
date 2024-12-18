@@ -1,0 +1,282 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-18 08:55:56.470193",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1ahc",
+  "naming_series",
+  "column_break_gyjb",
+  "is_published",
+  "amended_from",
+  "area_of_use_section",
+  "area_of_use_en",
+  "column_break_lwbt",
+  "area_of_use_ar",
+  "column_break_nuxf",
+  "area_of_use_fr",
+  "sub_are_of_use_section",
+  "sub_are_of_use_en",
+  "column_break_syrs",
+  "sub_are_of_use_ar",
+  "column_break_rvfz",
+  "sub_are_of_use_fr",
+  "section_break_hxgj",
+  "system_no",
+  "system_brand",
+  "system_name_section",
+  "system_name_en",
+  "column_break_njck",
+  "system_name_ar",
+  "column_break_mcqi",
+  "system_name_fr",
+  "section_break_ryhn",
+  "system_image_link",
+  "system_video_link",
+  "system_metadisc_section",
+  "system_metadisc_en",
+  "column_break_ooul",
+  "system_metadisc_ar",
+  "column_break_ipew",
+  "system_metadisc_fr",
+  "system_benefits_section",
+  "system_benefit_en",
+  "system_benefit_ar",
+  "system_benefit_fr"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1ahc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "System Entry",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "System ID",
+   "options": "Sys.-"
+  },
+  {
+   "fieldname": "area_of_use_en",
+   "fieldtype": "Link",
+   "label": "Area of Use EN",
+   "link_filters": "[[\"System Area of Use\",\"is_enabled\",\"=\",1]]",
+   "options": "System Area of Use"
+  },
+  {
+   "fetch_from": "area_of_use_en.area_of_use_ar",
+   "fieldname": "area_of_use_ar",
+   "fieldtype": "Data",
+   "label": "Area of Use AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "area_of_use_en.area_of_use_fr",
+   "fieldname": "area_of_use_fr",
+   "fieldtype": "Data",
+   "label": "Area of Use FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "area_of_use_section",
+   "fieldtype": "Section Break",
+   "label": "Area of Use"
+  },
+  {
+   "fieldname": "column_break_lwbt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nuxf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sub_are_of_use_section",
+   "fieldtype": "Section Break",
+   "label": "Sub Are of Use"
+  },
+  {
+   "fieldname": "sub_are_of_use_en",
+   "fieldtype": "Link",
+   "label": "Sub Are of Use EN",
+   "link_filters": "[[\"Sub System Area of Use\",\"is_enabled\",\"=\",1]]",
+   "options": "Sub System Area of Use"
+  },
+  {
+   "fetch_from": "sub_are_of_use_en.sub_area_of_use_ar",
+   "fieldname": "sub_are_of_use_ar",
+   "fieldtype": "Data",
+   "label": "Sub Are of Use AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sub_are_of_use_en.sub_area_of_use_fr",
+   "fieldname": "sub_are_of_use_fr",
+   "fieldtype": "Data",
+   "label": "Sub Are of Use FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_syrs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rvfz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gyjb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hxgj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "system_no",
+   "fieldtype": "Int",
+   "label": "System No"
+  },
+  {
+   "fieldname": "system_brand",
+   "fieldtype": "Link",
+   "label": "System Brand",
+   "options": "Brand"
+  },
+  {
+   "fieldname": "system_name_section",
+   "fieldtype": "Section Break",
+   "label": "System Name"
+  },
+  {
+   "fieldname": "system_name_en",
+   "fieldtype": "Data",
+   "label": "System Name EN"
+  },
+  {
+   "fieldname": "column_break_njck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "system_name_ar",
+   "fieldtype": "Data",
+   "label": "System Name AR"
+  },
+  {
+   "fieldname": "column_break_mcqi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "system_name_fr",
+   "fieldtype": "Data",
+   "label": "System Name FR"
+  },
+  {
+   "fieldname": "section_break_ryhn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "system_image_link",
+   "fieldtype": "Data",
+   "label": "System Image Link"
+  },
+  {
+   "fieldname": "system_video_link",
+   "fieldtype": "Data",
+   "label": "System Video Link"
+  },
+  {
+   "fieldname": "system_metadisc_section",
+   "fieldtype": "Section Break",
+   "label": "System MetaDisc"
+  },
+  {
+   "fieldname": "system_metadisc_en",
+   "fieldtype": "Small Text",
+   "label": "System MetaDisc EN"
+  },
+  {
+   "fieldname": "system_metadisc_ar",
+   "fieldtype": "Small Text",
+   "label": "System MetaDisc AR"
+  },
+  {
+   "fieldname": "system_metadisc_fr",
+   "fieldtype": "Small Text",
+   "label": "System MetaDisc FR"
+  },
+  {
+   "fieldname": "column_break_ooul",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ipew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "system_benefits_section",
+   "fieldtype": "Section Break",
+   "label": "System Benefits"
+  },
+  {
+   "fieldname": "system_benefit_en",
+   "fieldtype": "Text Editor",
+   "label": "System Benefit EN"
+  },
+  {
+   "fieldname": "system_benefit_ar",
+   "fieldtype": "Text Editor",
+   "label": "System Benefit AR"
+  },
+  {
+   "fieldname": "system_benefit_fr",
+   "fieldtype": "Text Editor",
+   "label": "System Benefit FR"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Published"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-18 09:18:08.405096",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "System Entry",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

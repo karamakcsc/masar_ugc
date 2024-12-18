@@ -168,4 +168,16 @@ def get_surface_details():
                             surfacemetadiscen, surfacemetadiscar, surfacemetadiscfr 
                         FROM tabSurface ts
                         WHERE is_enabled = 1 """, as_dict= True)
-    
+
+@frappe.whitelist()
+def get_system_details():
+    return frappe.db.sql("""
+                         SELECT 
+                            name, area_of_use_en,  area_of_use_ar, area_of_use_fr, 
+                            sub_are_of_use_en, sub_are_of_use_ar, sub_are_of_use_fr,
+                            system_no, system_brand, system_name_en, system_name_ar,
+                            system_name_fr, system_image_link, system_video_link,
+                            system_metadisc_en, system_metadisc_ar, system_metadisc_fr,
+                            system_benefit_en, system_benefit_ar, system_benefit_fr
+                        FROM `tabSystem Entry` tse
+                        WHERE is_published = 1 AND workflow_state = 'Publish' """, as_dict= True)
