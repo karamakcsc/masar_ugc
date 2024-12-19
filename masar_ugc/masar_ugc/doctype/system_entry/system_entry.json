@@ -37,8 +37,8 @@
   "system_description_en",
   "system_description_ar",
   "system_description_fr",
-  "proposed_system_section",
-  "proposed_system"
+  "section_break_zmko",
+  "proposed_systems"
  ],
  "fields": [
   {
@@ -196,25 +196,25 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "proposed_system_section",
+   "fieldname": "column_break_okah",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zmko",
    "fieldtype": "Section Break",
    "label": "Proposed System"
   },
   {
-   "fieldname": "proposed_system",
+   "fieldname": "proposed_systems",
    "fieldtype": "Table",
-   "label": "Proposed System",
+   "label": "Proposed Systems",
    "options": "Proposed System Item"
-  },
-  {
-   "fieldname": "column_break_okah",
-   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-19 11:29:52.082242",
+ "modified": "2024-12-19 12:05:33.562601",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",
