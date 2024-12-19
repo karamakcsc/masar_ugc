@@ -169,19 +169,6 @@ def get_surface_details():
                         FROM tabSurface ts
                         WHERE is_enabled = 1 """, as_dict= True)
 
-# @frappe.whitelist()
-# def get_system_master():
-#     return frappe.db.sql("""
-#                          SELECT 
-#                             tse.name, tse.system_no, tse.system_brand, tse.system_name_en, tse.system_name_ar,
-#                             tse.system_name_fr, tse.system_image_link, tse.system_video_link,tse.test_result_link,
-#                             tse.statement_link, tse.system_metadisc_en,tse.system_metadisc_ar, tse.system_metadisc_fr,
-#                             tse.system_description_en, tse.system_description_ar,tse.system_description_fr,
-#                             tpsi.name, tpsi.coat, tpsi.no_coat, tpsi.item_code 
-#                         FROM `tabSystem Entry` tse
-#                         INNER JOIN  `tabProposed System Item` tpsi ON tse.name = tpsi.parent
-#                         WHERE is_published = 1  """, as_dict= True)
-
 
 @frappe.whitelist()
 def get_system_master():
@@ -202,6 +189,5 @@ def get_system_master():
             WHERE parent = %s
         """, system['name'], as_dict=True)
         system['proposed_system_items'] = children
-
-    # Return the result as JSON
+        
     return systems
