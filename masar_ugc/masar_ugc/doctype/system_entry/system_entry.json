@@ -11,20 +11,9 @@
   "column_break_gyjb",
   "is_published",
   "amended_from",
-  "area_of_use_section",
-  "area_of_use_en",
-  "column_break_lwbt",
-  "area_of_use_ar",
-  "column_break_nuxf",
-  "area_of_use_fr",
-  "sub_are_of_use_section",
-  "sub_are_of_use_en",
-  "column_break_syrs",
-  "sub_are_of_use_ar",
-  "column_break_rvfz",
-  "sub_are_of_use_fr",
   "section_break_hxgj",
   "system_no",
+  "column_break_okah",
   "system_brand",
   "system_name_section",
   "system_name_en",
@@ -34,17 +23,22 @@
   "system_name_fr",
   "section_break_ryhn",
   "system_image_link",
+  "test_result_link",
+  "column_break_mals",
   "system_video_link",
+  "statement_link",
   "system_metadisc_section",
   "system_metadisc_en",
   "column_break_ooul",
   "system_metadisc_ar",
   "column_break_ipew",
   "system_metadisc_fr",
-  "system_benefits_section",
-  "system_benefit_en",
-  "system_benefit_ar",
-  "system_benefit_fr"
+  "system_description_section",
+  "system_description_en",
+  "system_description_ar",
+  "system_description_fr",
+  "proposed_system_section",
+  "proposed_system"
  ],
  "fields": [
   {
@@ -65,76 +59,9 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
+   "in_list_view": 1,
    "label": "System ID",
    "options": "Sys.-"
-  },
-  {
-   "fieldname": "area_of_use_en",
-   "fieldtype": "Link",
-   "label": "Area of Use EN",
-   "link_filters": "[[\"System Area of Use\",\"is_enabled\",\"=\",1]]",
-   "options": "System Area of Use"
-  },
-  {
-   "fetch_from": "area_of_use_en.area_of_use_ar",
-   "fieldname": "area_of_use_ar",
-   "fieldtype": "Data",
-   "label": "Area of Use AR",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "area_of_use_en.area_of_use_fr",
-   "fieldname": "area_of_use_fr",
-   "fieldtype": "Data",
-   "label": "Area of Use FR",
-   "read_only": 1
-  },
-  {
-   "fieldname": "area_of_use_section",
-   "fieldtype": "Section Break",
-   "label": "Area of Use"
-  },
-  {
-   "fieldname": "column_break_lwbt",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_nuxf",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "sub_are_of_use_section",
-   "fieldtype": "Section Break",
-   "label": "Sub Are of Use"
-  },
-  {
-   "fieldname": "sub_are_of_use_en",
-   "fieldtype": "Link",
-   "label": "Sub Are of Use EN",
-   "link_filters": "[[\"Sub System Area of Use\",\"is_enabled\",\"=\",1]]",
-   "options": "Sub System Area of Use"
-  },
-  {
-   "fetch_from": "sub_are_of_use_en.sub_area_of_use_ar",
-   "fieldname": "sub_are_of_use_ar",
-   "fieldtype": "Data",
-   "label": "Sub Are of Use AR",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "sub_are_of_use_en.sub_area_of_use_fr",
-   "fieldname": "sub_are_of_use_fr",
-   "fieldtype": "Data",
-   "label": "Sub Are of Use FR",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_syrs",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_rvfz",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_gyjb",
@@ -226,36 +153,68 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "system_benefits_section",
-   "fieldtype": "Section Break",
-   "label": "System Benefits"
-  },
-  {
-   "fieldname": "system_benefit_en",
-   "fieldtype": "Text Editor",
-   "label": "System Benefit EN"
-  },
-  {
-   "fieldname": "system_benefit_ar",
-   "fieldtype": "Text Editor",
-   "label": "System Benefit AR"
-  },
-  {
-   "fieldname": "system_benefit_fr",
-   "fieldtype": "Text Editor",
-   "label": "System Benefit FR"
-  },
-  {
    "default": "0",
    "fieldname": "is_published",
    "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Published"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "system_description_section",
+   "fieldtype": "Section Break",
+   "label": "System Description"
+  },
+  {
+   "fieldname": "system_description_en",
+   "fieldtype": "Text Editor",
+   "label": "System Description EN"
+  },
+  {
+   "fieldname": "system_description_ar",
+   "fieldtype": "Text Editor",
+   "label": "System Description AR"
+  },
+  {
+   "fieldname": "system_description_fr",
+   "fieldtype": "Text Editor",
+   "label": "System Description FR"
+  },
+  {
+   "fieldname": "test_result_link",
+   "fieldtype": "Data",
+   "label": "Test Result Link"
+  },
+  {
+   "fieldname": "statement_link",
+   "fieldtype": "Data",
+   "label": "Statement Link"
+  },
+  {
+   "fieldname": "column_break_mals",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "proposed_system_section",
+   "fieldtype": "Section Break",
+   "label": "Proposed System"
+  },
+  {
+   "fieldname": "proposed_system",
+   "fieldtype": "Table",
+   "label": "Proposed System",
+   "options": "Proposed System Item"
+  },
+  {
+   "fieldname": "column_break_okah",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-18 09:18:08.405096",
+ "modified": "2024-12-19 11:29:52.082242",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",
