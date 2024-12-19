@@ -168,3 +168,40 @@ def get_surface_details():
                             surfacemetadiscen, surfacemetadiscar, surfacemetadiscfr 
                         FROM tabSurface ts
                         WHERE is_enabled = 1 """, as_dict= True)
+
+# @frappe.whitelist()
+# def get_system_master():
+#     return frappe.db.sql("""
+#                          SELECT 
+#                             tse.name, tse.system_no, tse.system_brand, tse.system_name_en, tse.system_name_ar,
+#                             tse.system_name_fr, tse.system_image_link, tse.system_video_link,tse.test_result_link,
+#                             tse.statement_link, tse.system_metadisc_en,tse.system_metadisc_ar, tse.system_metadisc_fr,
+#                             tse.system_description_en, tse.system_description_ar,tse.system_description_fr,
+#                             tpsi.name, tpsi.coat, tpsi.no_coat, tpsi.item_code 
+#                         FROM `tabSystem Entry` tse
+#                         INNER JOIN  `tabProposed System Item` tpsi ON tse.name = tpsi.parent
+#                         WHERE is_published = 1  """, as_dict= True)
+
+
+@frappe.whitelist()
+def get_system_master():
+    systems = frappe.db.sql("""
+        SELECT 
+            name, system_no, system_brand, system_name_en, system_name_ar,
+            system_name_fr, system_image_link, system_video_link, test_result_link,
+            statement_link, system_metadisc_en, system_metadisc_ar, system_metadisc_fr,
+            system_description_en, system_description_ar, system_description_fr
+        FROM `tabSystem Entry`
+        WHERE is_published = 1  AND workflow_state = 'Publish' AND docstatus =1
+    """, as_dict=True)
+    for system in systems:
+        children = frappe.db.sql("""
+            SELECT 
+                name, coat, no_coat, item_code
+            FROM `tabProposed System Item`
+            WHERE parent = %s
+        """, system['name'], as_dict=True)
+        system['proposed_system_items'] = children
+
+    # Return the result as JSON
+    return systems

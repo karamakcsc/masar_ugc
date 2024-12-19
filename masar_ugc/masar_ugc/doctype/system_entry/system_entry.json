@@ -153,6 +153,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "default": "0",
    "fieldname": "is_published",
    "fieldtype": "Check",
@@ -214,7 +215,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-19 12:05:33.562601",
+ "modified": "2024-12-19 12:58:53.831094",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",

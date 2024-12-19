@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "UGC Product Admin",
  "links": [],
- "modified": "2024-12-18 09:20:31.587015",
+ "modified": "2024-12-19 12:47:52.674785",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "UGC Product Admin",
@@ -29,14 +29,6 @@
  ],
  "sequence_id": 39.0,
  "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "System Area of Use",
-   "link_to": "System Area of Use",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
   {
    "color": "Grey",
    "doc_view": "List",
@@ -58,14 +50,6 @@
    "doc_view": "List",
    "label": "Finishes",
    "link_to": "Finishes",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Sub System Area of Use",
-   "link_to": "Sub System Area of Use",
    "stats_filter": "[]",
    "type": "DocType"
   },
