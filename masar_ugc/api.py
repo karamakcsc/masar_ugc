@@ -179,7 +179,7 @@ def get_system_master():
             statement_link, system_metadisc_en, system_metadisc_ar, system_metadisc_fr,
             system_description_en, system_description_ar, system_description_fr
         FROM `tabSystem Entry`
-        WHERE is_published = 1  AND workflow_state = 'Publish' AND docstatus =1
+        WHERE is_published = 1  AND workflow_state = 'Publish'
     """, as_dict=True)
     for system in systems:
         children = frappe.db.sql("""
@@ -189,5 +189,5 @@ def get_system_master():
             WHERE parent = %s
         """, system['name'], as_dict=True)
         system['proposed_system_items'] = children
-        
+
     return systems
