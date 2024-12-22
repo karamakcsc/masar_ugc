@@ -60,7 +60,6 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
-   "in_list_view": 1,
    "label": "System ID",
    "options": "Sys.-"
   },
@@ -75,6 +74,8 @@
   {
    "fieldname": "system_no",
    "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "System No"
   },
   {
@@ -219,6 +220,7 @@
   {
    "fieldname": "area_of_use_en",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Area of Use EN",
    "link_filters": "[[\"Area of Use\",\"is_enabled\",\"=\",1]]",
    "options": "Area of Use"
@@ -252,6 +254,7 @@
   {
    "fieldname": "sub_area_of_use_en",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Sub Area of Use EN",
    "link_filters": "[[\"Sub Area of Use\",\"is_enabled\",\"=\",1]]",
    "options": "Sub Area of Use"
@@ -281,7 +284,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-22 14:44:43.794645",
+ "modified": "2024-12-22 15:21:04.291774",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",
