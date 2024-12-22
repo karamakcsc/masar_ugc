@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:area_of_use_en",
+ "creation": "2024-12-22 14:29:27.459882",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "area_of_use_en",
+  "area_of_use_ar",
+  "area_of_use_fr",
+  "column_break_vwxo",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "area_of_use_en",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Area of Use EN",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "area_of_use_ar",
+   "fieldtype": "Data",
+   "label": "Area of Use AR"
+  },
+  {
+   "fieldname": "area_of_use_fr",
+   "fieldtype": "Data",
+   "label": "Area of Use FR"
+  },
+  {
+   "fieldname": "column_break_vwxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-22 14:33:05.682919",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Area of Use",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

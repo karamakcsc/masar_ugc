@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:sub_area_of_use_en",
+ "creation": "2024-12-22 14:33:24.500379",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sub_area_of_use_en",
+  "sub_area_of_use_ar",
+  "sub_area_of_use_fr",
+  "column_break_skof",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "sub_area_of_use_en",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sub Area of Use EN",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "sub_area_of_use_ar",
+   "fieldtype": "Data",
+   "label": "Sub Area of Use AR"
+  },
+  {
+   "fieldname": "sub_area_of_use_fr",
+   "fieldtype": "Data",
+   "label": "Sub Area of Use FR"
+  },
+  {
+   "fieldname": "column_break_skof",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-22 14:34:34.276998",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Sub Area of Use",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

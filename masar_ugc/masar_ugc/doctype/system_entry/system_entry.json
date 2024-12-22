@@ -10,6 +10,18 @@
   "naming_series",
   "column_break_gyjb",
   "is_published",
+  "section_break_zrjl",
+  "area_of_use_en",
+  "column_break_jizh",
+  "area_of_use_ar",
+  "column_break_igon",
+  "area_of_use_fr",
+  "section_break_gyyh",
+  "sub_area_of_use_en",
+  "column_break_vyko",
+  "sub_area_of_use_ar",
+  "column_break_bzcg",
+  "sub_area_of_use_fr",
   "section_break_hxgj",
   "system_no",
   "column_break_okah",
@@ -198,11 +210,78 @@
    "fieldtype": "Table",
    "label": "Proposed Systems",
    "options": "Proposed System Item"
+  },
+  {
+   "fieldname": "section_break_zrjl",
+   "fieldtype": "Section Break",
+   "label": "Area of Use"
+  },
+  {
+   "fieldname": "area_of_use_en",
+   "fieldtype": "Link",
+   "label": "Area of Use EN",
+   "link_filters": "[[\"Area of Use\",\"is_enabled\",\"=\",1]]",
+   "options": "Area of Use"
+  },
+  {
+   "fieldname": "column_break_jizh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "area_of_use_en.area_of_use_ar",
+   "fieldname": "area_of_use_ar",
+   "fieldtype": "Data",
+   "label": "Area of Use AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_igon",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "area_of_use_en.area_of_use_fr",
+   "fieldname": "area_of_use_fr",
+   "fieldtype": "Data",
+   "label": "Area of Use FR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_gyyh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sub_area_of_use_en",
+   "fieldtype": "Link",
+   "label": "Sub Area of Use EN",
+   "link_filters": "[[\"Sub Area of Use\",\"is_enabled\",\"=\",1]]",
+   "options": "Sub Area of Use"
+  },
+  {
+   "fieldname": "column_break_vyko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sub_area_of_use_en.sub_area_of_use_ar",
+   "fieldname": "sub_area_of_use_ar",
+   "fieldtype": "Data",
+   "label": "Sub Area of Use AR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bzcg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sub_area_of_use_en.sub_area_of_use_fr",
+   "fieldname": "sub_area_of_use_fr",
+   "fieldtype": "Data",
+   "label": "Sub Area of Use FR",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-19 13:15:11.160867",
+ "modified": "2024-12-22 14:44:43.794645",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",
