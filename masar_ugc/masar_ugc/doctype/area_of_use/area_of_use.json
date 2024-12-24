@@ -10,7 +10,13 @@
   "area_of_use_ar",
   "area_of_use_fr",
   "column_break_vwxo",
-  "is_enabled"
+  "is_enabled",
+  "section_break_usxy",
+  "area_of_use_metadiscen",
+  "column_break_nvgd",
+  "area_of_use_metadiscar",
+  "column_break_qzcq",
+  "area_of_use_metadiscfr"
  ],
  "fields": [
   {
@@ -40,11 +46,38 @@
    "fieldname": "is_enabled",
    "fieldtype": "Check",
    "label": "Enabled"
+  },
+  {
+   "fieldname": "section_break_usxy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "area_of_use_metadiscen",
+   "fieldtype": "Small Text",
+   "label": "Area of Use MetaDiscEN"
+  },
+  {
+   "fieldname": "column_break_nvgd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "area_of_use_metadiscar",
+   "fieldtype": "Small Text",
+   "label": "Area of Use MetaDiscAR"
+  },
+  {
+   "fieldname": "column_break_qzcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "area_of_use_metadiscfr",
+   "fieldtype": "Small Text",
+   "label": "Area of Use MetaDiscFR"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-22 14:33:05.682919",
+ "modified": "2024-12-24 12:24:42.657677",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Area of Use",

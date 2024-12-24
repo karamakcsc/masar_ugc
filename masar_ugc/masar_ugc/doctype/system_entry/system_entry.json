@@ -16,6 +16,12 @@
   "area_of_use_ar",
   "column_break_igon",
   "area_of_use_fr",
+  "area_of_use_metadisc_section",
+  "area_of_use_metadiscen",
+  "column_break_wtat",
+  "area_of_use_metadiscar",
+  "column_break_dmry",
+  "area_of_use_metadiscfr",
   "section_break_gyyh",
   "sub_area_of_use_en",
   "column_break_vyko",
@@ -249,7 +255,8 @@
   },
   {
    "fieldname": "section_break_gyyh",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Sub Area of Use"
   },
   {
    "fieldname": "sub_area_of_use_en",
@@ -280,11 +287,45 @@
    "fieldtype": "Data",
    "label": "Sub Area of Use FR",
    "read_only": 1
+  },
+  {
+   "fieldname": "area_of_use_metadisc_section",
+   "fieldtype": "Section Break",
+   "label": "Area of Use MetaDisc"
+  },
+  {
+   "fetch_from": "area_of_use_en.area_of_use_metadiscen",
+   "fieldname": "area_of_use_metadiscen",
+   "fieldtype": "Small Text",
+   "label": "Area of Use MetaDiscEN",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wtat",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "area_of_use_en.area_of_use_ar",
+   "fieldname": "area_of_use_metadiscar",
+   "fieldtype": "Small Text",
+   "label": "Area of Use MetaDiscAR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dmry",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "area_of_use_en.area_of_use_fr",
+   "fieldname": "area_of_use_metadiscfr",
+   "fieldtype": "Small Text",
+   "label": "Area of Use MetaDiscFR",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-22 15:21:04.291774",
+ "modified": "2024-12-24 12:31:36.255124",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",
