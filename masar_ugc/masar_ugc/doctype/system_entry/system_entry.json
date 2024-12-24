@@ -305,7 +305,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "area_of_use_en.area_of_use_ar",
+   "fetch_from": "area_of_use_en.area_of_use_metadiscar",
    "fieldname": "area_of_use_metadiscar",
    "fieldtype": "Small Text",
    "label": "Area of Use MetaDiscAR",
@@ -316,7 +316,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "area_of_use_en.area_of_use_fr",
+   "fetch_from": "area_of_use_en.area_of_use_metadiscfr",
    "fieldname": "area_of_use_metadiscfr",
    "fieldtype": "Small Text",
    "label": "Area of Use MetaDiscFR",
@@ -325,7 +325,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-24 12:31:36.255124",
+ "modified": "2024-12-24 14:57:27.523524",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",
