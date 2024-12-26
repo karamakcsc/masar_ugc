@@ -193,3 +193,32 @@ def get_system_master():
         system['proposed_system_items'] = children
 
     return systems
+
+
+
+@frappe.whitelist()
+def get_item(item_code = None):
+    cond = None
+    if item_code:
+        cond = f""" AND item_code = '{item_code}'"""
+    return frappe.db.sql(f"""
+                         SELECT 
+                            item_code ,item_name, custom_visible ,custom_sold ,custom_category_en ,
+                            custom_category_ar ,custom_category_fr ,custom_brand_en ,custom_brand_ar ,custom_brand_fr ,custom_subbrand1_en ,
+                            custom_subbrand1_ar ,custom_subbrand1_fr ,custom_subbrand2_en , custom_subbrand2_ar , custom_subbrand2_fr , 
+                            custom_short_disc_en ,
+                            custom_short_disc_ar ,custom_short_disc_fr ,custom_product_use_en ,custom_product_use_ar ,custom_product_use_fr ,custom_surface1_en ,custom_surface2_en ,
+                            custom_surface3_en ,custom_surface1_ar , custom_surface2_ar ,custom_surface3_ar ,custom_surface1_fr ,custom_surface2_fr ,custom_surface3_fr ,custom_finishes_en , custom_finishes_ar ,custom_finishes_fr ,
+                            custom_colors_en ,custom_colors_ar ,custom_colors_fr ,custom_sheen_en ,custom_sheen_ar ,custom_sheen_fr ,
+                            custom_packsize_en ,custom_packsize_ar ,custom_packsize_fr ,custom_coverageperpack_en ,custom_applicationtool_en ,custom_coverageperpack_ar ,custom_applicationtool_ar ,
+                            custom_coverageperpack_fr , custom_applicationtool_fr , custom_subbrand_pic_en ,custom_subbrand_pic_ar ,
+                            custom_subbrand_pic_fr ,custom_subbrand_ved_en , custom_tds_en ,custom_msds_en ,custom_subbrand_ved_ar ,
+                            custom_tds_ar ,custom_msds_ar ,custom_subbrand_ved_fr ,custom_tds_fr ,custom_msds_fr ,custom_metadisc_en ,
+                            custom_metadisc_ar ,custom_metadisc_fr , custom_long_disc_en ,custom_long_disc_ar ,custom_long_disc_fr ,
+                            custom_applicationtool_2_en , custom_applicationtool_2_ar , custom_applicationtool_2_fr, custom_applicationtool_3_en , 
+                            custom_applicationtool_3_ar , custom_applicationtool_3_fr , custom_friendly_url
+                        FROM tabItem ti
+                        WHERE  disabled = 0 
+                        AND custom_visible = 1 
+                        AND workflow_state = 'Publish' 
+                        {cond}""", as_dict= True)
