@@ -174,7 +174,9 @@ def get_surface_details():
 def get_system_master():
     systems = frappe.db.sql("""
         SELECT 
-            name, system_no, area_of_use_en, area_of_use_ar, area_of_use_fr, area_of_use_metadiscen,
+            name, system_no, area_of_use_en, area_of_use_ar, area_of_use_fr, 
+            area_of_use_en_2, area_of_use_ar_2, area_of_use_fr_2, 
+            area_of_use_en_3, area_of_use_ar_3, area_of_use_fr_3, area_of_use_metadiscen,
             area_of_use_metadiscar, area_of_use_metadiscfr, sub_area_of_use_en,
             sub_area_of_use_ar, sub_area_of_use_fr, system_brand, system_name_en, system_name_ar,
             system_name_fr, system_image_link, system_video_link, test_result_link,
