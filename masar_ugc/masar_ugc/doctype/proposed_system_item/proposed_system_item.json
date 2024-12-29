@@ -6,17 +6,11 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "coat",
+  "product_use",
   "no_coat",
   "item_code"
  ],
  "fields": [
-  {
-   "fieldname": "coat",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Coat"
-  },
   {
    "fieldname": "no_coat",
    "fieldtype": "Data",
@@ -30,12 +24,20 @@
    "label": "Item Code",
    "link_filters": "[[\"Item\",\"disabled\",\"=\",0]]",
    "options": "Item"
+  },
+  {
+   "fieldname": "product_use",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Product Use",
+   "link_filters": "[[\"Product Use\",\"is_enabled\",\"=\",1]]",
+   "options": "Product Use"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-12-19 11:27:00.772948",
+ "modified": "2024-12-29 14:58:45.361415",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Proposed System Item",

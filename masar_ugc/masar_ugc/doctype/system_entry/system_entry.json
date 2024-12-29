@@ -203,7 +203,7 @@
   {
    "fieldname": "statement_link",
    "fieldtype": "Data",
-   "label": "Statement Link"
+   "label": "Methods of Statement Link"
   },
   {
    "fieldname": "column_break_mals",
@@ -373,7 +373,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-29 12:07:31.469973",
+ "modified": "2024-12-29 14:56:05.470780",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",
