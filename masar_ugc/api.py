@@ -224,3 +224,14 @@ def get_item(item_code = None):
                         AND custom_visible = 1 
                         AND workflow_state = 'Publish' 
                         {cond}""", as_dict= True)
+
+
+
+@frappe.whitelist()
+def get_area_of_use():
+    return frappe.db.sql("""
+                         SELECT 
+                            area_of_use_en, area_of_use_ar, area_of_use_fr,
+                            area_of_use_metadiscen, area_of_use_metadiscar, area_of_use_metadiscfr
+                        FROM `tabArea of Use`
+                        WHERE is_enabled = 1 """, as_dict= True)
