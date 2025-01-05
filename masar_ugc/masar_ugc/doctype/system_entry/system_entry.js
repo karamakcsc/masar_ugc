@@ -11,11 +11,11 @@ frappe.ui.form.on("System Entry", {
 function auto_number_sys_no(frm) {
     if (frm.doc.system_brand){
         if (frm.doc.system_brand === "Uniguard") {
-            frm.doc.system_no = 11000;
+            frm.doc.system_no = 1100;
         } else if (frm.doc.system_brand === "Jotun") {
-            frm.doc.system_no = 22000;
+            frm.doc.system_no = 2200;
         } else if (frm.doc.system_brand === "Jotun&Uniguard") {
-            frm.doc.system_no = 30000;
+            frm.doc.system_no = 3000;
         } else {
             frm.doc.system_no = null;
         }
