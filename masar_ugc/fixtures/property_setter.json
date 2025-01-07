@@ -508,8 +508,7 @@
   "name": "Quotation-company-default",
   "property": "default",
   "property_type": "Text",
-  "row_name": null,
-  "value": "frappe.defaults.get_user_default(“Company”)"
+  "row_name": null
  },
  {
   "default_value": null,
