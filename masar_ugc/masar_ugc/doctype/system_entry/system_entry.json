@@ -84,17 +84,21 @@
    "fieldtype": "Section Break"
   },
   {
+   "depends_on": "eval:doc.system_brand",
    "fieldname": "system_no",
    "fieldtype": "Int",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "System No"
+   "label": "System No",
+   "mandatory_depends_on": "eval:doc.system_brand",
+   "unique": 1
   },
   {
    "fieldname": "system_brand",
    "fieldtype": "Link",
    "label": "System Brand",
-   "options": "Brand"
+   "options": "Brand",
+   "reqd": 1
   },
   {
    "fieldname": "system_name_section",
@@ -373,7 +377,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-29 14:56:05.470780",
+ "modified": "2025-01-07 11:16:35.696793",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",
