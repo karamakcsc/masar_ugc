@@ -173,89 +173,20 @@ def get_surface_details():
                         WHERE is_enabled = 1 """, as_dict= True)
 
 
-# @frappe.whitelist()
-# def get_system_master():
-#     data = frappe.db.sql("""
-#         SELECT 
-#             tse.name AS system_name, tse.system_no, tse.area_of_use_en, tse.area_of_use_ar, tse.area_of_use_fr, 
-#             tse.area_of_use_en_2, tse.area_of_use_ar_2, tse.area_of_use_fr_2, 
-#             tse.area_of_use_en_3, tse.area_of_use_ar_3, tse.area_of_use_fr_3, 
-#             tse.area_of_use_metadiscen, tse.area_of_use_metadiscar, tse.area_of_use_metadiscfr, 
-#             tse.sub_area_of_use_en, tse.sub_area_of_use_ar, tse.sub_area_of_use_fr, 
-#             tse.system_brand, tse.system_name_en, tse.system_name_ar, tse.system_name_fr, 
-#             tse.system_image_link, tse.system_video_link, tse.test_result_link, 
-#             tse.statement_link, tse.system_metadisc_en, tse.system_metadisc_ar, tse.system_metadisc_fr, 
-#             tse.system_description_en, tse.system_description_ar, tse.system_description_fr, 
-#             CASE 
-#                 WHEN tse.image IS NULL THEN NULL 
-#                 ELSE CONCAT('https://ugc.kcsc.com.jo', tse.image) 
-#             END AS image_url, 
-#             tpsi.name AS proposed_system_item_name, tpsi.coat, tpsi.no_coat, tpsi.item_code, 
-#             ti.custom_subbrand2_en
-#         FROM 
-#             `tabSystem Entry` tse
-#         LEFT JOIN 
-#             `tabProposed System Item` tpsi 
-#             ON tse.name = tpsi.parent
-#         LEFT JOIN 
-#             `tabItem` ti 
-#             ON tpsi.item_code = ti.name
-#         WHERE 
-#             tse.is_published = 1 
-#             AND tse.workflow_state = 'Publish'
-#         ORDER BY 
-#             tse.name
-#     """, as_dict=True)
-
-#     systems = {}
-#     for row in data:
-#         system_name = row['system_name']
-#         if system_name not in systems:
-#             # Initialize system entry
-#             systems[system_name] = {
-#                 "name": row["system_name"],
-#                 "system_no": row["system_no"],
-#                 "area_of_use_en": row["area_of_use_en"],
-#                 "area_of_use_ar": row["area_of_use_ar"],
-#                 "area_of_use_fr": row["area_of_use_fr"],
-#                 "system_image_link": row["system_image_link"],
-#                 "system_video_link": row["system_video_link"],
-#                 "image_url": row["image_url"],
-#                 "system_brand":row["system_brand"],
-#                 "system_metadisc_en":row["system_metadisc_en"],
-#                 "system_metadisc_ar":row["system_metadisc_ar"],
-#                 "system_metadisc_fr":row["system_metadisc_fr"],
-#                 "system_description_en":row["system_description_en"],
-#                 "system_description_ar":row["system_description_ar"],
-#                 "system_description_fr":row["system_description_fr"],
-#                 "proposed_system_items": []
-#             }
-        
-#         # Add child items if they exist
-#         if row["proposed_system_item_name"]:
-#             systems[system_name]["proposed_system_items"].append({
-#                 "name": row["proposed_system_item_name"],
-#                 "coat": row["coat"],
-#                 "no_coat": row["no_coat"],
-#                 "item_code": row["item_code"],
-#                 "custom_subbrand2_en": row["custom_subbrand2_en"]
-#             })
-
-#     # Return the grouped data as a list
-#     return list(systems.values())
-
-
 @frappe.whitelist()
 def get_system_master():
     systems = frappe.db.sql("""
         SELECT 
-            tpse.name, tpse.system_no, tpse.area_of_use_en, tpse.area_of_use_ar, tpse.area_of_use_fr, 
+            tpse.name, tpse.system_no, 
+            tpse.area_of_use_en, tpse.area_of_use_ar, tpse.area_of_use_fr, 
             tpse.area_of_use_en_2, tpse.area_of_use_ar_2, tpse.area_of_use_fr_2, 
-            tpse.area_of_use_en_3, tpse.area_of_use_ar_3, tpse.area_of_use_fr_3, tpse.area_of_use_metadiscen,
-            tpse.area_of_use_metadiscar, tpse.area_of_use_metadiscfr, tpse.sub_area_of_use_en,
-            tpse.sub_area_of_use_ar, tpse.sub_area_of_use_fr, tpse.system_brand, tpse.system_name_en, tpse.system_name_ar,
-            tpse.system_name_fr, tpse.system_image_link, tpse.system_video_link, tpse.test_result_link,
-            tpse.statement_link, tpse.system_metadisc_en, tpse.system_metadisc_ar, tpse.system_metadisc_fr,
+            tpse.area_of_use_en_3, tpse.area_of_use_ar_3, tpse.area_of_use_fr_3, 
+            tpse.area_of_use_metadiscen, tpse.area_of_use_metadiscar, tpse.area_of_use_metadiscfr, 
+            tpse.sub_area_of_use_en, tpse.sub_area_of_use_ar, tpse.sub_area_of_use_fr, 
+            tpse.system_brand, 
+            tpse.system_name_en, tpse.system_name_ar, tpse.system_name_fr, 
+            tpse.system_image_link, tpse.system_video_link, tpse.test_result_link, tpse.statement_link, 
+            tpse.system_metadisc_en, tpse.system_metadisc_ar, tpse.system_metadisc_fr,
             tpse.system_description_en, tpse.system_description_ar, tpse.system_description_fr, 
             CASE 
                 WHEN tpse.image IS NULL THEN NULL 
