@@ -172,7 +172,7 @@ def get_surface_details():
                         FROM tabSurface ts
                         WHERE is_enabled = 1 """, as_dict= True)
 
-##s
+
 @frappe.whitelist()
 def get_system_master():
     data = frappe.db.sql("""
@@ -221,6 +221,13 @@ def get_system_master():
                 "system_image_link": row["system_image_link"],
                 "system_video_link": row["system_video_link"],
                 "image_url": row["image_url"],
+                "system_brand":row["system_brand"],
+                "system_metadisc_en":row["system_metadisc_en"],
+                "system_metadisc_ar":row["system_metadisc_ar"],
+                "system_metadisc_fr":row["system_metadisc_fr"],
+                "system_metadisc_en":row["system_metadisc_en"],
+                "system_metadisc_ar":row["system_metadisc_ar"],
+                "system_metadisc_fr":row["system_metadisc_fr"],
                 "proposed_system_items": []
             }
         
