@@ -225,9 +225,9 @@ def get_system_master():
                 "system_metadisc_en":row["system_metadisc_en"],
                 "system_metadisc_ar":row["system_metadisc_ar"],
                 "system_metadisc_fr":row["system_metadisc_fr"],
-                "system_metadisc_en":row["system_metadisc_en"],
-                "system_metadisc_ar":row["system_metadisc_ar"],
-                "system_metadisc_fr":row["system_metadisc_fr"],
+                "system_description_en":row["system_description_en"],
+                "system_description_ar":row["system_description_ar"],
+                "system_description_fr":row["system_description_fr"],
                 "proposed_system_items": []
             }
         
