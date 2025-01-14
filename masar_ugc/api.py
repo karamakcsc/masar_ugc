@@ -194,11 +194,12 @@ def get_system_master():
     for system in systems:
         children = frappe.db.sql("""
             SELECT 
-                name, coat, no_coat, item_code
-            FROM `tabProposed System Item`
+                tpsi.name, tpsi.coat, tpsi.no_coat, tpsi.item_code, ti.custom_subbrand2_en
+            FROM `tabProposed System Item` tpsi
+            INNER JOIN tabItem ti on tpsi.item_code = ti.name
             WHERE parent = %s
         """, system['name'], as_dict=True)
-        system['proposed_system_items'] = children
+        system['proposed_system_items'] = children 
 
     return systems
 

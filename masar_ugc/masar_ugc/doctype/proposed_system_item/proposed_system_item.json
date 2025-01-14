@@ -17,7 +17,7 @@
    "fieldname": "no_coat",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "No of Coat"
+   "label": "No of Coat / Dry Film Thickness"
   },
   {
    "fieldname": "item_code",
@@ -51,7 +51,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-09 09:33:23.087087",
+ "modified": "2025-01-14 16:05:35.047025",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Proposed System Item",
