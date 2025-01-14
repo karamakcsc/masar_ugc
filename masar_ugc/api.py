@@ -249,19 +249,19 @@ frappe.whitelist()
 def get_system_master():
     systems = frappe.db.sql("""
         SELECT 
-            name, system_no, area_of_use_en, area_of_use_ar, area_of_use_fr, 
-            area_of_use_en_2, area_of_use_ar_2, area_of_use_fr_2, 
-            area_of_use_en_3, area_of_use_ar_3, area_of_use_fr_3, area_of_use_metadiscen,
-            area_of_use_metadiscar, area_of_use_metadiscfr, sub_area_of_use_en,
-            sub_area_of_use_ar, sub_area_of_use_fr, system_brand, system_name_en, system_name_ar,
-            system_name_fr, system_image_link, system_video_link, test_result_link,
-            statement_link, system_metadisc_en, system_metadisc_ar, system_metadisc_fr,
-            system_description_en, system_description_ar, system_description_fr, 
+            tpse.name, tpse.system_no, tpse.area_of_use_en, tpse.area_of_use_ar, tpse.area_of_use_fr, 
+            tpse.area_of_use_en_2, tpse.area_of_use_ar_2, tpse.area_of_use_fr_2, 
+            tpse.area_of_use_en_3, tpse.area_of_use_ar_3, tpse.area_of_use_fr_3, tpse.area_of_use_metadiscen,
+            tpse.area_of_use_metadiscar, tpse.area_of_use_metadiscfr, tpse.sub_area_of_use_en,
+            tpse.sub_area_of_use_ar, tpse.sub_area_of_use_fr, tpse.system_brand, tpse.system_name_en, tpse.system_name_ar,
+            tpse.system_name_fr, tpse.system_image_link, tpse.system_video_link, tpse.test_result_link,
+            tpse.statement_link, tpse.system_metadisc_en, tpse.system_metadisc_ar, tpse.system_metadisc_fr,
+            tpse.system_description_en, tpse.system_description_ar, tpse.system_description_fr, 
             CASE 
-                WHEN image IS NULL THEN NULL ELSE CONCAT('https://ugc.kcsc.com.jo', image)
+                WHEN tpse.image IS NULL THEN NULL ELSE CONCAT('https://ugc.kcsc.com.jo', tpse.image)
             END AS image_url
-        FROM `tabSystem Entry`
-        WHERE is_published = 1  AND workflow_state = 'Publish'
+        FROM `tabSystem Entry` tpse
+        WHERE tpse.is_published = 1  AND tpse.workflow_state = 'Publish'
     """, as_dict=True)
     for system in systems:
         children = frappe.db.sql("""
@@ -270,8 +270,8 @@ def get_system_master():
             FROM `tabProposed System Item` tpsi
             INNER JOIN tabItem ti on tpsi.item_code = ti.name
             WHERE tspi.parent = %s
-        """, system['name'], as_dict=True)
-        system['proposed_system_items'] = children 
+        """, system['tpse.name'], as_dict=True)
+        system['tpse.proposed_system_items'] = children 
 
     return systems
 
