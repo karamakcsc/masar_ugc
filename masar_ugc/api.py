@@ -130,7 +130,7 @@ def get_announcement():
     
 @frappe.whitelist()
 def get_item_details():
-    return frappe.db.sql("""
+    items= frappe.db.sql("""
                          SELECT 
                             item_code ,item_name, custom_visible ,custom_sold ,custom_category_en ,
                             custom_category_ar ,custom_category_fr ,custom_brand_en ,custom_brand_ar ,custom_brand_fr ,custom_subbrand1_en ,
@@ -151,8 +151,11 @@ def get_item_details():
                             END AS image_url
                         FROM tabItem ti
                         WHERE disabled = 0 AND custom_visible = 1 AND workflow_state = 'Publish' """, as_dict= True)
+    for item in items:
+        if not item.get('image_url'):
+            item['image_url'] = None
 
-
+    return items
 
 @frappe.whitelist()
 def get_category_details():
@@ -184,14 +187,19 @@ def get_system_master():
             sub_area_of_use_ar, sub_area_of_use_fr, system_brand, system_name_en, system_name_ar,
             system_name_fr, system_image_link, system_video_link, test_result_link,
             statement_link, system_metadisc_en, system_metadisc_ar, system_metadisc_fr,
-            system_description_en, system_description_ar, system_description_fr, 
+            system_description_en, system_description_ar, system_description_fr,
             CASE 
-                WHEN image IS NULL THEN NULL ELSE CONCAT('https://ugc.kcsc.com.jo', image)
+                WHEN image IS NULL THEN NULL
+                ELSE CONCAT('https://ugc.kcsc.com.jo', image)
             END AS image_url
         FROM `tabSystem Entry`
-        WHERE is_published = 1  AND workflow_state = 'Publish'
+        WHERE is_published = 1 AND workflow_state = 'Publish'
     """, as_dict=True)
+
     for system in systems:
+        if system.get('image_url') == "https://ugc.kcsc.com.jo":
+            system['image_url'] = None
+
         children = frappe.db.sql("""
             SELECT 
                 name, coat, no_coat, item_code
@@ -203,13 +211,16 @@ def get_system_master():
     return systems
 
 
+    return systems
+
+
 
 @frappe.whitelist()
 def get_item(item_code = None):
     cond = None
     if item_code:
         cond = f""" AND item_code = '{item_code}'"""
-    return frappe.db.sql(f"""
+    items = frappe.db.sql(f"""
                          SELECT 
                             item_code ,item_name, custom_visible ,custom_sold ,custom_category_en ,
                             custom_category_ar ,custom_category_fr ,custom_brand_en ,custom_brand_ar ,custom_brand_fr ,custom_subbrand1_en ,
@@ -234,6 +245,11 @@ def get_item(item_code = None):
                         AND custom_visible = 1 
                         AND workflow_state = 'Publish' 
                         {cond}""", as_dict= True)
+    for item in items:
+        if not item.get('image_url'):
+            item['image_url'] = None
+
+    return items
 
 
 
