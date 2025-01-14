@@ -181,7 +181,7 @@ def get_system_master():
             sub_area_of_use_ar, sub_area_of_use_fr, system_brand, system_name_en, system_name_ar,
             system_name_fr, system_image_link, system_video_link, test_result_link,
             statement_link, system_metadisc_en, system_metadisc_ar, system_metadisc_fr,
-            system_description_en, system_description_ar, system_description_fr, CONCAT('https://ugc.kcsc.com.jo/files/', image) AS image_url
+            system_description_en, system_description_ar, system_description_fr, CONCAT('https://ugc.kcsc.com.jo', image) AS image_url
         FROM `tabSystem Entry`
         WHERE is_published = 1  AND workflow_state = 'Publish'
     """, as_dict=True)
