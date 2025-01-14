@@ -145,7 +145,7 @@ def get_item_details():
                             custom_tds_ar ,custom_msds_ar ,custom_subbrand_ved_fr ,custom_tds_fr ,custom_msds_fr ,custom_metadisc_en ,
                             custom_metadisc_ar ,custom_metadisc_fr , custom_long_disc_en ,custom_long_disc_ar ,custom_long_disc_fr ,
                             custom_applicationtool_2_en , custom_applicationtool_2_ar , custom_applicationtool_2_fr, custom_applicationtool_3_en , 
-                            custom_applicationtool_3_ar , custom_applicationtool_3_fr , custom_friendly_url
+                            custom_applicationtool_3_ar , custom_applicationtool_3_fr , custom_friendly_url,  CONCAT('https://ugc.kcsc.com.jo', image) AS image_url
                         FROM tabItem ti
                         WHERE disabled = 0 AND custom_visible = 1 AND workflow_state = 'Publish' """, as_dict= True)
 
@@ -218,7 +218,7 @@ def get_item(item_code = None):
                             custom_tds_ar ,custom_msds_ar ,custom_subbrand_ved_fr ,custom_tds_fr ,custom_msds_fr ,custom_metadisc_en ,
                             custom_metadisc_ar ,custom_metadisc_fr , custom_long_disc_en ,custom_long_disc_ar ,custom_long_disc_fr ,
                             custom_applicationtool_2_en , custom_applicationtool_2_ar , custom_applicationtool_2_fr, custom_applicationtool_3_en , 
-                            custom_applicationtool_3_ar , custom_applicationtool_3_fr , custom_friendly_url
+                            custom_applicationtool_3_ar , custom_applicationtool_3_fr , custom_friendly_url,  CONCAT('https://ugc.kcsc.com.jo', image) AS image_url
                         FROM tabItem ti
                         WHERE  disabled = 0 
                         AND custom_visible = 1 
