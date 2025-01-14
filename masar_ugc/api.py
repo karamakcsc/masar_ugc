@@ -172,7 +172,7 @@ def get_surface_details():
                         FROM tabSurface ts
                         WHERE is_enabled = 1 """, as_dict= True)
 
-
+##s
 @frappe.whitelist()
 def get_system_master():
     data = frappe.db.sql("""
