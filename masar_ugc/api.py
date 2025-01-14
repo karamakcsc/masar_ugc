@@ -204,18 +204,9 @@ def get_system_master():
             INNER JOIN `tabItem` ti ON tpsi.item_code = ti.name
             WHERE tpsi.parent = %s
         """, (system['name'],), as_dict=True)
-        system['proposed_system_items'] = children  # Fixing the key name here.
+        system['proposed_system_items'] = children
 
     return systems
-
-
-
-
-
-
-
-
-
 
 
 @frappe.whitelist()
