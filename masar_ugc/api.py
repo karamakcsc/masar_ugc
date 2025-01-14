@@ -245,7 +245,7 @@ def get_surface_details():
 #     return list(systems.values())
 
 
-frappe.whitelist()
+@frappe.whitelist()
 def get_system_master():
     systems = frappe.db.sql("""
         SELECT 
@@ -258,22 +258,25 @@ def get_system_master():
             tpse.statement_link, tpse.system_metadisc_en, tpse.system_metadisc_ar, tpse.system_metadisc_fr,
             tpse.system_description_en, tpse.system_description_ar, tpse.system_description_fr, 
             CASE 
-                WHEN tpse.image IS NULL THEN NULL ELSE CONCAT('https://ugc.kcsc.com.jo', tpse.image)
+                WHEN tpse.image IS NULL THEN NULL 
+                ELSE CONCAT('https://ugc.kcsc.com.jo', tpse.image)
             END AS image_url
         FROM `tabSystem Entry` tpse
-        WHERE tpse.is_published = 1  AND tpse.workflow_state = 'Publish'
+        WHERE tpse.is_published = 1 AND tpse.workflow_state = 'Publish'
     """, as_dict=True)
+
     for system in systems:
         children = frappe.db.sql("""
             SELECT 
                 tpsi.name, tpsi.coat, tpsi.no_coat, tpsi.item_code, ti.custom_subbrand2_en
             FROM `tabProposed System Item` tpsi
-            INNER JOIN tabItem ti on tpsi.item_code = ti.name
-            WHERE tspi.parent = %s
-        """, system['tpse.name'], as_dict=True)
-        system['tpse.proposed_system_items'] = children 
+            INNER JOIN `tabItem` ti ON tpsi.item_code = ti.name
+            WHERE tpsi.parent = %s
+        """, (system['name'],), as_dict=True)
+        system['proposed_system_items'] = children  # Fixing the key name here.
 
     return systems
+
 
 
 
