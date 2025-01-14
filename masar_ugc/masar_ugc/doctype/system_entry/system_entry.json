@@ -10,6 +10,7 @@
   "naming_series",
   "column_break_gyjb",
   "is_published",
+  "image",
   "section_break_zrjl",
   "area_of_use_en",
   "area_of_use_en_2",
@@ -373,11 +374,19 @@
    "fieldtype": "Data",
    "label": "Area of Use FR 3",
    "read_only": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "image"
   }
  ],
+ "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-07 11:16:35.696793",
+ "make_attachments_public": 1,
+ "modified": "2025-01-14 09:40:00.422444",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",
