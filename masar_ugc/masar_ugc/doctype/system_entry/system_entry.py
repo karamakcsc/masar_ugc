@@ -33,28 +33,16 @@ class SystemEntry(Document):
         
     def get_payload_data(self):
         system_items = list()
-        
         for i in self.proposed_systems:
             system_items.append({
-                    "ItemCode": i.item_code,
-                    "idx": i.idx,
-                    "ProductUseEN": i.product_use_en,
-                    "ProductUseAR": i.product_use_ar,
-                    "ProductUseFR": i.product_use_fr,
-                    "ProductNoOfCoatsEN":i.no_coat_en,
-                    "ProductNoOfCoatsAR": i.no_coat_ar,
-                    "ProductNoOfCoatsFR": i.no_coat_fr
+                    "ItemCode": i.item_code,"idx": i.idx,"ProductUseEN": i.product_use_en,
+                    "ProductUseAR": i.product_use_ar,"ProductUseFR": i.product_use_fr, "ProductNoOfCoatsEN":i.no_coat_en,
+                    "ProductNoOfCoatsAR": i.no_coat_ar, "ProductNoOfCoatsFR": i.no_coat_fr
                 })
         return { 
-                "SystemID": self.name,
-            "SystemNo": self.system_no,
-            "SystemNameEN": self.system_name_en,
-            "SystemNameAR": self.system_name_ar,
-            "SystemNameFR": self.system_name_fr,
-            "AreaofUseEN": self.sub_area_of_use_en,
-            "AreaofUseAR": self.sub_area_of_use_ar,
-            "AreaofUseFR": self.sub_area_of_use_fr,
-           "AreaofUseEN2": self.area_of_use_en_2,
+                "SystemID": self.name, "SystemNo": self.system_no, "SystemNameEN": self.system_name_en,
+            "SystemNameAR": self.system_name_ar,"SystemNameFR": self.system_name_fr, "AreaofUseEN": self.sub_area_of_use_en,
+            "AreaofUseAR": self.sub_area_of_use_ar, "AreaofUseFR": self.sub_area_of_use_fr,"AreaofUseEN2": self.area_of_use_en_2,
             "AreaofUseAR2": self.area_of_use_ar_2,
             "AreaofUseFR2": self.area_of_use_fr_2,
             "AreaofUseEN3": self.area_of_use_en_3,
@@ -73,21 +61,7 @@ class SystemEntry(Document):
             "MetaDescriptionAR": self.system_description_ar,
             "MetaDescriptionFR": self.system_description_fr,
             "Publish":self.is_published,
-            "SystemItems": [
-                {
-                    "ItemCode": "03-02-11-01-0008",
-                    "idx": 1,
-                    "ProductUseEN": "Product Use EN",
-                    "ProductUseAR": "استخدام المنتج AR",
-                    "ProductUseFR": "Utilisation du produit FR",
-                    "ProductNoOfCoatsEN":"2 Coats",
-                    "ProductNoOfCoatsAR": "2 طبقات",
-                    "ProductNoOfCoatsFR": "2 couches",
-                    "ProductSubBrand2EN": "Product Description EN",
-                    "ProductSubBrand2AR": "وصف المنتج AR",
-                    "ProductSubBrand2FR": "Description du produit FR"
-                }
-            ]
+            "SystemItems": system_items
         }
 
     def system_master_asp_api(self): 
@@ -100,4 +74,17 @@ class SystemEntry(Document):
             self.insert_system_master()
             
     def insert_system_master(self): 
-        
+        url = "https://demo.es.jo/ugsASP/UGCSystemsMaster.ashx"
+        response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
+        if response.status_code == 200:
+            frappe.msgprint(f'System {self.name} is Created Successfully in ASP.' , alert=True , indicator='green')
+        else : 
+            frappe.throw(f"Create System : {response.text}")
+            
+    def update_system_master(self):
+        url = "https://demo.es.jo/ugsASP/UGCSystemsMasterUpdate.ashx"
+        response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
+        if response.status_code == 200:
+            frappe.msgprint(f'System {self.name} is Updated Successfully in ASP.' , alert=True , indicator='green')
+        else : 
+            frappe.throw(f"Updated System : {response.text}")
