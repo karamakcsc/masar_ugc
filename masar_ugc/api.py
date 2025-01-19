@@ -289,12 +289,19 @@ def get_header_data():
     }
     
 @frappe.whitelist()
-def get_defult_image():
-    return frappe.db.sql("""
-                         SELECT tdi.brand, 
-                         CASE 
-                                WHEN tdi.default_image IS NULL THEN NULL ELSE CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)
-                         END AS tdi.default_image   
-                                                   
-                        FROM `tabDefault Image` tdi
-                        WHERE publish = 1 """, as_dict= True)
+def get_default_image():
+    try:
+        result = frappe.db.sql("""
+            SELECT 
+                tdi.brand, 
+                CASE 
+                    WHEN tdi.default_image IS NULL THEN NULL 
+                    ELSE CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)
+                END AS default_image   
+            FROM `tabDefault Image` tdi
+            WHERE tdi.publish = 1
+        """, as_dict=True)
+        return result
+    except Exception as e:
+        frappe.log_error(message=str(e), title="Error in get_default_image")
+        frappe.throw(_("Unable to fetch default images. Please try again later."))
