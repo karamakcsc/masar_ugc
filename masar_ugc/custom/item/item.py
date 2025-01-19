@@ -86,9 +86,11 @@ def insert_item_to_asp(self):
         url = "https://demo.es.jo/ugsASP/UGCInsertProduct.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(get_payload_data(self)))
         if response.status_code == 200:
+            
             frappe.msgprint(f'Item {self.name} is Created Successfully in ASP.' , alert=True , indicator='green')
             self.custom_inserted_to_asp = 1 
-            
+        else: 
+            frappe.throw(f" Create Item : {str(response.text)}")
 
 def update_item_in_asp(self):
     if self.custom_inserted_to_asp == 1: 
@@ -96,3 +98,5 @@ def update_item_in_asp(self):
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(get_payload_data(self)))
         if response.status_code == 200:
             frappe.msgprint(f'Item {self.name} is updated Successfully in ASP.' , alert=True , indicator='green')
+        else: 
+            frappe.throw(str(response.text))
