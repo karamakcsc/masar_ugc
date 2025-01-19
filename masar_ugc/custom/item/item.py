@@ -1,9 +1,11 @@
 import frappe
-
-
+import json
+import requests
 def validate(self, method):
     set_shortdisc(self)
     publish_to_web(self)
+    insert_item_to_asp(self)
+    update_item_in_asp(self)
 
 def set_shortdisc(self):
     if self.custom_short_disc_en:
@@ -75,5 +77,23 @@ def get_payload_data(self):
             "PackSizeAR": self.custom_packsize_ar, 
             "PackSizeFR": self.custom_packsize_fr
         }
+def get_header_data():
+    return  {
+  'Authorization': 'Basic YWRtaW46cGFzc3dvcmQxMjM=',
+  'Content-Type': 'application/json'
+    }
 def insert_item_to_asp(self):
-    pass
+    if self.custom_inserted_to_asp == 0: 
+        url = "https://demo.es.jo/ugsASP/UGCInsertProduct.ashx"
+        response = requests.request("POST", url, headers=get_header_data, data=json.dumps(get_payload_data(self)))
+        if response.status_code == 200:
+            frappe.msgprint(f'Item {self.name} is updated Successfully in ASP.' , alert=True , indicator='green')
+            self.custom_inserted_to_asp = 1 
+            
+
+def update_item_in_asp(self):
+    if self.custom_inserted_to_asp == 1: 
+        url = "https://demo.es.jo/ugsASP/UGCEditProduct.ashx"
+        response = requests.request("POST", url, headers=get_header_data, data=json.dumps(get_payload_data(self)))
+        if response.status_code == 200:
+            frappe.msgprint(f'Item {self.name} is updated Successfully in ASP.' , alert=True , indicator='green')

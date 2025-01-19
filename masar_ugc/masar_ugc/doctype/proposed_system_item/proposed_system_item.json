@@ -6,13 +6,15 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "product_use",
+  "product_use_en",
   "no_coat_en",
   "no_coat_ar",
   "no_coat_fr",
   "column_break_vgyk",
   "item_code",
-  "item_name"
+  "item_name",
+  "product_use_ar",
+  "product_use_fr"
  ],
  "fields": [
   {
@@ -22,14 +24,6 @@
    "label": "Item Code",
    "link_filters": "[[\"Item\",\"disabled\",\"=\",0]]",
    "options": "Item"
-  },
-  {
-   "fieldname": "product_use",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Product Use",
-   "link_filters": "[[\"Product Use\",\"is_enabled\",\"=\",1]]",
-   "options": "Product Use"
   },
   {
    "fetch_from": "item_code.item_name",
@@ -60,12 +54,34 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Coats/Thickness FR"
+  },
+  {
+   "fieldname": "product_use_en",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Product Use EN",
+   "link_filters": "[[\"Product Use\",\"is_enabled\",\"=\",1]]",
+   "options": "Product Use"
+  },
+  {
+   "fetch_from": "product_use_en.product_use_ar",
+   "fieldname": "product_use_ar",
+   "fieldtype": "Data",
+   "label": "Product Use AR",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "product_use_en.product_use_fr",
+   "fieldname": "product_use_fr",
+   "fieldtype": "Data",
+   "label": "Product Use FR",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-19 10:59:07.633655",
+ "modified": "2025-01-19 11:07:51.845358",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Proposed System Item",

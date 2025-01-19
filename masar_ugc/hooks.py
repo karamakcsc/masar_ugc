@@ -374,7 +374,8 @@ fixtures = [
                 "Quotation-custom_title3",
                 "Quotation-custom_items3",
                 "Quotation-custom_coats_or_dft", 
-                "Item-custom_friendly_url"
+                "Item-custom_friendly_url",
+                "Item-custom_inserted_to_asp"
             ]
         ]
     ]},
