@@ -191,7 +191,11 @@ def get_system_master():
             CASE 
                 WHEN tpse.image IS NULL THEN NULL 
                 ELSE CONCAT('https://ugc.kcsc.com.jo', tpse.image)
-            END AS image_url
+            END AS image_url,
+            CASE 
+                WHEN tpse.body_image IS NULL THEN NULL 
+                ELSE CONCAT('https://ugc.kcsc.com.jo', tpse.body_image)
+            END AS body_image
         FROM `tabSystem Entry` tpse
         WHERE tpse.is_published = 1 AND tpse.workflow_state = 'Publish'
     """, as_dict=True)
