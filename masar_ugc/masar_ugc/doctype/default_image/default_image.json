@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:brand",
  "creation": "2025-01-19 12:53:16.233668",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -31,7 +32,8 @@
    "fieldname": "brand",
    "fieldtype": "Link",
    "label": "Brand",
-   "options": "Brand"
+   "options": "Brand",
+   "unique": 1
   },
   {
    "fieldname": "column_break_dwcx",
@@ -46,16 +48,17 @@
   {
    "fieldname": "default_image",
    "fieldtype": "Attach Image",
-   "label": "Default Image"
+   "label": "Default Image",
+   "make_attachment_public": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-01-19 12:55:39.151632",
+ "modified": "2025-01-19 13:11:09.877424",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Default Image",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -68,7 +71,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],
