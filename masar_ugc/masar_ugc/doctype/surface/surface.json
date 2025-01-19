@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:surface1_en",
  "creation": "2024-11-05 12:23:22.162000",
@@ -75,7 +76,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-17 13:52:42.943986",
+ "modified": "2025-01-19 10:02:43.435863",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Surface",

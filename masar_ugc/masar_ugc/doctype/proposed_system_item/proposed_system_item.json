@@ -7,18 +7,14 @@
  "engine": "InnoDB",
  "field_order": [
   "product_use",
-  "no_coat",
+  "no_coat_en",
+  "no_coat_ar",
+  "no_coat_fr",
   "column_break_vgyk",
   "item_code",
   "item_name"
  ],
  "fields": [
-  {
-   "fieldname": "no_coat",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Coats/Thickness"
-  },
   {
    "fieldname": "item_code",
    "fieldtype": "Link",
@@ -46,12 +42,30 @@
   {
    "fieldname": "column_break_vgyk",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_coat_en",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Coats/Thickness EN"
+  },
+  {
+   "fieldname": "no_coat_ar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Coats/Thickness AR"
+  },
+  {
+   "fieldname": "no_coat_fr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Coats/Thickness FR"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-19 09:33:05.549627",
+ "modified": "2025-01-19 10:59:07.633655",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Proposed System Item",
