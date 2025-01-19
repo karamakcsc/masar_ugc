@@ -76,6 +76,8 @@ class SystemEntry(Document):
     def insert_system_master(self): 
         url = "https://demo.es.jo/ugsASP/UGCSystemsMaster.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
+        print(url)
+        print(json.dumps(self.get_payload_data()))
         if response.status_code == 200:
             frappe.msgprint(f'System {self.name} is Created Successfully in ASP.' , alert=True , indicator='green')
         else : 
