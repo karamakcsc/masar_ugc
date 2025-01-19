@@ -293,7 +293,7 @@ def get_default_image():
     try:
         result = frappe.db.sql("""
             SELECT 
-                tdi.brand, 
+                tdi.brand, tdi.is_product, tdi.is_item,
                 CASE 
                     WHEN tdi.default_image IS NULL THEN NULL 
                     ELSE CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)

@@ -8,9 +8,11 @@
  "field_order": [
   "section_break_0vdr",
   "brand",
+  "default_image",
   "column_break_dwcx",
   "publish",
-  "default_image",
+  "is_product",
+  "is_item",
   "amended_from"
  ],
  "fields": [
@@ -50,11 +52,23 @@
    "fieldtype": "Attach Image",
    "label": "Default Image",
    "make_attachment_public": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_product",
+   "fieldtype": "Check",
+   "label": "Is Product"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_item",
+   "fieldtype": "Check",
+   "label": "Is Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-19 13:11:09.877424",
+ "modified": "2025-01-19 14:31:44.275515",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Default Image",
