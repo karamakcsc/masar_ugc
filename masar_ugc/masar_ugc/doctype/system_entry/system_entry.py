@@ -34,7 +34,17 @@ class SystemEntry(Document):
     def get_payload_data(self):
         system_items = list()
         
-        for i in self.
+        for i in self.proposed_systems:
+            system_items.append({
+                    "ItemCode": i.item_code,
+                    "idx": i.idx,
+                    "ProductUseEN": i.product_use_en,
+                    "ProductUseAR": i.product_use_ar,
+                    "ProductUseFR": i.product_use_fr,
+                    "ProductNoOfCoatsEN":i.no_coat_en,
+                    "ProductNoOfCoatsAR": i.no_coat_ar,
+                    "ProductNoOfCoatsFR": i.no_coat_fr
+                })
         return { 
                 "SystemID": self.name,
             "SystemNo": self.system_no,

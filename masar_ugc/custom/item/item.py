@@ -48,4 +48,4 @@ def update_item_in_asp(self , publish):
         if response.status_code == 200:
             frappe.msgprint(f'Item {self.name} is updated Successfully in ASP.' , alert=True , indicator='green')
         else: 
-            frappe.throw(str(response.text))
+            frappe.throw(f" Update Item : {str(response.text)}")
