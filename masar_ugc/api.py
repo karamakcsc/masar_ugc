@@ -290,10 +290,9 @@ def get_header_data():
     
 @frappe.whitelist()
 def get_default_image():
-    try:
         result = frappe.db.sql("""
             SELECT 
-                tdi.brand, tdi.is_product, tdi.is_item,
+                tdi.brand, tdi.is_product, tdi.is_system,
                 CASE 
                     WHEN tdi.default_image IS NULL THEN NULL 
                     ELSE CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)
@@ -302,6 +301,3 @@ def get_default_image():
             WHERE tdi.publish = 1
         """, as_dict=True)
         return result
-    except Exception as e:
-        frappe.log_error(message=str(e), title="Error in get_default_image")
-        frappe.throw(_("Unable to fetch default images. Please try again later."))

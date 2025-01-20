@@ -12,7 +12,7 @@
   "column_break_dwcx",
   "publish",
   "is_product",
-  "is_item",
+  "is_system",
   "amended_from"
  ],
  "fields": [
@@ -61,14 +61,14 @@
   },
   {
    "default": "0",
-   "fieldname": "is_item",
+   "fieldname": "is_system",
    "fieldtype": "Check",
-   "label": "Is Item"
+   "label": "Is System"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-19 14:31:44.275515",
+ "modified": "2025-01-20 09:44:00.545215",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Default Image",
