@@ -35,8 +35,7 @@
    "fieldname": "brand",
    "fieldtype": "Link",
    "label": "Brand",
-   "options": "Brand",
-   "unique": 1
+   "options": "Brand"
   },
   {
    "fieldname": "column_break_dwcx",
@@ -75,7 +74,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-21 10:03:33.565687",
+ "modified": "2025-01-21 11:15:28.556926",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Default Image",
