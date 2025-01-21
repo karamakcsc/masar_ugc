@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:brand",
+ "autoname": "naming_series:",
  "creation": "2025-01-19 12:53:16.233668",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_0vdr",
+  "naming_series",
   "brand",
   "default_image",
   "column_break_dwcx",
@@ -64,15 +65,21 @@
    "fieldname": "is_system",
    "fieldtype": "Check",
    "label": "Is System"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Image ID",
+   "options": "Img-"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-20 09:44:00.545215",
+ "modified": "2025-01-21 10:03:33.565687",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Default Image",
- "naming_rule": "By fieldname",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

@@ -39,6 +39,14 @@ class SystemEntry(Document):
                     "ProductUseAR": i.product_use_ar,"ProductUseFR": i.product_use_fr, "ProductNoOfCoatsEN":i.no_coat_en,
                     "ProductNoOfCoatsAR": i.no_coat_ar, "ProductNoOfCoatsFR": i.no_coat_fr
                 })
+        image = None
+        if self.body_image is not None:
+            image =  f"https://ugc.kcsc.com.jo{self.body_image}"
+        if image is None: 
+            di = frappe.qb.DocType('Default Image')
+            defualt_image_sql = frappe.qb.from_(di).select(di.default_image).where(di.beand == self.system_brand).where(di.is_system == 1 ).run()
+            if defualt_image_sql and defualt_image_sql[0] and defualt_image_sql[0][0]: 
+                image = f"https://ugc.kcsc.com.jo{defualt_image_sql[0][0]}"
         return { 
                 "SystemID": self.name, "SystemNo": self.system_no, "SystemNameEN": self.system_name_en,
             "SystemNameAR": self.system_name_ar,"SystemNameFR": self.system_name_fr, "AreaofUseEN": self.sub_area_of_use_en,
@@ -50,7 +58,7 @@ class SystemEntry(Document):
             "AreaofUseFR3": self.area_of_use_fr_3,
             "SystemBrand": self.system_brand,
             "SystemImageLink": self.system_image_link,
-            "SystemBodyImageLink": f"https://ugc.kcsc.com.jo{self.body_image}" if self.body_image else None, ##################################
+            "SystemBodyImageLink":image,
             "SystemVideoLink": self.system_video_link,
             "SystemTestResultLink": self.test_result_link,
             "SystemStatementLink": self.statement_link,

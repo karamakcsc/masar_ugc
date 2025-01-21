@@ -131,26 +131,31 @@ def get_announcement():
 @frappe.whitelist()
 def get_item_details():
     return frappe.db.sql("""
-                         SELECT 
-                            item_code ,item_name, custom_visible ,custom_sold ,custom_category_en ,
-                            custom_category_ar ,custom_category_fr ,custom_brand_en ,custom_brand_ar ,custom_brand_fr ,custom_subbrand1_en ,
-                            custom_subbrand1_ar ,custom_subbrand1_fr ,custom_subbrand2_en , custom_subbrand2_ar , custom_subbrand2_fr , 
-                            custom_short_disc_en ,
-                            custom_short_disc_ar ,custom_short_disc_fr ,custom_product_use_en ,custom_product_use_ar ,custom_product_use_fr ,custom_surface1_en ,custom_surface2_en ,
-                            custom_surface3_en ,custom_surface1_ar , custom_surface2_ar ,custom_surface3_ar ,custom_surface1_fr ,custom_surface2_fr ,custom_surface3_fr ,custom_finishes_en , custom_finishes_ar ,custom_finishes_fr ,
-                            custom_colors_en ,custom_colors_ar ,custom_colors_fr ,custom_sheen_en ,custom_sheen_ar ,custom_sheen_fr ,
-                            custom_packsize_en ,custom_packsize_ar ,custom_packsize_fr ,custom_coverageperpack_en ,custom_applicationtool_en ,custom_coverageperpack_ar ,custom_applicationtool_ar ,
-                            custom_coverageperpack_fr , custom_applicationtool_fr , custom_subbrand_pic_en ,custom_subbrand_pic_ar ,
-                            custom_subbrand_pic_fr ,custom_subbrand_ved_en , custom_tds_en ,custom_msds_en ,custom_subbrand_ved_ar ,
-                            custom_tds_ar ,custom_msds_ar ,custom_subbrand_ved_fr ,custom_tds_fr ,custom_msds_fr ,custom_metadisc_en ,
-                            custom_metadisc_ar ,custom_metadisc_fr , custom_long_disc_en ,custom_long_disc_ar ,custom_long_disc_fr ,
-                            custom_applicationtool_2_en , custom_applicationtool_2_ar , custom_applicationtool_2_fr, custom_applicationtool_3_en , 
-                            custom_applicationtool_3_ar , custom_applicationtool_3_fr , custom_friendly_url, 
-                            CASE 
-                                    WHEN image IS NULL THEN NULL ELSE CONCAT('https://ugc.kcsc.com.jo', image)
-                            END AS image_url
-                        FROM tabItem ti
-                        WHERE disabled = 0 AND custom_visible = 1 AND workflow_state = 'Publish' """, as_dict= True)
+                SELECT 
+                    ti.item_code, ti.item_name,  ti.custom_visible,  ti.custom_sold,  ti.custom_category_en, ti.custom_category_ar, ti.custom_category_fr, 
+                    ti.custom_brand_en, ti.custom_brand_ar,  ti.custom_brand_fr,  ti.custom_subbrand1_en, ti.custom_subbrand1_ar, ti.custom_subbrand1_fr, 
+                    ti.custom_subbrand2_en, ti.custom_subbrand2_ar, ti.custom_subbrand2_fr, ti.custom_short_disc_en, ti.custom_short_disc_ar, 
+                    ti.custom_short_disc_fr, ti.custom_product_use_en, ti.custom_product_use_ar, ti.custom_product_use_fr, ti.custom_surface1_en, 
+                    ti.custom_surface2_en, ti.custom_surface3_en, ti.custom_surface1_ar, ti.custom_surface2_ar, ti.custom_surface3_ar, 
+                    ti.custom_surface1_fr, ti.custom_surface2_fr, ti.custom_surface3_fr, ti.custom_finishes_en, ti.custom_finishes_ar, 
+                    ti.custom_finishes_fr, ti.custom_colors_en, ti.custom_colors_ar, ti.custom_colors_fr, ti.custom_sheen_en, ti.custom_sheen_ar, 
+                    ti.custom_sheen_fr, ti.custom_packsize_en, ti.custom_packsize_ar, ti.custom_packsize_fr, ti.custom_coverageperpack_en, 
+                    ti.custom_applicationtool_en, ti.custom_coverageperpack_ar,  ti.custom_applicationtool_ar, ti.custom_coverageperpack_fr, ti.custom_applicationtool_fr, 
+                    ti.custom_subbrand_pic_en, ti.custom_subbrand_pic_ar, ti.custom_subbrand_pic_fr, ti.custom_subbrand_ved_en, ti.custom_tds_en, ti.custom_msds_en, 
+                    ti.custom_subbrand_ved_ar,  ti.custom_tds_ar, ti.custom_msds_ar, ti.custom_subbrand_ved_fr,  ti.custom_tds_fr, ti.custom_msds_fr, 
+                    ti.custom_metadisc_en, ti.custom_metadisc_ar, ti.custom_metadisc_fr, ti.custom_long_disc_en, ti.custom_long_disc_ar, 
+                    ti.custom_long_disc_fr,  ti.custom_applicationtool_2_en, ti.custom_applicationtool_2_ar,  ti.custom_applicationtool_2_fr,  ti.custom_applicationtool_3_en, 
+                    ti.custom_applicationtool_3_ar, ti.custom_applicationtool_3_fr,  ti.custom_friendly_url, 
+                    COALESCE(
+                        CASE 
+                            WHEN ti.image IS NULL OR TRIM(ti.image) = '' THEN NULL
+                            ELSE CONCAT('https://ugc.kcsc.com.jo', ti.image)
+                        END,
+                        CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)
+                    ) AS image_url
+                FROM tabItem ti
+                LEFT JOIN `tabDefault Image` tdi ON ti.brand = tdi.brand AND tdi.is_product = 1 
+                WHERE disabled = 0 AND custom_visible = 1 AND workflow_state = 'Publish' """, as_dict= True)
 
 
 
@@ -188,15 +193,22 @@ def get_system_master():
             tpse.system_image_link, tpse.system_video_link, tpse.test_result_link, tpse.statement_link, 
             tpse.system_metadisc_en, tpse.system_metadisc_ar, tpse.system_metadisc_fr,
             tpse.system_description_en, tpse.system_description_ar, tpse.system_description_fr, 
-            CASE 
-                WHEN tpse.image IS NULL THEN NULL 
-                ELSE CONCAT('https://ugc.kcsc.com.jo', tpse.image)
-            END AS image_url,
-            CASE 
-                WHEN tpse.body_image IS NULL THEN NULL 
-                ELSE CONCAT('https://ugc.kcsc.com.jo', tpse.body_image)
-            END AS body_image
+            COALESCE(
+		        CASE 
+		            WHEN tpse.image IS NULL OR TRIM(tpse.image) = '' THEN NULL
+		            ELSE CONCAT('https://ugc.kcsc.com.jo', tpse.image)
+		        END,
+		        CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)
+		    ) AS image_url,
+		    COALESCE(
+		        CASE 
+		            WHEN tpse.body_image IS NULL OR TRIM(tpse.body_image) = '' THEN NULL
+		            ELSE CONCAT('https://ugc.kcsc.com.jo', tpse.body_image)
+		        END,
+		        CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)
+		    ) AS body_image
         FROM `tabSystem Entry` tpse
+        LEFT JOIN `tabDefault Image` tdi ON tpse.system_brand = tdi.brand AND tdi.is_system =1 
         WHERE tpse.is_published = 1 AND tpse.workflow_state = 'Publish'
     """, as_dict=True)
 
@@ -220,29 +232,32 @@ def get_item(item_code = None):
     if item_code:
         cond = f""" AND item_code = '{item_code}'"""
     return frappe.db.sql(f"""
-                         SELECT 
-                            item_code ,item_name, custom_visible ,custom_sold ,custom_category_en ,
-                            custom_category_ar ,custom_category_fr ,custom_brand_en ,custom_brand_ar ,custom_brand_fr ,custom_subbrand1_en ,
-                            custom_subbrand1_ar ,custom_subbrand1_fr ,custom_subbrand2_en , custom_subbrand2_ar , custom_subbrand2_fr , 
-                            custom_short_disc_en ,
-                            custom_short_disc_ar ,custom_short_disc_fr ,custom_product_use_en ,custom_product_use_ar ,custom_product_use_fr ,custom_surface1_en ,custom_surface2_en ,
-                            custom_surface3_en ,custom_surface1_ar , custom_surface2_ar ,custom_surface3_ar ,custom_surface1_fr ,custom_surface2_fr ,custom_surface3_fr ,custom_finishes_en , custom_finishes_ar ,custom_finishes_fr ,
-                            custom_colors_en ,custom_colors_ar ,custom_colors_fr ,custom_sheen_en ,custom_sheen_ar ,custom_sheen_fr ,
-                            custom_packsize_en ,custom_packsize_ar ,custom_packsize_fr ,custom_coverageperpack_en ,custom_applicationtool_en ,custom_coverageperpack_ar ,custom_applicationtool_ar ,
-                            custom_coverageperpack_fr , custom_applicationtool_fr , custom_subbrand_pic_en ,custom_subbrand_pic_ar ,
-                            custom_subbrand_pic_fr ,custom_subbrand_ved_en , custom_tds_en ,custom_msds_en ,custom_subbrand_ved_ar ,
-                            custom_tds_ar ,custom_msds_ar ,custom_subbrand_ved_fr ,custom_tds_fr ,custom_msds_fr ,custom_metadisc_en ,
-                            custom_metadisc_ar ,custom_metadisc_fr , custom_long_disc_en ,custom_long_disc_ar ,custom_long_disc_fr ,
-                            custom_applicationtool_2_en , custom_applicationtool_2_ar , custom_applicationtool_2_fr, custom_applicationtool_3_en , 
-                            custom_applicationtool_3_ar , custom_applicationtool_3_fr , custom_friendly_url,  
-                         CASE 
-                                WHEN image IS NULL THEN NULL ELSE CONCAT('https://ugc.kcsc.com.jo', image)
-                         END AS image_url
-
-                        FROM tabItem ti
-                        WHERE  disabled = 0 
-                        AND custom_visible = 1 
-                        AND workflow_state = 'Publish' 
+                          SELECT 
+                                ti.item_code ,ti.item_name, ti.custom_visible ,ti.custom_sold ,ti.custom_category_en ,
+                                ti.custom_category_ar ,ti.custom_category_fr ,ti.custom_brand_en ,ti.custom_brand_ar ,ti.custom_brand_fr ,ti.custom_subbrand1_en ,
+                                ti.custom_subbrand1_ar ,ti.custom_subbrand1_fr ,ti.custom_subbrand2_en , ti.custom_subbrand2_ar , ti.custom_subbrand2_fr , 
+                                ti.custom_short_disc_en ,
+                                ti.custom_short_disc_ar ,ti.custom_short_disc_fr ,ti.custom_product_use_en ,ti.custom_product_use_ar ,ti.custom_product_use_fr ,ti.custom_surface1_en ,ti.custom_surface2_en ,
+                                ti.custom_surface3_en ,ti.custom_surface1_ar , ti.custom_surface2_ar ,ti.custom_surface3_ar ,ti.custom_surface1_fr ,ti.custom_surface2_fr ,ti.custom_surface3_fr ,ti.custom_finishes_en , ti.custom_finishes_ar ,ti.custom_finishes_fr ,
+                                ti.custom_colors_en ,ti.custom_colors_ar ,ti.custom_colors_fr ,ti.custom_sheen_en ,ti.custom_sheen_ar ,ti.custom_sheen_fr ,
+                                ti.custom_packsize_en ,ti.custom_packsize_ar ,ti.custom_packsize_fr ,ti.custom_coverageperpack_en ,ti.custom_applicationtool_en ,ti.custom_coverageperpack_ar ,ti.custom_applicationtool_ar ,
+                                ti.custom_coverageperpack_fr , ti.custom_applicationtool_fr , ti.custom_subbrand_pic_en ,ti.custom_subbrand_pic_ar ,
+                                ti.custom_subbrand_pic_fr ,ti.custom_subbrand_ved_en , ti.custom_tds_en ,ti.custom_msds_en ,ti.custom_subbrand_ved_ar ,
+                                ti.custom_tds_ar ,ti.custom_msds_ar ,ti.custom_subbrand_ved_fr ,ti.custom_tds_fr ,ti.custom_msds_fr ,ti.custom_metadisc_en ,
+                                ti.custom_metadisc_ar ,ti.custom_metadisc_fr , ti.custom_long_disc_en ,ti.custom_long_disc_ar ,ti.custom_long_disc_fr ,    ti.custom_applicationtool_2_en , ti.custom_applicationtool_2_ar , ti.custom_applicationtool_2_fr, ti.custom_applicationtool_3_en , 
+                                ti.custom_applicationtool_3_ar , ti.custom_applicationtool_3_fr , ti.custom_friendly_url,  
+                            COALESCE(
+                                                    CASE 
+                                                        WHEN ti.image IS NULL OR TRIM(ti.image) = '' THEN NULL
+                                                        ELSE CONCAT('https://ugc.kcsc.com.jo', ti.image)
+                                                    END,
+                                                    CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)
+                                                ) AS image_url
+                                            FROM tabItem ti
+                                            LEFT JOIN `tabDefault Image` tdi ON ti.brand = tdi.brand AND tdi.is_product = 1 
+                            WHERE  disabled = 0 
+                            AND custom_visible = 1 
+                            AND workflow_state = 'Publish' 
                         {cond}""", as_dict= True)
 
 
