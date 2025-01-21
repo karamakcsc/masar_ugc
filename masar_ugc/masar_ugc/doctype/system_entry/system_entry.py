@@ -50,16 +50,16 @@ class SystemEntry(Document):
             "AreaofUseFR3": self.area_of_use_fr_3,
             "SystemBrand": self.system_brand,
             "SystemImageLink": self.system_image_link,
-            "SystemBodyImageLink": f"https://ugc.kcsc.com.jo{self.body_image}", ##################################
+            "SystemBodyImageLink": f"https://ugc.kcsc.com.jo{self.body_image}" if self.body_image else None, ##################################
             "SystemVideoLink": self.system_video_link,
             "SystemTestResultLink": self.test_result_link,
             "SystemStatementLink": self.statement_link,
-            "SystemDescriptionEN": self.system_metadisc_en,
-            "SystemDescriptionAR": self.system_metadisc_ar,
-            "SystemDescriptionFR": self.system_metadisc_fr,
-            "MetaDescriptionEN": self.system_description_en,
-            "MetaDescriptionAR": self.system_description_ar,
-            "MetaDescriptionFR": self.system_description_fr,
+            "SystemDescriptionEN": self.system_description_en,
+            "SystemDescriptionAR": self.system_description_ar,
+            "SystemDescriptionFR": self.system_description_fr,
+            "MetaDescriptionEN": self.system_metadisc_en,
+            "MetaDescriptionAR": self.system_metadisc_ar,
+            "MetaDescriptionFR": self.system_metadisc_fr,
             "Publish":self.is_published,
             "SystemItems": system_items
         }
