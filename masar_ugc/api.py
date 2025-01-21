@@ -307,7 +307,7 @@ def get_header_data():
 def get_default_image():
         result = frappe.db.sql("""
             SELECT 
-                tdi.brand, tdi.is_product, tdi.is_system,
+               tdi.name, tdi.brand, tdi.is_product, tdi.is_system,
                 CASE 
                     WHEN tdi.default_image IS NULL THEN NULL 
                     ELSE CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)
