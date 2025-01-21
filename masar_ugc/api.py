@@ -154,7 +154,7 @@ def get_item_details():
                         CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)
                     ) AS image_url
                 FROM tabItem ti
-                LEFT JOIN `tabDefault Image` tdi ON ti.brand = tdi.brand AND tdi.is_product = 1 
+                LEFT JOIN `tabDefault Image` tdi ON ti.custom_brand_en = tdi.brand AND tdi.is_product = 1 
                 WHERE disabled = 0 AND custom_visible = 1 AND workflow_state = 'Publish' """, as_dict= True)
 
 
@@ -254,7 +254,7 @@ def get_item(item_code = None):
                                                     CONCAT('https://ugc.kcsc.com.jo', tdi.default_image)
                                                 ) AS image_url
                                             FROM tabItem ti
-                                            LEFT JOIN `tabDefault Image` tdi ON ti.brand = tdi.brand AND tdi.is_product = 1 
+                                            LEFT JOIN `tabDefault Image` tdi ON ti.custom_brand_en = tdi.brand AND tdi.is_product = 1 
                             WHERE  disabled = 0 
                             AND custom_visible = 1 
                             AND workflow_state = 'Publish' 
