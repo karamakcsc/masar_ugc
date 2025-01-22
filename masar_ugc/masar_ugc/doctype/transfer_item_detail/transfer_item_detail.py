@@ -7,7 +7,7 @@ from frappe.model.document import Document
 
 class TransferItemDetail(Document):
     def on_submit(self):
-        pass
+        self.transfer_details()
     
     
     def transfer_details(self):
@@ -27,15 +27,8 @@ class TransferItemDetail(Document):
                             FROM tabItem ti
                             WHERE  ti.name = %s
                         """,(self.source_item,), as_dict= True)
-        if len(item_details_sql) != 0:
-            for detail in item_details_sql:
-                for item in self.items:
-                    frappe.db.set_value("Item", item.item_code, "custom_category_en", detail.get('custom_category_en'))
-                    frappe.db.set_value("Item", item.item_code, "custom_category_ar", detail.get('custom_category_ar'))
-                    frappe.db.set_value("Item", item.item_code, "custom_category_fr", detail.get('custom_category_fr'))
-                    frappe.db.set_value("Item", item.item_code, "custom_brand_en", detail.get('custom_brand_en'))
-                    frappe.db.set_value("Item", item.item_code, "custom_brand_ar", detail.get('custom_brand_ar'))
-                    frappe.db.set_value("Item", item.item_code, "custom_brand_fr", detail.get('custom_brand_fr'))
-                    frappe.db.set_value("Item", item.item_code, "custom_subbrand1_en", detail.get('custom_subbrand1_en'))
-
+        if item_details_sql and item_details_sql[0]:
+            for item in self.items:
+                doc = frappe.get_doc("Item", item.item_code).update(item_details_sql[0]).save()
+            
                 

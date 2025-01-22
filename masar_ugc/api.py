@@ -275,9 +275,9 @@ def get_area_of_use():
 
 def get_payload_data_for_item(self , publish):
         image = None
-        if self.image is not None:
+        if self.image  not in [None , '' , ' ']:
             image =  f"https://ugc.kcsc.com.jo{self.image}"
-        if image is None: 
+        if image   not in [None , '' , ' ']: 
             di = frappe.qb.DocType('Default Image')
             defualt_image_sql = frappe.qb.from_(di).select(di.default_image).where(di.brand == self.custom_brand_en).where(di.is_product == 1 ).run()
             if defualt_image_sql and defualt_image_sql[0] and defualt_image_sql[0][0]: 

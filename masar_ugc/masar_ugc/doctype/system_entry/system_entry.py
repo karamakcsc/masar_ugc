@@ -39,14 +39,23 @@ class SystemEntry(Document):
                     "ProductUseAR": i.product_use_ar,"ProductUseFR": i.product_use_fr, "ProductNoOfCoatsEN":i.no_coat_en,
                     "ProductNoOfCoatsAR": i.no_coat_ar, "ProductNoOfCoatsFR": i.no_coat_fr
                 })
-        image = None
-        if self.body_image is not None:
-            image =  f"https://ugc.kcsc.com.jo{self.body_image}"
-        if image is None: 
+        cover_image = None
+        if self.image  not in [None , '' , ' ']:
+            cover_image =  f"https://ugc.kcsc.com.jo{self.image}"
+        if cover_image   not in [None , '' , ' ']: 
+            di = frappe.qb.DocType('Default Image')
+            defualt_cover_image_sql = frappe.qb.from_(di).select(di.default_image).where(di.brand == self.system_brand).where(di.is_system == 1 ).run()
+            if defualt_cover_image_sql and defualt_cover_image_sql[0] and defualt_cover_image_sql[0][0]: 
+                cover_image = f"https://ugc.kcsc.com.jo{defualt_cover_image_sql[0][0]}"
+
+        body_image = None
+        if self.body_image  not in [None , '' , ' ']:
+            body_image =  f"https://ugc.kcsc.com.jo{self.body_image}"
+        if body_image   not in [None , '' , ' ']: 
             di = frappe.qb.DocType('Default Image')
             defualt_image_sql = frappe.qb.from_(di).select(di.default_image).where(di.brand == self.system_brand).where(di.is_system == 1 ).run()
             if defualt_image_sql and defualt_image_sql[0] and defualt_image_sql[0][0]: 
-                image = f"https://ugc.kcsc.com.jo{defualt_image_sql[0][0]}"
+                body_image = f"https://ugc.kcsc.com.jo{defualt_image_sql[0][0]}"
         return { 
                 "SystemID": self.name, "SystemNo": self.system_no, "SystemNameEN": self.system_name_en,
             "SystemNameAR": self.system_name_ar,"SystemNameFR": self.system_name_fr, "AreaofUseEN": self.sub_area_of_use_en,
@@ -58,7 +67,8 @@ class SystemEntry(Document):
             "AreaofUseFR3": self.area_of_use_fr_3,
             "SystemBrand": self.system_brand,
             "SystemImageLink": self.system_image_link,
-            "SystemBodyImageLink":image,
+            "SystemBodyImageLink":body_image,
+            "SystemCoverImageLink": cover_image,
             "SystemVideoLink": self.system_video_link,
             "SystemTestResultLink": self.test_result_link,
             "SystemStatementLink": self.statement_link,
@@ -84,6 +94,7 @@ class SystemEntry(Document):
     def insert_system_master(self): 
         url = "https://demo.es.jo/ugclive/UGCSystemsMaster.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
+        # frappe.msgprint(str(json.dumps(self.get_payload_data())))
         if response.status_code == 200:
             frappe.msgprint(f'System {self.name} is Created Successfully in ASP.' , alert=True , indicator='green')
         else : 
@@ -92,6 +103,7 @@ class SystemEntry(Document):
     def update_system_master(self):
         url = "https://demo.es.jo/ugclive/UGCSystemsMasterUpdate.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
+        # frappe.msgprint(str(json.dumps(self.get_payload_data())))
         if response.status_code == 200:
             frappe.msgprint(f'System {self.name} is Updated Successfully in ASP.' , alert=True , indicator='green')
         else : 
