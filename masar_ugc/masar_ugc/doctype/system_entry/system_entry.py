@@ -42,7 +42,7 @@ class SystemEntry(Document):
         cover_image = None
         if self.image  not in [None , '' , ' ']:
             cover_image =  f"https://ugc.kcsc.com.jo{self.image}"
-        if cover_image   not in [None , '' , ' ']: 
+        if cover_image   in [None , '' , ' ']: 
             di = frappe.qb.DocType('Default Image')
             defualt_cover_image_sql = frappe.qb.from_(di).select(di.default_image).where(di.brand == self.system_brand).where(di.is_system == 1 ).run()
             if defualt_cover_image_sql and defualt_cover_image_sql[0] and defualt_cover_image_sql[0][0]: 
@@ -51,7 +51,7 @@ class SystemEntry(Document):
         body_image = None
         if self.body_image  not in [None , '' , ' ']:
             body_image =  f"https://ugc.kcsc.com.jo{self.body_image}"
-        if body_image   not in [None , '' , ' ']: 
+        if body_image  in [None , '' , ' ']: 
             di = frappe.qb.DocType('Default Image')
             defualt_image_sql = frappe.qb.from_(di).select(di.default_image).where(di.brand == self.system_brand).where(di.is_system == 1 ).run()
             if defualt_image_sql and defualt_image_sql[0] and defualt_image_sql[0][0]: 
@@ -94,7 +94,7 @@ class SystemEntry(Document):
     def insert_system_master(self): 
         url = "https://demo.es.jo/ugclive/UGCSystemsMaster.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
-        # frappe.msgprint(str(json.dumps(self.get_payload_data())))
+        frappe.msgprint(str(json.dumps(self.get_payload_data())))
         if response.status_code == 200:
             frappe.msgprint(f'System {self.name} is Created Successfully in ASP.' , alert=True , indicator='green')
         else : 
@@ -103,7 +103,7 @@ class SystemEntry(Document):
     def update_system_master(self):
         url = "https://demo.es.jo/ugclive/UGCSystemsMasterUpdate.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
-        # frappe.msgprint(str(json.dumps(self.get_payload_data())))
+        frappe.msgprint(str(json.dumps(self.get_payload_data())))
         if response.status_code == 200:
             frappe.msgprint(f'System {self.name} is Updated Successfully in ASP.' , alert=True , indicator='green')
         else : 
