@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-22 12:25:23.853165",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "source_item",
+  "category_en",
+  "brand_en",
+  "subbrand1_en",
+  "subbrand2_en",
+  "product_name_en",
+  "product_use_en",
+  "surface1_en",
+  "surface2_en",
+  "surface3_en",
+  "friendly_url",
+  "column_break_dppg",
+  "source_item_name",
+  "section_break_ahfd",
+  "items",
+  "section_break_jcy2",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_jcy2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Transfer Item Detail",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "source_item",
+   "fieldtype": "Link",
+   "label": "Source Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_dppg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "source_item.item_name",
+   "fieldname": "source_item_name",
+   "fieldtype": "Data",
+   "label": "Source Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ahfd",
+   "fieldtype": "Section Break",
+   "label": "Target Item"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Transfer Item Detail Line"
+  },
+  {
+   "fetch_from": "source_item.custom_category_en",
+   "fieldname": "category_en",
+   "fieldtype": "Data",
+   "label": "Category EN"
+  },
+  {
+   "fetch_from": "source_item.custom_brand_en",
+   "fieldname": "brand_en",
+   "fieldtype": "Data",
+   "label": "Brand EN"
+  },
+  {
+   "fetch_from": "source_item.custom_subbrand1_en",
+   "fieldname": "subbrand1_en",
+   "fieldtype": "Data",
+   "label": "SubBrand1 EN"
+  },
+  {
+   "fetch_from": "source_item.custom_subbrand2_en",
+   "fieldname": "subbrand2_en",
+   "fieldtype": "Data",
+   "label": "SubBrand2 EN"
+  },
+  {
+   "fetch_from": "source_item.custom_product_name_en",
+   "fieldname": "product_name_en",
+   "fieldtype": "Data",
+   "label": "Product Name EN"
+  },
+  {
+   "fetch_from": "source_item.custom_product_use_en",
+   "fieldname": "product_use_en",
+   "fieldtype": "Data",
+   "label": "Product Use EN"
+  },
+  {
+   "fetch_from": "source_item.custom_surface1_en",
+   "fieldname": "surface1_en",
+   "fieldtype": "Data",
+   "label": "Surface1 EN"
+  },
+  {
+   "fetch_from": "source_item.custom_subbrand2_en",
+   "fieldname": "surface2_en",
+   "fieldtype": "Data",
+   "label": "Surface2 EN"
+  },
+  {
+   "fetch_from": "source_item.custom_surface3_en",
+   "fieldname": "surface3_en",
+   "fieldtype": "Data",
+   "label": "Surface3 EN"
+  },
+  {
+   "fetch_from": "source_item.custom_friendly_url",
+   "fieldname": "friendly_url",
+   "fieldtype": "Small Text",
+   "label": "Friendly URL"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-22 12:50:10.103890",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Transfer Item Detail",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
