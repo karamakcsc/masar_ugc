@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"U0Ya0TOWW-\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UGC Admin</span>\",\"col\":12}},{\"id\":\"qTt5_BIG5Z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Category\",\"col\":4}},{\"id\":\"apC4knXUmz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Header\",\"col\":4}},{\"id\":\"abc0s_wl2R\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Application Tool\",\"col\":4}},{\"id\":\"SenMgs2xDr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Use\",\"col\":4}},{\"id\":\"2pQnQPG6rm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface\",\"col\":4}},{\"id\":\"Olr7M-Al3C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Finishes\",\"col\":4}},{\"id\":\"KbF6u9Q24j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incoterm\",\"col\":4}},{\"id\":\"SjAMTlRs1j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sheen\",\"col\":4}},{\"id\":\"20OOtscXAA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Brand\",\"col\":4}},{\"id\":\"EvVEMsrZUK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pack Size\",\"col\":4}},{\"id\":\"tAD82Z_CQA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SubBrand 1\",\"col\":4}},{\"id\":\"IUmTBUznem\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SubBrand 2\",\"col\":4}},{\"id\":\"MlL8qG2Caa\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"RNZCGsRnzZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Area of Use\",\"col\":4}},{\"id\":\"yI3Ri0cZ9-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sub Area of Use\",\"col\":4}},{\"id\":\"Plx7rUypm6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"System Entry\",\"col\":4}},{\"id\":\"ijtHBULHHG\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"YpUpjjGgJh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Default Image\",\"col\":4}}]",
+ "content": "[{\"id\":\"U0Ya0TOWW-\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UGC Admin</span>\",\"col\":12}},{\"id\":\"qTt5_BIG5Z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Category\",\"col\":4}},{\"id\":\"apC4knXUmz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Header\",\"col\":4}},{\"id\":\"abc0s_wl2R\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Application Tool\",\"col\":4}},{\"id\":\"SenMgs2xDr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product Use\",\"col\":4}},{\"id\":\"2pQnQPG6rm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Surface\",\"col\":4}},{\"id\":\"Olr7M-Al3C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Finishes\",\"col\":4}},{\"id\":\"KbF6u9Q24j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Incoterm\",\"col\":4}},{\"id\":\"SjAMTlRs1j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sheen\",\"col\":4}},{\"id\":\"20OOtscXAA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Brand\",\"col\":4}},{\"id\":\"EvVEMsrZUK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pack Size\",\"col\":4}},{\"id\":\"tAD82Z_CQA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SubBrand 1\",\"col\":4}},{\"id\":\"IUmTBUznem\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SubBrand 2\",\"col\":4}},{\"id\":\"MlL8qG2Caa\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"RNZCGsRnzZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Area of Use\",\"col\":4}},{\"id\":\"yI3Ri0cZ9-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sub Area of Use\",\"col\":4}},{\"id\":\"Plx7rUypm6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"System Entry\",\"col\":4}},{\"id\":\"ijtHBULHHG\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"YpUpjjGgJh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Default Image\",\"col\":4}},{\"id\":\"F4J6B45OU6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Transfer Item Detail\",\"col\":4}}]",
  "creation": "2024-11-13 19:22:32.978409",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "UGC Product Admin",
  "links": [],
- "modified": "2025-01-19 13:12:23.412930",
+ "modified": "2025-01-22 14:29:04.395539",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "UGC Product Admin",
@@ -32,6 +32,14 @@
  ],
  "sequence_id": 39.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Transfer Item Detail",
+   "link_to": "Transfer Item Detail",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
   {
    "color": "Grey",
    "doc_view": "List",
