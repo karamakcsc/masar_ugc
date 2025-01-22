@@ -23,7 +23,7 @@ class TransferItemDetail(Document):
                                 ti.custom_subbrand_pic_fr ,ti.custom_subbrand_ved_en , ti.custom_tds_en ,ti.custom_msds_en ,ti.custom_subbrand_ved_ar ,
                                 ti.custom_tds_ar ,ti.custom_msds_ar ,ti.custom_subbrand_ved_fr ,ti.custom_tds_fr ,ti.custom_msds_fr ,ti.custom_metadisc_en ,
                                 ti.custom_metadisc_ar ,ti.custom_metadisc_fr , ti.custom_long_disc_en ,ti.custom_long_disc_ar ,ti.custom_long_disc_fr ,    ti.custom_applicationtool_2_en , ti.custom_applicationtool_2_ar , ti.custom_applicationtool_2_fr, ti.custom_applicationtool_3_en , 
-                                ti.custom_applicationtool_3_ar , ti.custom_applicationtool_3_fr , ti.custom_friendly_url  
+                                ti.custom_applicationtool_3_ar , ti.custom_applicationtool_3_fr , ti.custom_friendly_url, ti.image 
                             FROM tabItem ti
                             WHERE  ti.name = %s
                         """,(self.source_item,), as_dict= True)
