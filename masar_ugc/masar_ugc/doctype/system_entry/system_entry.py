@@ -44,7 +44,7 @@ class SystemEntry(Document):
             image =  f"https://ugc.kcsc.com.jo{self.body_image}"
         if image is None: 
             di = frappe.qb.DocType('Default Image')
-            defualt_image_sql = frappe.qb.from_(di).select(di.default_image).where(di.beand == self.system_brand).where(di.is_system == 1 ).run()
+            defualt_image_sql = frappe.qb.from_(di).select(di.default_image).where(di.brand == self.system_brand).where(di.is_system == 1 ).run()
             if defualt_image_sql and defualt_image_sql[0] and defualt_image_sql[0][0]: 
                 image = f"https://ugc.kcsc.com.jo{defualt_image_sql[0][0]}"
         return { 
