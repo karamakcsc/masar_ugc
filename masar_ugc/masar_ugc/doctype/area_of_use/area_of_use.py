@@ -5,6 +5,7 @@ import frappe
 from frappe.model.document import Document
 from masar_ugc.api import get_header_data , get_base_url
 import requests
+import json
 class AreaofUse(Document):
     def validate(self): 
         if self.is_enabled: 
@@ -21,7 +22,7 @@ class AreaofUse(Document):
             "MetaDiscFR": self.area_of_use_metadiscfr
         }
         try:
-            response = requests.post(url, headers=get_header_data(), data=payload)
+            response = requests.post(url, headers=get_header_data(), data=json.dumps(payload))
             if response.status_code == 200:
                 frappe.msgprint(f'Area of Use {self.name} Successfully Inserted/Updated in ASP', alert=True, indicator='green')
             else:

@@ -5,7 +5,7 @@ import frappe
 from frappe.model.document import Document
 import requests
 from masar_ugc.api import get_base_url , get_header_data
-
+import json
 class Category(Document):
 	def validate(self):
 		if self.is_enabled: 
@@ -21,7 +21,7 @@ class Category(Document):
                	"MetaDiscFR": self.category_meta_disc_fr
         }
 		try:
-			response = requests.post(url, headers=get_header_data(), data=payload)
+			response = requests.post(url, headers=get_header_data(), data=json.dumps(payload))
 			if response.status_code == 200:
 				frappe.msgprint(f'Category {self.name} Successfully Inserted/Updated in ASP', alert=True, indicator='green')
 			else:

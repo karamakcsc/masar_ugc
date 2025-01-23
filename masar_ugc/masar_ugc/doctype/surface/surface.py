@@ -4,7 +4,7 @@
 import frappe
 from frappe.model.document import Document
 from masar_ugc.api import get_base_url , get_header_data
-import requests
+import requests , json
 class Surface(Document):
 	def validate(self):
 		if self.is_enabled: 
@@ -21,7 +21,7 @@ class Surface(Document):
             "MetaDiscFR": self.surfacemetadiscfr
         }
 		try:
-			response = requests.post(url, headers=get_header_data(), data=payload)
+			response = requests.post(url, headers=get_header_data(), data=json.dumps(payload))
 			if response.status_code == 200:
 				frappe.msgprint(f'Surface {self.name} Successfully Inserted/Updated in ASP', alert=True, indicator='green')
 			else:
