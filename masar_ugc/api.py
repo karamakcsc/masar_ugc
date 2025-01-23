@@ -346,6 +346,8 @@ def get_header_data():
     'Content-Type': 'application/json'
     }
     
+def get_base_url():
+    return "https://demo.es.jo/ugclive/"
 @frappe.whitelist()
 def get_default_image():
         result = frappe.db.sql("""

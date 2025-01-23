@@ -5,7 +5,7 @@ import frappe
 from frappe.model.document import Document
 import json
 import requests
-from masar_ugc.api import get_header_data
+from masar_ugc.api import get_header_data , get_base_url
 class SystemEntry(Document):
     @frappe.whitelist()
     def get_max_system_no(self):
@@ -84,7 +84,7 @@ class SystemEntry(Document):
 
     def system_master_asp_api(self): 
         "check if existing in ASP"
-        url = f"https://demo.es.jo/ugclive/UGCSelectSystem.ashx?SystemNo={self.system_no}"
+        url = f"{get_base_url()}UGCSelectSystem.ashx?SystemNo={self.system_no}"
         response = requests.request("GET", url, headers=get_header_data(), data={})
         if response.status_code == 200: 
             self.update_system_master()
@@ -92,7 +92,7 @@ class SystemEntry(Document):
             self.insert_system_master()
             
     def insert_system_master(self): 
-        url = "https://demo.es.jo/ugclive/UGCSystemsMaster.ashx"
+        url = f"{get_base_url()}UGCSystemsMaster.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
         frappe.msgprint(str(json.dumps(self.get_payload_data())))
         if response.status_code == 200:
@@ -101,7 +101,7 @@ class SystemEntry(Document):
             frappe.throw(f"Create System : {response.text}")
             
     def update_system_master(self):
-        url = "https://demo.es.jo/ugclive/UGCSystemsMasterUpdate.ashx"
+        url = f"{get_base_url()}UGCSystemsMasterUpdate.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
         frappe.msgprint(str(json.dumps(self.get_payload_data())))
         if response.status_code == 200:

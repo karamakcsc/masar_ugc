@@ -558,7 +558,8 @@
    "default": "Today",
    "fieldname": "posting_date",
    "fieldtype": "Date",
-   "label": "Posting Date"
+   "label": "Posting Date",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_ydzm",
@@ -759,7 +760,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-22 14:27:45.984249",
+ "modified": "2025-01-22 16:41:05.006654",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Transfer Item Detail",

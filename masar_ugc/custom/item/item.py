@@ -1,7 +1,7 @@
 import frappe
 import json
 import requests
-from masar_ugc.api import get_header_data , get_payload_data_for_item
+from masar_ugc.api import get_header_data , get_payload_data_for_item , get_base_url
 def validate(self, method):
     set_shortdisc(self)
     publish_to_web(self)
@@ -25,7 +25,7 @@ def asp_item_api(self):
         publish = 1 
     else:
         publish = 0 
-    url = f"https://demo.es.jo/ugclive/UGCSelectProduct.ashx?ItemCode={self.item_code}"     
+    url = f"{get_base_url()}UGCSelectProduct.ashx?ItemCode={self.item_code}"     
     response = requests.request("GET", url, headers=get_header_data(), data={})
     if response.status_code == 200: 
         update_item_in_asp(self ,publish ) 
@@ -34,7 +34,7 @@ def asp_item_api(self):
 
 
 def insert_item_to_asp(self , publish):
-        url = "https://demo.es.jo/ugclive/UGCInsertProduct.ashx"
+        url = f"{get_base_url()}UGCInsertProduct.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(get_payload_data_for_item(self , publish)))
         if response.status_code == 200:
             frappe.msgprint(f'Item {self.name} is Created Successfully in ASP.' , alert=True , indicator='green')
@@ -43,7 +43,7 @@ def insert_item_to_asp(self , publish):
             frappe.throw(f" Create Item : {str(response.text)}")
 
 def update_item_in_asp(self , publish):
-        url = "https://demo.es.jo/ugclive/UGCEditProduct.ashx"
+        url = f"{get_base_url()}UGCEditProduct.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(get_payload_data_for_item(self , publish)))
         if response.status_code == 200:
             frappe.msgprint(f'Item {self.name} is updated Successfully in ASP.' , alert=True , indicator='green')
