@@ -11,7 +11,7 @@ class AreaofUse(Document):
             self.area_of_use_api()
    
     def area_of_use_api(self):
-        url = f'{get_base_url()}UGCAreaofUse'
+        url = f'{get_base_url()}UGCAreaofUse.ashx'
         payload = {
             "AreaofUseEN": self.area_of_use_en,
             "AreaofUseAR": self.area_of_use_ar,

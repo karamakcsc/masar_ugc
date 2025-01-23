@@ -11,7 +11,7 @@ class Category(Document):
 		if self.is_enabled: 
 			self.category_api()
 	def category_api(self):
-		url = f'{get_base_url()}UGCCatMeta'
+		url = f'{get_base_url()}UGCCatMeta.ashx'
 		payload =  {
       			"CategoryEN": self.category_name_en,
          		"CategoryAR":self.category_name_ar,
