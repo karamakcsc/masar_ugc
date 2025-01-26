@@ -58,8 +58,8 @@ class SystemEntry(Document):
                 body_image = f"https://ugc.kcsc.com.jo{defualt_image_sql[0][0]}"
         return { 
                 "SystemID": self.name, "SystemNo": self.system_no, "SystemNameEN": self.system_name_en,
-            "SystemNameAR": self.system_name_ar,"SystemNameFR": self.system_name_fr, "AreaofUseEN": self.sub_area_of_use_en,
-            "AreaofUseAR": self.sub_area_of_use_ar, "AreaofUseFR": self.sub_area_of_use_fr,"AreaofUseEN2": self.area_of_use_en_2,
+            "SystemNameAR": self.system_name_ar,"SystemNameFR": self.system_name_fr, "AreaofUseEN": self.area_of_use_en,
+            "AreaofUseAR": self.area_of_use_ar, "AreaofUseFR": self.area_of_use_fr,"AreaofUseEN2": self.area_of_use_en_2,
             "AreaofUseAR2": self.area_of_use_ar_2,
             "AreaofUseFR2": self.area_of_use_fr_2,
             "AreaofUseEN3": self.area_of_use_en_3,
@@ -94,7 +94,7 @@ class SystemEntry(Document):
     def insert_system_master(self): 
         url = f"{get_base_url()}UGCSystemsMaster.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
-        frappe.msgprint(str(json.dumps(self.get_payload_data())))
+        # frappe.msgprint(str(json.dumps(self.get_payload_data())))
         if response.status_code == 200:
             frappe.msgprint(f'System {self.name} is Created Successfully in ASP.' , alert=True , indicator='green')
         else : 
@@ -103,7 +103,7 @@ class SystemEntry(Document):
     def update_system_master(self):
         url = f"{get_base_url()}UGCSystemsMasterUpdate.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(self.get_payload_data()))
-        frappe.msgprint(str(json.dumps(self.get_payload_data())))
+        # frappe.msgprint(str(json.dumps(self.get_payload_data())))
         if response.status_code == 200:
             frappe.msgprint(f'System {self.name} is Updated Successfully in ASP.' , alert=True , indicator='green')
         else : 
