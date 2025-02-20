@@ -375,7 +375,15 @@ fixtures = [
                 "Quotation-custom_items3",
                 "Quotation-custom_coats_or_dft", 
                 "Item-custom_friendly_url",
-                "Item-custom_inserted_to_asp"
+                "Item-custom_inserted_to_asp",
+                "Project Type-custom_posting_date",
+                "Project Type-custom_column_break_brwiu",
+                "Project Type-custom_enabled",
+                "Project Type-custom_section_break_ldxao",
+                "Quotation-custom_project_type",
+                "Item-custom_practical_spreading_rate_en",
+                "Item-custom_practical_spreading_rate_ar",
+                "Item-custom_practical_spreading_rate_fr"
             ]
         ]
     ]},
