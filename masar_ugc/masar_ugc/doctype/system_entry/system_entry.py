@@ -29,9 +29,9 @@ class SystemEntry(Document):
 
         return None
     def validate(self): 
-        if self.is_published:
-            self.system_master_asp_api()
-        pass
+        # if self.is_published:
+        self.system_master_asp_api()
+        # pass
         
     def get_payload_data(self):
         system_items = list()
