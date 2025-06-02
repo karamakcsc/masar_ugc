@@ -383,7 +383,13 @@ fixtures = [
                 "Quotation-custom_project_type",
                 "Item-custom_practical_spreading_rate_en",
                 "Item-custom_practical_spreading_rate_ar",
-                "Item-custom_practical_spreading_rate_fr"
+                "Item-custom_practical_spreading_rate_fr",
+                "Item-custom_section_break_6fgby",
+                "Item-custom_keyfeatures_en",
+                "Item-custom_column_break_fgjyr",
+                "Item-custom_keyfeatures_ar",
+                "Item-custom_column_break_pgxlq",
+                "Item-custom_keyfeatures_fr"
             ]
         ]
     ]},

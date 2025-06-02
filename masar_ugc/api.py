@@ -145,7 +145,7 @@ def get_item_details():
                     ti.custom_subbrand_ved_ar,  ti.custom_tds_ar, ti.custom_msds_ar, ti.custom_subbrand_ved_fr,  ti.custom_tds_fr, ti.custom_msds_fr, 
                     ti.custom_metadisc_en, ti.custom_metadisc_ar, ti.custom_metadisc_fr, ti.custom_long_disc_en, ti.custom_long_disc_ar, 
                     ti.custom_long_disc_fr,  ti.custom_applicationtool_2_en, ti.custom_applicationtool_2_ar,  ti.custom_applicationtool_2_fr,  ti.custom_applicationtool_3_en, 
-                    ti.custom_applicationtool_3_ar, ti.custom_applicationtool_3_fr,  ti.custom_friendly_url, 
+                    ti.custom_applicationtool_3_ar, ti.custom_applicationtool_3_fr,  ti.custom_friendly_url, ti.custom_keyfeatures_en, ti.custom_keyfeatures_ar, ti.custom_keyfeatures_fr,
                     COALESCE(
                         CASE 
                             WHEN ti.image IS NULL OR TRIM(ti.image) = '' THEN NULL
@@ -245,7 +245,7 @@ def get_item(item_code = None):
                                 ti.custom_subbrand_pic_fr ,ti.custom_subbrand_ved_en , ti.custom_tds_en ,ti.custom_msds_en ,ti.custom_subbrand_ved_ar ,
                                 ti.custom_tds_ar ,ti.custom_msds_ar ,ti.custom_subbrand_ved_fr ,ti.custom_tds_fr ,ti.custom_msds_fr ,ti.custom_metadisc_en ,
                                 ti.custom_metadisc_ar ,ti.custom_metadisc_fr , ti.custom_long_disc_en ,ti.custom_long_disc_ar ,ti.custom_long_disc_fr ,    ti.custom_applicationtool_2_en , ti.custom_applicationtool_2_ar , ti.custom_applicationtool_2_fr, ti.custom_applicationtool_3_en , 
-                                ti.custom_applicationtool_3_ar , ti.custom_applicationtool_3_fr , ti.custom_friendly_url,  
+                                ti.custom_applicationtool_3_ar , ti.custom_applicationtool_3_fr , ti.custom_friendly_url,  ti.custom_keyfeatures_en, ti.custom_keyfeatures_ar, ti.custom_keyfeatures_fr,
                             COALESCE(
                                                     CASE 
                                                         WHEN ti.image IS NULL OR TRIM(ti.image) = '' THEN NULL
@@ -339,6 +339,9 @@ def get_payload_data_for_item(self , publish):
             "PackSizeEN": self.custom_packsize_en, 
             "PackSizeAR": self.custom_packsize_ar, 
             "PackSizeFR": self.custom_packsize_fr, 
+            "KeyFeaturesEN": self.custom_keyfeatures_en,
+            "KeyFeaturesAR": self.custom_keyfeatures_ar,
+            "KeyFeaturesFR": self.custom_keyfeatures_fr,
             "Publish" : publish
         }
 
