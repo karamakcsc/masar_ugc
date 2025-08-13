@@ -389,7 +389,9 @@ fixtures = [
                 "Item-custom_column_break_fgjyr",
                 "Item-custom_keyfeatures_ar",
                 "Item-custom_column_break_pgxlq",
-                "Item-custom_keyfeatures_fr"
+                "Item-custom_keyfeatures_fr" , 
+                "Item-custom_filter_data" , 
+                "Item-custom_section_break_ogopp"
             ]
         ]
     ]},
