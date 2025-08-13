@@ -228,7 +228,7 @@ def get_system_master():
 
 @frappe.whitelist()
 def get_item(item_code = None):
-    cond = None
+    cond = ""
     if item_code:
         cond = f""" AND item_code = '{item_code}'"""
     return frappe.db.sql(f"""
