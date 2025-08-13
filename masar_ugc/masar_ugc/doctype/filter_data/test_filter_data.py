@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestFilteredData(FrappeTestCase):
+class TestFilterData(FrappeTestCase):
 	pass

@@ -63,7 +63,9 @@
   "system_description_ar",
   "system_description_fr",
   "section_break_zmko",
-  "proposed_systems"
+  "proposed_systems",
+  "section_break_yokl",
+  "filter_data"
  ],
  "fields": [
   {
@@ -387,13 +389,24 @@
    "fieldtype": "Attach Image",
    "label": "Body Image",
    "make_attachment_public": 1
+  },
+  {
+   "fieldname": "section_break_yokl",
+   "fieldtype": "Section Break",
+   "label": "Filter Data"
+  },
+  {
+   "fieldname": "filter_data",
+   "fieldtype": "Table MultiSelect",
+   "label": "Filter Data",
+   "options": "Filter Data Details"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-01-19 09:35:54.836333",
+ "modified": "2025-08-13 11:53:52.757911",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "System Entry",
