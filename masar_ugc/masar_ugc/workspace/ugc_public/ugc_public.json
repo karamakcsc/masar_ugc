@@ -2,16 +2,7 @@
  "charts": [],
  "content": "[{\"id\":\"qeO2lnnysO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">UGC Public</span>\",\"col\":12}},{\"id\":\"2BQgr21gXz\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Employee Details\",\"col\":6}},{\"id\":\"I3q9dR4XQv\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Announcement\",\"col\":6}},{\"id\":\"pWaXiEz0Vt\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h2\\\">KPI</span>\",\"col\":6}}]",
  "creation": "2024-11-20 15:47:29.077124",
- "custom_blocks": [
-  {
-   "custom_block_name": "Employee Details",
-   "label": "Employee Details"
-  },
-  {
-   "custom_block_name": "Announcement",
-   "label": "Announcement"
-  }
- ],
+ "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -19,10 +10,10 @@
  "icon": "solid-info",
  "idx": 0,
  "indicator_color": "green",
- "is_hidden": 0,
+ "is_hidden": 1,
  "label": "UGC Public",
  "links": [],
- "modified": "2024-12-05 12:41:54.204288",
+ "modified": "2025-09-29 13:52:25.406159",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "UGC Public",

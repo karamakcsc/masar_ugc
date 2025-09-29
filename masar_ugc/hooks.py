@@ -391,7 +391,8 @@ fixtures = [
                 "Item-custom_column_break_pgxlq",
                 "Item-custom_keyfeatures_fr" , 
                 "Item-custom_filter_data" , 
-                "Item-custom_section_break_ogopp"
+                "Item-custom_section_break_ogopp",
+                "Quotation-custom_titles",
             ]
         ]
     ]},
@@ -403,7 +404,7 @@ fixtures = [
                 "in",
                 [
                     "Quotation-main-field_order",
-                    "Quotation-payment_schedule_section-hidden",
+                    # "Quotation-payment_schedule_section-hidden",
                     "Quotation-pricing_rule_details-hidden",
                     "Quotation-bundle_items_section-hidden",
                     "Quotation-sec_tax_breakup-hidden",
@@ -431,11 +432,15 @@ fixtures = [
                     "Quotation-sec_break23-hidden", 
                     "Quotation-base_total_taxes_and_charges-hidden" , 
                     "Quotation-total_taxes_and_charges-hidden",
-                    # "Quotation-company-hidden",
+                    "Quotation-company-hidden",
                     "Quotation-quotation_to-hidden",
                     "Quotation Item-item_name-in_list_view",
                     "Quotation-company-default",
-                    "Quotation-address_and_contact_tab-hidden"
+                    "Quotation-address_and_contact_tab-hidden",
+                    "Quotation-main-field_order",
+                    "Quotation-party_name-in_standard_filter",
+                    "Quotation-payment_terms_template-reqd",
+                    "Quotation-order_type-in_standard_filter",
                 ]
             ]
         ]
