@@ -1,19 +1,18 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-09-29 14:24:52.560902",
+ "autoname": "format:MIP-{YYYY}-{####}",
+ "creation": "2025-09-30 14:04:08.683068",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_k0s5",
-  "doctype_ref",
+  "section_break_jpjv",
   "amended_from",
-  "masar_data",
-  "response"
+  "items"
  ],
  "fields": [
   {
-   "fieldname": "section_break_k0s5",
+   "fieldname": "section_break_jpjv",
    "fieldtype": "Section Break"
   },
   {
@@ -21,36 +20,27 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Masar API History",
+   "options": "Masar Item Price",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
   },
   {
-   "fieldname": "doctype_ref",
-   "fieldtype": "Link",
-   "label": "Doctype",
-   "options": "DocType"
-  },
-  {
-   "fieldname": "masar_data",
-   "fieldtype": "Long Text",
-   "label": "Masar Data"
-  },
-  {
-   "fieldname": "response",
-   "fieldtype": "Small Text",
-   "label": "Response"
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "items",
+   "options": "Masar Item Price Details"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-30 13:35:57.265305",
+ "modified": "2025-09-30 15:27:19.653551",
  "modified_by": "Administrator",
  "module": "Masar UGC",
- "name": "Masar API History",
+ "name": "Masar Item Price",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -63,6 +53,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

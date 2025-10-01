@@ -394,6 +394,10 @@ fixtures = [
                 "Item-custom_filter_data" , 
                 "Item-custom_section_break_ogopp",
                 "Quotation-custom_titles",
+                "Item-custom_item_name_ar" , 
+                "Item-custom_solid_content" , 
+                "Item-custom_spreading_rate" , 
+                "Item-custom_dft_desc"
             ]
         ]
     ]},

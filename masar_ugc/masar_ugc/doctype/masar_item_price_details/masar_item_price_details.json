@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-30 13:57:02.933481",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pl_voutype_id",
+  "pl_voutype_desc",
+  "column_break_ebbm",
+  "pl_vouno",
+  "pl_voutitle",
+  "section_break_jwcu",
+  "item_code",
+  "column_break_xeaw",
+  "item_name",
+  "item_price",
+  "response"
+ ],
+ "fields": [
+  {
+   "fieldname": "pl_voutype_id",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "PL VouType ID"
+  },
+  {
+   "fieldname": "pl_voutype_desc",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PL VouType Desc"
+  },
+  {
+   "fieldname": "pl_vouno",
+   "fieldtype": "Data",
+   "label": "PL VouNo"
+  },
+  {
+   "fieldname": "pl_voutitle",
+   "fieldtype": "Small Text",
+   "label": "PL VouTitle"
+  },
+  {
+   "fieldname": "column_break_ebbm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jwcu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code"
+  },
+  {
+   "fieldname": "column_break_xeaw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "item_price",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Item Price"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "Small Text",
+   "label": "Response"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-30 15:19:23.779592",
+ "modified_by": "Administrator",
+ "module": "Masar UGC",
+ "name": "Masar Item Price Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

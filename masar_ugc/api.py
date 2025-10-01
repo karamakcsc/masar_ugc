@@ -1,6 +1,7 @@
 import frappe 
 from datetime import date
-
+import json
+from frappe import _
 @frappe.whitelist()
 def get_employee_details():
     '''
@@ -366,3 +367,65 @@ def get_default_image():
             WHERE tdi.publish = 1
         """, as_dict=True)
         return result
+
+@frappe.whitelist(methods=['POST'])
+def create_item():
+    try:
+        data_items = json.loads(frappe.request.data)
+        data_items_loop = data_items.get('items') or []
+        if not data_items_loop:
+            return {"success": False, "message": "No items provided"}
+        masar_item = frappe.new_doc('Masar Item')
+        masar_item.insert(ignore_permissions=True)
+        masar_item.extend('items', data_items_loop)
+        masar_item.save(ignore_permissions=True).submit()
+        history_doc = frappe.new_doc('Masar API History')
+        history_doc.doctype_ref = 'Item'
+        history_doc.masar_data = str(data_items)
+        history_doc.response = f"Items queued for processing in Masar Item"
+        history_doc.insert(ignore_permissions=True)
+        history_doc.submit()
+        frappe.db.commit()
+        return {
+            "success": True,
+            "message": f"Items have been queued for processing in Masar Item ",
+            "item_name": masar_item.name,
+            "history_doc": history_doc.name
+        }
+        
+    except Exception as e:
+        frappe.db.rollback()
+        error_msg = f"Unexpected error in create_item API: {str(e)}"
+        frappe.log_error(error_msg)
+        return {"success": False, "message": error_msg}
+    
+@frappe.whitelist(methods=['POST'])
+def create_item_price():
+    try:
+        data_items = json.loads(frappe.request.data)
+        data_items_loop = data_items.get('items') or []
+        if not data_items_loop:
+            return {"success": False, "message": "No items provided"}
+        masar_item = frappe.new_doc('Masar Item Price')
+        masar_item.insert(ignore_permissions=True)
+        masar_item.extend('items', data_items_loop)
+        masar_item.save(ignore_permissions=True).submit()
+        history_doc = frappe.new_doc('Masar API History')
+        history_doc.doctype_ref = 'Item Price'
+        history_doc.masar_data = str(data_items)
+        history_doc.response = f"Items queued for processing in Masar Item Price"
+        history_doc.insert(ignore_permissions=True)
+        history_doc.submit()
+        frappe.db.commit()
+        return {
+            "success": True,
+            "message": f"Items have been queued for processing in Masar Item Price",
+            "item_price_name": masar_item.name,
+            "history_doc": history_doc.name
+        }
+        
+    except Exception as e:
+        frappe.db.rollback()
+        error_msg = f"Unexpected error in create_item API: {str(e)}"
+        frappe.log_error(error_msg)
+        return {"success": False, "message": error_msg}

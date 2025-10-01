@@ -25,12 +25,13 @@ def asp_item_api(self):
         publish = 1 
     else:
         publish = 0 
-    url = f"{get_base_url()}UGCSelectProduct.ashx?ItemCode={self.item_code}"     
-    response = requests.request("GET", url, headers=get_header_data(), data={})
-    if response.status_code == 200: 
-        update_item_in_asp(self ,publish ) 
-    else: 
-        insert_item_to_asp(self , publish)
+    if publish:
+        url = f"{get_base_url()}UGCSelectProduct.ashx?ItemCode={self.item_code}"     
+        response = requests.request("GET", url, headers=get_header_data(), data={})
+        if response.status_code == 200: 
+            update_item_in_asp(self ,publish ) 
+        else: 
+            insert_item_to_asp(self , publish)
 
 
 def insert_item_to_asp(self , publish):
@@ -43,6 +44,7 @@ def insert_item_to_asp(self , publish):
             frappe.throw(f" Create Item : {str(response.text)}")
 
 def update_item_in_asp(self , publish):
+    if publish:
         url = f"{get_base_url()}UGCEditProduct.ashx"
         response = requests.request("POST", url, headers=get_header_data(), data=json.dumps(get_payload_data_for_item(self , publish)))
         if response.status_code == 200:
