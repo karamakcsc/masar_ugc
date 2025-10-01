@@ -238,6 +238,7 @@ fixtures = [
         [
             "name", "in", [
                 "Item-custom_more_details",
+                "Item-custom_masar_id",
                 "Item-custom_visible",
                 "Item-custom_column_break_2hsra",
                 "Item-custom_sold",
