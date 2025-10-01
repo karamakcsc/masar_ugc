@@ -366,7 +366,7 @@ fixtures = [
                 "Quotation-custom_attention",
                 "Item-custom_is_publish",
                 "Quotation-custom_payment_term",
-                "Quotation-custom_address", 
+                # "Quotation-custom_address", 
                 "Quotation-custom_title1", 
                 "Quotation-custom_section_break_nvp9m", 
                 "Quotation-custom_title2", 
