@@ -429,3 +429,11 @@ def create_item_price():
         error_msg = f"Unexpected error in create_item API: {str(e)}"
         frappe.log_error(error_msg)
         return {"success": False, "message": error_msg}
+
+@frappe.whitelist()
+def get_item_for_masar():
+    return frappe.db.sql("""
+                         SELECT 
+                           ti.item_code, ti.custom_masar_id
+                        FROM `tabItem` ti
+                        """, as_dict= True)
