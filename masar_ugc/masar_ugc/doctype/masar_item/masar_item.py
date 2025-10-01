@@ -19,9 +19,9 @@ class MasarItem(Document):
                     item_data = {
 						"item_name": data.get("item_name"),
 						"item_group": data.get("item_group"),
-						"custom_item_name_ar": data.get("item_name_ar"),
-						"custom_short_disc_en": data.get("short_disc_en"),
-						"custom_short_disc_ar": data.get("short_disc_ar"),
+						# "custom_item_name_ar": data.get("item_name_ar"),
+						# "custom_short_disc_en": data.get("short_disc_en"),
+						# "custom_short_disc_ar": data.get("short_disc_ar"),
 						"custom_solid_content": data.get("solid_content"),
 						"custom_spreading_rate": data.get("spreading_rate", 0),
 						"custom_dft_desc": data.get("dft_desc")

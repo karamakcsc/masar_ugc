@@ -30,18 +30,20 @@ frappe.ui.form.on('Quotation', {
 
  frappe.ui.form.on("Quotation", {
     refresh: function(frm) {
-        console.log("dfghjk");
         frm.add_custom_button(("Quotation"), function() {
-            console.log("dfghjk");
             var quot= window.open("http://147.182.251.32:8005/printview?doctype=Quotation&name="+cur_frm.doc.name+"&trigger_print=1&format=Proforma%20Invoice%20PF&no_letterhead=1&letterhead=No%20Letterhead&settings=%7B%7D&_lang=en" )
         });
+
+        frm.add_custom_button(("Pro Forma"),function(){
+            var pro_forma= window.open("http://147.182.251.32:8005/printview?doctype=Quotation&name="+cur_frm.doc.name+"&trigger_print=1&format=Proforma%20Invoice%20PF&no_letterhead=1&letterhead=No%20Letterhead&settings=%7B%7D&_lang=en")
+        })
     }
 });
 
-// frappe.ui.form.on("Quotation", {
-//     refresh: function(frm) {
-//         // Target the specific print button with flex class
-//         $('button[data-original-title="Print"].btn.btn-default.icon-btn').hide();
-//     }
-// });
+frappe.ui.form.on("Quotation", {
+    refresh: function(frm) {
+        // Target the specific print button with flex class
+        $('button[data-original-title="Print"].btn.btn-default.icon-btn').hide();
+    }
+});
  ////////////////////// end Mohanad  ////////////
