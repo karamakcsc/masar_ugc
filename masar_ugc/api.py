@@ -353,7 +353,8 @@ def get_header_data():
     }
     
 def get_base_url():
-    return "https://demo.es.jo/ugclive/"
+    # return "https://demo.es.jo/ugclive/"
+    return "https://www.ugc.jo/"
 @frappe.whitelist()
 def get_default_image():
         result = frappe.db.sql("""
