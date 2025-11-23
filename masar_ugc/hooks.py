@@ -367,7 +367,7 @@ fixtures = [
                 "Quotation-custom_attention",
                 "Item-custom_is_publish",
                 "Quotation-custom_payment_term",
-                # "Quotation-custom_address", 
+                "Quotation-custom_address",
                 "Quotation-custom_title1", 
                 "Quotation-custom_section_break_nvp9m", 
                 "Quotation-custom_title2", 
@@ -398,7 +398,14 @@ fixtures = [
                 "Item-custom_item_name_ar" , 
                 "Item-custom_solid_content" , 
                 "Item-custom_spreading_rate" , 
-                "Item-custom_dft_desc"
+                "Item-custom_dft_desc" , 
+                "Quotation-custom_area" , 
+                "Quotation-custom_system" , 
+                "Item-custom_dft" , 
+                "Quotation Item-custom_dft",
+                "Quotation-custom_column_break_wgdmx",
+                "Quotation Item-custom_column_break_ys4g4",
+                "Quotation Item-custom_title"
             ]
         ]
     ]},
@@ -447,6 +454,18 @@ fixtures = [
                     "Quotation-party_name-in_standard_filter",
                     "Quotation-payment_terms_template-reqd",
                     "Quotation-order_type-in_standard_filter",
+                    "Item-main-field_order",
+                    "Quotation Item-main-field_order",
+                    "Quotation-customer_address-hidden",
+                    "Quotation-main-field_order",
+                    "Quotation Item-gross_profit-hidden",
+                    "Quotation Item-valuation_rate-hidden",
+                    "Quotation Item-section_break_43-hidden",
+                    "Quotation Item-is_alternative-hidden",
+                    "Quotation Item-is_free_item-hidden",
+                    "Quotation Item-uom-in_list_view",
+                    "Quotation Item-item_code-columns",
+                    "Quotation Item-qty-columns"
                 ]
             ]
         ]

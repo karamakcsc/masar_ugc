@@ -1,8 +1,7 @@
-
-
-
 import frappe
 from frappe.model.naming import make_autoname
+
+
 def on_submit(self , method): 
     headers_validate(self)
 
