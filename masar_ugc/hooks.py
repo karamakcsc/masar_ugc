@@ -405,7 +405,7 @@ fixtures = [
                 "Quotation Item-custom_dft",
                 "Quotation-custom_column_break_wgdmx",
                 "Quotation Item-custom_column_break_ys4g4",
-                "Quotation Item-custom_title"
+                "Quotation-custom_column_break_aqejd"
             ]
         ]
     ]},
@@ -448,6 +448,7 @@ fixtures = [
                     "Quotation-quotation_to-hidden",
                     "Quotation Item-item_name-in_list_view",
                     "Quotation-company-default",
+                    "Quotation-address_and_contact_tab-hidden",
                     "Quotation-main-field_order",
                     "Quotation-party_name-in_standard_filter",
                     "Quotation-payment_terms_template-reqd",
