@@ -1,4 +1,5 @@
 import frappe
+import json
 from frappe.model.naming import make_autoname
 
 
@@ -67,3 +68,53 @@ def autoname(self , method):
     part_three = abbr[0][0]
     part_four =".######"
     self.name = make_autoname(f"{part_one}/{part_two}/{part_three}/{part_four}")
+    
+@frappe.whitelist()
+def set_tax(self):
+    if isinstance(self, str):
+        self = json.loads(self)
+    
+    if isinstance(self, dict):
+        self = frappe._dict(self)
+    
+    if not self.get("items") or not self.get("tax_category"):
+        return
+
+    quotation_doc = frappe.get_doc("Quotation", self.get("name"))
+    
+    tax_percent = 0 if self.get("tax_category") == "0%" else 16
+    
+    for item in quotation_doc.items:
+
+        if not item.get("original_rate"):
+            item.original_rate = item.rate
+
+        base_rate = item.original_rate 
+
+        if tax_percent == 0:
+            item.rate = round(base_rate / 1.16, 3)
+
+        else:
+            item.rate = base_rate
+
+    build_taxes_table(quotation_doc, tax_percent)
+    quotation_doc.save()
+    
+    return quotation_doc.as_dict()
+
+def build_taxes_table(doc, tax_percent):
+    doc.set("taxes", [])
+
+    if tax_percent == 0:
+        return
+
+    total = sum([item.rate * item.qty for item in doc.items])
+    total_tax = round(total * (tax_percent / 100), 3)
+
+    doc.append("taxes", {
+        "charge_type": "On Net Total",
+        "account_head": "VAT - UGCD",
+        "description": f"Sales Tax {tax_percent}%",
+        "rate": tax_percent,
+        "tax_amount": total_tax
+    })

@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
+from frappe.utils import today
 from frappe.model.document import Document
 
 
@@ -24,12 +25,16 @@ class MasarItemPrice(Document):
                 if frappe.db.exists("Item Price", {"item_code": data.item_code, "price_list": data.pl_voutype_desc , "price_list_rate": data.item_price}):
                     frappe.db.set_value(data.doctype , data.name ,'response', f"Item Price for Item {data.item_code} in Price List {data.pl_voutype_desc} already exists")
                 else:
-                    item_price = frappe.new_doc("Item Price")
-                    item_price.item_code = data.item_code
-                    item_price.price_list = data.pl_voutype_desc
-                    item_price.price_list_rate = data.item_price
-                    item_price.insert()
-                    frappe.db.set_value(data.doctype , data.name ,'response', f"Item Price for Item {data.item_code} in Price List {data.pl_voutype_desc} created successfully")
+                    item_price_data = frappe.db.get_value("Item Price", {"item_code": data.item_code, "price_list": data.pl_voutype_desc, "valid_from": today()}, ["name", "price_list_rate"])
+                    if item_price_data:
+                        frappe.db.set_value("Item Price", item_price_data[0], "price_list_rate", data.item_price)
+                    else:
+                        item_price = frappe.new_doc("Item Price")
+                        item_price.item_code = data.item_code
+                        item_price.price_list = data.pl_voutype_desc
+                        item_price.price_list_rate = data.item_price
+                        item_price.insert()
+                        frappe.db.set_value(data.doctype , data.name ,'response', f"Item Price for Item {data.item_code} in Price List {data.pl_voutype_desc} created successfully")
             except Exception as e:
                 frappe.db.set_value(data.doctype , data.name ,'response', f"Error processing item price for item {data.item_code} in Price List {data.pl_voutype_desc}: {str(e)}")
      

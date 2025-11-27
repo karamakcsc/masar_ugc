@@ -12,7 +12,11 @@
   "item_group",
   "item_name_ar",
   "short_disc_en",
+  "no_of_coats",
+  "item_weight",
+  "unit_content",
   "column_break_xjny",
+  "item_active",
   "solid_content",
   "masar_id",
   "spreading_rate",
@@ -94,13 +98,38 @@
    "fieldname": "masar_id",
    "fieldtype": "Data",
    "label": "Masar ID"
+  },
+  {
+   "fieldname": "no_of_coats",
+   "fieldtype": "Data",
+   "label": "No of Coats",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "item_active",
+   "fieldtype": "Check",
+   "label": "Item Active",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_weight",
+   "fieldtype": "Data",
+   "label": "Item Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unit_content",
+   "fieldtype": "Data",
+   "label": "Unit Content",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-10-02 10:50:27.429605",
+ "modified": "2025-11-23 14:57:01.508445",
  "modified_by": "Administrator",
  "module": "Masar UGC",
  "name": "Masar Item Details",

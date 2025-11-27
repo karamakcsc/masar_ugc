@@ -405,7 +405,18 @@ fixtures = [
                 "Quotation Item-custom_dft",
                 "Quotation-custom_column_break_wgdmx",
                 "Quotation Item-custom_column_break_ys4g4",
-                "Quotation-custom_column_break_aqejd"
+                "Quotation-custom_column_break_aqejd",
+                "Item-custom_solid_content",
+                "Quotation Item-custom_system_entry",
+                "Item-custom_system_entry",
+                "Item-custom_is_system",
+                "Item-custom_short_disc_fr_2",
+                "Item-custom_short_disc_ar_2",
+                "Item-custom_short_disc_en_2",
+                "Item-custom_metadisc_fr_2",
+                "Item-custom_metadisc_ar_2",
+                "Item-custom_metadisc_en_2",
+                "Item-custom_no_of_coats"
             ]
         ]
     ]},
@@ -464,7 +475,8 @@ fixtures = [
                     "Quotation Item-is_free_item-hidden",
                     "Quotation Item-uom-in_list_view",
                     "Quotation Item-item_code-columns",
-                    "Quotation Item-qty-columns"
+                    "Quotation Item-qty-columns",
+                    "Quotation Item-uom-columns"
                 ]
             ]
         ]

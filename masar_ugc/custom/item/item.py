@@ -4,17 +4,12 @@ import requests
 from masar_ugc.api import get_header_data , get_payload_data_for_item , get_base_url
 def validate(self, method):
     set_shortdisc(self)
-    set_uom(self)
     publish_to_web(self)
     asp_item_api(self)
 
 def set_shortdisc(self):
     if self.custom_short_disc_en and self.custom_short_disc_en != self.description:
         self.description = self.custom_short_disc_en
-        
-def set_uom(self):
-    if self.custom_packsize_en and self.custom_packsize_en != self.stock_uom:
-        self.stock_uom = self.custom_packsize_en
         
 def publish_to_web(self):
     if self.workflow_state == "Publish":
