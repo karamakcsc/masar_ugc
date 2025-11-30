@@ -399,8 +399,6 @@ fixtures = [
                 "Item-custom_solid_content" , 
                 "Item-custom_spreading_rate" , 
                 "Item-custom_dft_desc" , 
-                "Quotation-custom_area" , 
-                "Quotation-custom_system" , 
                 "Item-custom_dft" , 
                 "Quotation Item-custom_dft",
                 "Quotation-custom_column_break_wgdmx",

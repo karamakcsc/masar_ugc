@@ -32,8 +32,8 @@ class SystemEntry(Document):
         if self.is_published:
             self.system_master_asp_api()
         pass
-    def after_insert(self):
-        self.create_system_item()
+    # def after_insert(self):
+    #     self.create_system_item()
         
     def get_payload_data(self):
         system_items = list()
@@ -113,16 +113,16 @@ class SystemEntry(Document):
         else : 
             frappe.throw(f"Updated System : {response.text}")
             
-    def create_system_item(self):
-        if self.system_no:
-            if not frappe.db.exists("Item", self.system_no):
-                item = frappe.get_doc({
-                    "doctype": "Item",
-                    "item_code": str(self.system_no),
-                    "item_name": f"System-{self.system_name_en}",
-                    "item_group": "Services",
-                    "custom_is_system": 1,
-                    "custom_system_entry": self.name,
-                })
-                item.insert(ignore_permissions=True)
-                frappe.db.commit()
+    # def create_system_item(self):
+    #     if self.system_no:
+    #         if not frappe.db.exists("Item", self.system_no):
+    #             item = frappe.get_doc({
+    #                 "doctype": "Item",
+    #                 "item_code": str(self.system_no),
+    #                 "item_name": f"System-{self.system_name_en}",
+    #                 "item_group": "Services",
+    #                 "custom_is_system": 1,
+    #                 "custom_system_entry": self.name,
+    #             })
+    #             item.insert(ignore_permissions=True)
+    #             frappe.db.commit()

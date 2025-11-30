@@ -1,6 +1,7 @@
 import frappe
 import json
 from frappe.model.naming import make_autoname
+from frappe.utils import flt, ceil
 
 
 def on_submit(self , method): 
@@ -118,3 +119,19 @@ def build_taxes_table(doc, tax_percent):
         "rate": tax_percent,
         "tax_amount": total_tax
     })
+
+@frappe.whitelist()    
+def fetch_system_items(system_name, sys_qty):
+    system_entry = frappe.get_doc("System Entry", system_name)
+    items = []
+    for system_item in system_entry.proposed_systems:
+        item = frappe.get_doc("Item", system_item.item_code)
+        qty = flt(sys_qty)/flt(item.custom_spreading_rate) if item.custom_spreading_rate and item.custom_spreading_rate > 0 else 1 
+        items.append({
+            "item_code": system_item.item_code,
+            "item_name": system_item.item_name,
+            "description": item.description,
+            "qty": ceil(qty),
+            "uom": item.stock_uom,
+        })
+    return items

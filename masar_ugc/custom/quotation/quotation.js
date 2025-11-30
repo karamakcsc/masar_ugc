@@ -23,12 +23,20 @@ frappe.ui.form.on('Quotation', {
         frm.refresh_field('items');
     }
  });
+
+ frappe.ui.form.on('Quotation Item', {
+    qty: function (frm, cdt, cdn) {
+        var d = locals[cdt][cdn];
+        if (d.custom_system_entry) {
+            fetch_system_items(frm, cdt, cdn);
+        }
+    }
+ });
  
 
 function create_print_buttons(frm) {
     if (frm.doc.__islocal != 1) {
         const base_url = window.location.origin;
-        console.log(base_url);
         frm.add_custom_button(__("Quotation"), function(){
             const url = `${base_url}/printview?doctype=Quotation&name=${frm.doc.name}&trigger_print=1&format=Quotation%20PF&no_letterhead=1&letterhead=No%20Letterhead&settings=%7B%7D&_lang=en`;
             window.open(url);
@@ -79,5 +87,33 @@ function set_system_filter(frm) {
         frm.fields_dict.items.grid.get_field("item_code").get_query = function (doc, cdt, cdn) {
                 return 
             }
+    }
+}
+
+function fetch_system_items(frm, cdt, cdn) {
+    console.log("Fetch system items called");
+    var d = locals[cdt][cdn];
+    if (d.custom_system_entry) {
+        frappe.call({
+            method: "masar_ugc.custom.quotation.quotation.fetch_system_items",
+            args: {
+                system_name: d.custom_system_entry,
+                sys_qty: d.qty
+            },
+            callback: function(r) {
+                if (r.message) {
+                    var items = r.message;
+                    items.forEach(function(item) {
+                        var row = frm.add_child("items");
+                        row.item_code = item.item_code;
+                        row.item_name = item.item_name;
+                        row.description = item.description;
+                        row.qty = item.qty;
+                        row.uom = item.uom;
+                    });
+                }
+                frm.refresh_field("items");
+            }
+        })
     }
 }
