@@ -82,6 +82,9 @@ class SystemEntry(Document):
             "MetaDescriptionEN": self.system_metadisc_en,
             "MetaDescriptionAR": self.system_metadisc_ar,
             "MetaDescriptionFR": self.system_metadisc_fr,
+            "KeyFeaturesEN": self.system_key_features_en,
+            "KeyFeaturesAR": self.system_key_features_ar,
+            "KeyFeaturesFR": self.system_key_features_fr,
             "Publish":self.is_published,
             "SystemItems": system_items
         }
