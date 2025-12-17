@@ -13,20 +13,11 @@ class MasarItem(Document):
         for data in self.items:
             if data.to_reflect:
                 try:
-                    item_code = data.item_code
+                    item_code = frappe.db.get_value("Item", {"custom_masar_id": str(data.get("masar_id"))}, "name")
+                    # frappe.throw(str(item_code))
                     if not item_code:
-                        frappe.db.set_value(data.doctype , data.name ,'response', "Item code is missing")
+                        frappe.db.set_value(data.doctype , data.name ,'response', "Item code not found for given Masar ID")
                         continue
-                    packsize = data.unit_content if data.unit_content else 0
-                    if packsize:
-                        if not frappe.db.exists("Pack Size", packsize):
-                            new_packsize = frappe.get_doc({
-                                "doctype": "Pack Size",
-                                "pack_size_en": packsize,
-                                "enabled": 1
-                            })
-                            new_packsize.insert(ignore_permissions=True)
-                            frappe.db.commit()
                     item_data = {
 						"item_name": data.get("item_name"),
 						"item_group": data.get("item_group"),
@@ -39,7 +30,6 @@ class MasarItem(Document):
                         "disabled": data.get("item_active", 0),
                         "weight_per_unit": data.get("item_weight", 0),
                         "weight_uom": "Kg",
-                        "custom_packsize_en": packsize,
                         "custom_no_of_coats": data.get("no_of_coats", ""),
 					}
                     if frappe.db.exists("Item", item_code):
