@@ -414,7 +414,8 @@ fixtures = [
                 "Item-custom_metadisc_fr_2",
                 "Item-custom_metadisc_ar_2",
                 "Item-custom_metadisc_en_2",
-                "Item-custom_no_of_coats"
+                "Item-custom_no_of_coats",
+                "Item-custom_is_hero"
             ]
         ]
     ]},
