@@ -343,6 +343,7 @@ def get_payload_data_for_item(self , publish):
             "KeyFeaturesEN": self.custom_keyfeatures_en,
             "KeyFeaturesAR": self.custom_keyfeatures_ar,
             "KeyFeaturesFR": self.custom_keyfeatures_fr,
+            "is_hero": self.custom_is_hero,
             "Publish" : publish
         }
 
